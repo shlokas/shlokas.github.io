@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="icon" href="oculus-favicon.png">
+    <link rel="stylesheet" media="screen" href="css/styles.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+
+    <title>OCULUS 2019</title>
+    <style>
+        @font-face {
+            font-family: 'fourHandTrial';
+            src: url('fourHand_TRIAL.ttf');
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var footer_height;
+        $(document).ready(function () {
+            footer_height = $("footer").offset().top;
+            console.log("footer height is " + footer_height);
+
+        });
+    </script>
+    <script>
+        // on scroll show button to go back to top
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                $('#scrollUp').addClass("disp");
+            } else {
+                $('#scrollUp').removeClass("disp");
+            }
+
+            if (document.body.scrollTop > (footer_height - 100) || document.documentElement.scrollTop > (footer_height -
+                    100)) {
+                console.log("hide");
+                // document.getElementById("navbar").toggleClass("disp");
+                $('#navbar').addClass("disp");
+            } else {
+                console.log("unhide");
+                $('#navbar').removeClass("disp");
+                
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <div id="navbar">
+        <div>Sponsors</div>
+        <div><img src="oculus-favicon.png"></div>
+        <div>Events</div>
+    </div>
+
+    <!-- scroll to top button -->
+    <i class="fa fa-angle-up" id="scrollUp" onclick="topFunction()"></i>
+
+
+    <section style="height: 100vh">
+        <div class="clock">
+            <div class="holder">
+                <span> Days</span>
+                <div class="time-card">
+                    <div class="digit hundredday">
+                        <span class="base"></span>
+                        <div class="flap over front"></div>
+                        <div class="flap over back"></div>
+                        <div class="flap under"></div>
+                    </div>
+
+                    <div class="digit tenday">
+                        <span class="base"></span>
+                        <div class="flap over front"></div>
+                        <div class="flap over back"></div>
+                        <div class="flap under"></div>
+                    </div>
+                    <div class="digit day">
+                        <span class="base"></span>
+                        <div class="flap over front"></div>
+                        <div class="flap over back"></div>
+                        <div class="flap under"></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="holder">
+                <span>Hours</span>
+                <div class="time-card">
+                    <div class="digit tenhour">
+                        <span class="base"></span>
+                        <div class="flap over front"></div>
+                        <div class="flap over back"></div>
+                        <div class="flap under"></div>
+                    </div>
+
+                    <div class="digit hour">
+                        <span class="base"></span>
+                        <div class="flap over front"></div>
+                        <div class="flap over back"></div>
+                        <div class="flap under"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="holder">
+                <span>Minutes</span>
+                <div class="time-card">
+                    <div class="digit tenmin">
+                        <span class="base"></span>
+                        <div class="flap over front"></div>
+                        <div class="flap over back"></div>
+                        <div class="flap under"></div>
+                    </div>
+
+                    <div class="digit min">
+                        <span class="base"></span>
+                        <div class="flap over front"></div>
+                        <div class="flap over back"></div>
+                        <div class="flap under"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="holder">
+                <span>Seconds</span>
+                <div class="time-card">
+                    <div class="digit tensec">
+                        <span class="base"></span>
+                        <div class="flap over front"></div>
+                        <div class="flap over back"></div>
+                        <div class="flap under"></div>
+                    </div>
+
+                    <div class="digit sec">
+                        <span class="base"></span>
+                        <div class="flap over front"></div>
+                        <div class="flap over back"></div>
+                        <div class="flap under"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="about-oculus" style="color:white">
+            <a href="#"><img src="oculus.png"></a>
+            <p>
+                Sardar Patel Institute of Technology presents to you Oculus 2019.
+                Oculus is a Techno-Cultural festival that represents the synergy between Culture and Technology. Be it
+                performing arts, or hackathons. Writing poetry or Technical Papers, Oculus sees all.
+            </p>
+
+        </div>
+
+
+    </section>
+    <section>
+        <div style="color: white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+            Ipsum
+            has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+            of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+
+            Why do we use it?
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+            letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+            desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
+            search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved
+            over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+
+            Where does it come from?
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+            Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+            Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a
+            Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the
+            undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
+            (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
+            ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
+            comes from a line in section 1.10.32.
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+            of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+
+            Why do we use it?
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+            letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+            desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
+            search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved
+            over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+
+            Where does it come from?
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+            Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+            Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a
+            Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the
+            undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
+            (The Extremes of Good anelectronic typesetting, remaining essentially unchanged. It was popularised in the
+            1960s with the release
+            of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+
+            Why do we use it?
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+            letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+            desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
+            search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved
+            over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+
+            Where does it come from?
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+            Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+            Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a
+            Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the
+            undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
+            (The Extremes of Good anelectronic typesetting, remaining essentially unchanged. It was popularised in the
+            1960s with the release
+            of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+
+            Why do we use it?
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+            letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+            desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
+            search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved
+            over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+
+            Where does it come from?
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+            Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+            Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a
+            Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the
+            undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
+            (The Extremes of Good anelectronic typesetting, remaining essentially unchanged. It was popularised in the
+            1960s with the release
+            of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+
+            Why do we use it?
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+            letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+            desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
+            search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved
+            over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+
+            Where does it come from?
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+            Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+            Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a
+            Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the
+            undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
+            (The Extremes of Good an
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+            1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
+            original form, accompanied by English versions from the 1914 translation by H. Rackham.</div>
+    </section>
+    <footer>
+        <center><img style="width: 200px" src="logotext.png"></center>
+        <h2 style="text-align: center;margin-top: 5vh">LINKS</h2>
+        <div style="display: flex; justify-content: space-evenly;">
+            <div class="links">
+                <p><a class="effect-shine" href="#">HOME</a></p>
+                <p><a class="effect-shine" href="#">EVENTS</a></p>
+                <p><a class="effect-shine" href="#">REGISTER</a></p>
+                <p><a class="effect-shine" href="#">SCHEDULE</a></p>
+                <p><a class="effect-shine" href="#">SOCIAL CAUSE</a></p>
+            </div>
+            <div class="links">
+                <p><a class="effect-shine" href="#">AFTERMOVIE</a></p>
+                <p><a class="effect-shine" href="#">TEAM</a></p>
+                <p><a class="effect-shine" href="#">PRIVACY POLICY</a></p>
+            </div>
+
+        </div>
+
+
+        <h2 style="text-align: center">CONTACT</h2>
+        <br>
+        <div class="contact">
+            <div class="contact-details">
+                <center>
+                    <strong>
+                        <p>ADDRESS</p>
+                    </strong>
+
+                    <p>Bharatiya Vidya Bhavans Sardar Patel Institute of Technology, Bhavans Campus, Munshi Nagar,
+                        Andheri (West),
+                        Mumbai, Maharashtra 400058</p>
+                    <p>Phone: (91)-73039 12185</p>
+                    <p>Email:
+                        <a href="mailto:oculus_thefest@spit.ac.in">oculus_thefest@spit.ac.in</a></p>
+                </center>
+            </div>
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1012.9718675897255!2d72.83564226591032!3d19.123355949795293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x16268e5d6bca2e6a!2sSardar+Patel+Institute+of+Technology!5e0!3m2!1sen!2sin!4v1503820125526"
+                    width="100%" height="200px" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- scripts -->
+
+    <script type="text/javascript" src="js/scripts.js"></script>
+
+</body>
+
+</html>
