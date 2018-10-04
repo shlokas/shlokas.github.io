@@ -54,7 +54,7 @@ function updateGroup(group, n, flip) {
 }
 
 function setTime(flip) {
-    var time2 = getTimeRemaining("01/10/2019 12:00 AM");
+    var time2 = getTimeRemaining("01/18/2019 12:00 AM");
     // console.log(time2);
     updateGroup('day', time2.days, flip);
     updateGroup('hour', time2.hours, flip);
