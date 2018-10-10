@@ -1,4 +1,6 @@
-// ... vue instance
+// ... cards
+
+
   methods: {
     hoverCard(selectedIndex) {
       this.selectedCard = selectedIndex
@@ -8,11 +10,12 @@
     }
   }
   
-  const cards = [
-  {title: 'Gooey PBJ Brownies', author: 'John Walibur', image: 'https://placeimg.com/640/480/nature'},
-  {title: 'Crisp Spanish Tortilla Matzo Brei', author: 'Colman Andrews', image: 'https://placeimg.com/640/480/animals'},
-  {title: 'Grilled Shrimp with Lemon and Garlic', author: 'Celeste Mills', image: 'https://placeimg.com/640/480/arch'}
-]
+/*  const cards = [
+  {title: 'Virtual Stock Market', image: 'https://placeimg.com/640/480/nature'},
+  {title: 'Hogathon', image: 'https://placeimg.com/640/480/animals'},
+  {title: 'Codatron',  image: 'https://placeimg.com/640/480/arch'},
+  {title: 'Zorbing', image: 'https://placeimg.com/640/480/arch'}
+]*/
 
 
 new Vue({
@@ -67,3 +70,42 @@ $(function() {
     });
 });
 
+
+
+
+//full pg
+
+
+  $(document).ready(function() {
+          $('#homepage').fullpage({
+            scrollingSpeed: 900,
+            autoScrolling: false,
+            fitToSection: true,
+            fitToSectionDelay: 2500,
+            anchors: ['Events','Technical', 'Cultural', 'Literary', 'Fun'],
+            sectionsColor: ['#ADADFF','#E59CF2', '#A8A9F0', '#45F2AD', '#F5C07F'],
+            verticalCentered: false,
+            navigation: true,
+            navigationPosition: 'right',
+            navigationTooltips: ['Tech', 'Cultural', 'Literary','Fun'],
+            responsiveWidth: 900,
+            onLeave: function(index, nextIndex, direction){
+                  if(direction == "up"){
+                    $(".section").removeClass("down");
+                    $(".section").removeClass("next");
+                    $(".section").removeClass("prev");
+                    $("#homepage .section:nth-child("+nextIndex+")").addClass("up");
+                    $("#homepage .section:nth-child("+nextIndex+")").next().addClass("next up");
+                    $("#homepage .section:nth-child("+nextIndex+")").prev().addClass("prev up");
+                  }else{
+                    $(".section").removeClass("up");
+                    $(".section").removeClass("next");
+                    $(".section").removeClass("prev");
+                    $("#homepage .section:nth-child("+nextIndex+")").addClass("down");
+                    $("#homepage .section:nth-child("+nextIndex+")").next().addClass("next down");
+                    $("#homepage .section:nth-child("+nextIndex+")").prev().addClass("prev down");
+                  }
+                  console.log(direction + nextIndex);
+              },
+          });
+      });
