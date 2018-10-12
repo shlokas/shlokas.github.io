@@ -30,9 +30,10 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
  
+  <link rel="stylesheet" type="text/css" href="css/background.trial.css">
+  <script type="text/javascript" src="js/background.trial.js"></script>
 
-
-
+  <link rel="stylesheet" type="text/css" href="css/time.css">
 
 <!--TRIAL-->
 
@@ -64,8 +65,10 @@
 
 <body>
 
-	<!--top navbar fixed
-	    <div id="navbar">
+
+
+    <!--top navbar fixed-->
+      <div id="navbar">
         <div id="nav">
             <a href="#" style="color: #bcbcbc">Sponsors</a>
             <div><img src="images/oculus-favicon.png"></div>
@@ -73,21 +76,6 @@
         </div>
 
     </div>
-<br>
--->
-
-
-<!--bottom navbar fixed
-
-
-
-	<nav  id="footer" class="navbar navbar-inverse navbar-fixed-bottom">
-	<a class="navbar-brand" href="#">Fixed bottom</a>
-	</nav>
-
-
--->
-
 
 
 
@@ -98,15 +86,299 @@
 
 
 <div id="fullpage">
-<!--  bottom nav
+
+
+
+
+
+
+
+
+
+<!--  bottom nav-->
 
   <nav  id="footer" class="navbar navbar-inverse navbar-fixed-bottom">
-  <a class="navbar-brand" href="#">Fixed bottom</a>
+  <div class="navbar-brand">
+    
+      <div class="bar"></div>
+<div class="timeline">
+    <div class="entry">
+        <button type="button" class="btn btn-primary" id="buttons" data-toggle="div" data-target="#sec1"  aria-pressed="false" autocomplete="off">
+  TECHNICAL
+</button>
+    </div>
+    <div class="entry">
+    <button type="button" class="btn btn-primary" data-toggle="button"  id="buttons" data-target="#sec2" aria-pressed="false" autocomplete="off">
+  CULTURAL
+</button>
+    </div>
+    <div class="entry">
+        <button type="button" class="btn btn-primary" data-toggle="button"  id="buttons" aria-pressed="false" autocomplete="off">
+  LITERARY
+</button>
+    </div>
+    <div class="entry">
+        <button type="button" class="btn btn-primary" data-toggle="button"  id="buttons"  aria-pressed="false" autocomplete="off">
+  FEATURED
+</button>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
   </nav>
 
--->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section active" id="sec1">
+
+
+
+
+<div>
+  <div>
+    
+<!--first slide-->
+
+
+    <!--top navbar fixed-->
+      <div id="navbar">
+        <div id="nav">
+            <a href="#" style="color: #bcbcbc">Sponsors</a>
+            <div><img src="images/oculus-favicon.png"></div>
+            <a href="events.html" style="color: #bcbcbc">Events</a>
+        </div>
+
+    </div>
+<!--events-->
+
+    <div class="glitch" data-text="EVENTS">EVENTS</div>
+
+
+
+
+
+
+<!--particle js-->
+
+      <div id="particle"></div>
+        <div id="overlay"></div>
+          <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+
+<!--particle js script-->
+                    <script>
+  
+
+var options = {"particles":{"number":{"value":99,"density":{"enable":true,"value_area":552.4033491425909}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":3},"image":{"src":"img/github.svg","width":70,"height":100}},"opacity":{"value":1,"random":true,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":2,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":1.5782952832645452,"direction":"none","random":true,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"repulse"},"onclick":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.1},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":false};
+particlesJS("particle", options);
+
+
+
+
+
+                      </script>
+
+
+
+<!--gears--js-->
+                      <script>
+                            var offset = 0.0;
+                          function draw() { 
+                            StyleKitName.clearCanvas('gears');
+                            StyleKitName.drawGears('gears', offset);
+                          }
+                          var tid = setInterval(loop, 40);
+                          var canvas = document.getElementById("gears");
+                          var context = canvas.getContext("2d");
+                          function loop() {
+                            offset += 1;
+                            draw();
+                          }
+                        </script>
+ 
+
+<!--gears html-->
+
+  <canvas id="gears" width="1200" height="900"></canvas>
+ <!-- fog animation --> 
+
+
+
+
+
+
+
+
+
+
+        </div>
+    
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="section" id="sec2">
+
+    <!--top navbar fixed-->
+      <div id="navbar">
+        <div id="nav">
+            <a href="#" style="color: #bcbcbc">Sponsors</a>
+            <div><img src="images/oculus-favicon.png"></div>
+            <a href="events.html" style="color: #bcbcbc">Events</a>
+        </div>
+
+    </div>
+<div>
+  
+<div>
+    
+<div id="app">
+  <div class="card-row" data-toggle="modal" data-target=".bd-example-modal-lg">
+    <div class="card">
+      
+      <img class="card-image" src="https://placeimg.com/640/480/nature">
+      
+      <div class="card-footer">
+      
+      <p>
+        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
+        <h8>100%</h8>
+      </p> 
+       
+        <h4 class="card-title">VIRTUAL STOCK MARKET</h4>
+       <!-- <p class="card-text">prizes worth 10k </p>  -->
+       
+          
+        </p>
+      </div>
+    </div>
+    
+    
+    
+    <div class="card" data-toggle="modal" data-target=".bd-example-modal-lg">
+      
+      <img class="card-image" src="https://placeimg.com/640/480/nature">
+      
+         <div class="card-footer">
+      
+             <p>
+                <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
+                <h8>96%</h8>
+             </p>
+                
+            <h3 class="card-title">HOGATHON</h3>
+            <p class="card-text"> </p>
+            
+            </p>
+      </div>
+    </div>
+    
+    
+   <div class="card" data-toggle="modal" data-target=".bd-example-modal-lg">
+      
+      <img class="card-image" src="images/zumba4.jpeg">
+      
+      <div class="card-footer">
+      <p>
+        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
+        <h8>98%</h8>
+      </p>
+        <h3 class="card-title">CODATRON </h3>
+         
+        <p class="card-text"></p>
+        <p class="card-text">
+       
+        </p>
+      </div>
+    </div>
+    
+    
+    
+    <div class="card" data-toggle="modal" data-target=".bd-example-modal-lg">
+      
+      <img class="card-image" src="https://placeimg.com/640/480/nature">
+      
+      <div class="card-footer">
+      
+      <p>
+        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
+        <h8>88%</h8>
+      </p>
+        
+        <h3 class="card-title">ZORBING</h3>
+        <p class="card-text"></p>
+        <p class="card-text">
+         
+        </p>
+      </div>
+    </div>
+    
+    
+  </div>
+</div>
+
+
+
+
+  </div>
+
+
+</div>
+
+
+
+  </div>
+
+
   <div class="section">
 
+    <!--top navbar fixed-->
+      <div id="navbar">
+        <div id="nav">
+            <a href="#" style="color: #bcbcbc">Sponsors</a>
+            <div><img src="images/oculus-favicon.png"></div>
+            <a href="events.html" style="color: #bcbcbc">Events</a>
+        </div>
+
+    </div>
+
 
 <div>
   
@@ -207,113 +479,6 @@
 
 
 
-  </div>
-
-
-  <div class="section">SLIDE 2
-
-
-
-
-<div>
-  
-<div>
-    
-<div id="app">
-  <div class="card-row" data-toggle="modal" data-target=".bd-example-modal-lg">
-    <div class="card">
-      
-      <img class="card-image" src="https://placeimg.com/640/480/nature">
-      
-      <div class="card-footer">
-      
-      <p>
-        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-        <h8>100%</h8>
-      </p> 
-       
-        <h4 class="card-title">VIRTUAL STOCK MARKET</h4>
-       <!-- <p class="card-text">prizes worth 10k </p>  -->
-       
-          
-        </p>
-      </div>
-    </div>
-    
-    
-    
-    <div class="card" data-toggle="modal" data-target=".bd-example-modal-lg">
-      
-      <img class="card-image" src="https://placeimg.com/640/480/nature">
-      
-         <div class="card-footer">
-      
-             <p>
-                <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-                <h8>96%</h8>
-             </p>
-                
-            <h3 class="card-title">HOGATHON</h3>
-            <p class="card-text"> </p>
-            
-            </p>
-      </div>
-    </div>
-    
-    
-   <div class="card" data-toggle="modal" data-target=".bd-example-modal-lg">
-      
-      <img class="card-image" src="images/zumba4.jpeg">
-      
-      <div class="card-footer">
-      <p>
-        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-        <h8>98%</h8>
-      </p>
-        <h3 class="card-title">CODATRON </h3>
-         
-        <p class="card-text"></p>
-        <p class="card-text">
-       
-        </p>
-      </div>
-    </div>
-    
-    
-    
-    <div class="card" data-toggle="modal" data-target=".bd-example-modal-lg">
-      
-      <img class="card-image" src="https://placeimg.com/640/480/nature">
-      
-      <div class="card-footer">
-      
-      <p>
-        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-        <h8>88%</h8>
-      </p>
-        
-        <h3 class="card-title">ZORBING</h3>
-        <p class="card-text"></p>
-        <p class="card-text">
-         
-        </p>
-      </div>
-    </div>
-    
-    
-  </div>
-</div>
-
-
-
-
-  </div>
-
-
-</div>
-
-
-
 
 
 
@@ -331,7 +496,16 @@
 
 
 
-  <div class="section">Scultural
+  <div class="section">
+        <!--top navbar fixed-->
+      <div id="navbar">
+        <div id="nav">
+            <a href="#" style="color: #bcbcbc">Sponsors</a>
+            <div><img src="images/oculus-favicon.png"></div>
+            <a href="events.html" style="color: #bcbcbc">Events</a>
+        </div>
+
+    </div>
 
 <div>
   
@@ -762,7 +936,16 @@
 
 
   </div>
-  <div class="section">SLIDE 4
+  <div class="section">
+        <!--top navbar fixed-->
+      <div id="navbar">
+        <div id="nav">
+            <a href="#" style="color: #bcbcbc">Sponsors</a>
+            <div><img src="images/oculus-favicon.png"></div>
+            <a href="events.html" style="color: #bcbcbc">Events</a>
+        </div>
+
+    </div>
 
 <div>
   
@@ -867,15 +1050,15 @@
   </div>
 </div>
 
-
+<!--full page-->
 <script>
   $(document).ready(function() {
   $('#fullpage').fullpage({
     //Navigation
     menu: '#menu',
-    lockAnchors: false,
-    anchors:['firstPage', 'secondPage'],
-    navigation: false,
+    lockAnchors: true,
+    anchors:['firstPage', 'secondPage','third','fourth','fifth'],
+    navigation: true,
     navigationPosition: 'right',
     navigationTooltips: ['firstSlide', 'secondSlide'],
     showActiveTooltip: false,
@@ -884,14 +1067,14 @@
 
     //Scrolling
     css3: true,
-    scrollingSpeed: 2000,
+    scrollingSpeed: 5000,
     autoScrolling: false,
     fitToSection: true,
-    fitToSectionDelay: 1000,
-    scrollBar: true,
+    fitToSectionDelay: 5000,
+    scrollBar: false,
     easing: 'easeInOutCubic',
     easingcss3: 'ease',
-    loopBottom: false,
+    loopBottom: true,
     loopTop: false,
     loopHorizontal: false,
     continuousVertical: false,
@@ -899,14 +1082,14 @@
     scrollHorizontally: false,
     interlockedSlides: false,
     dragAndMove: true,
-    offsetSections: true,
-    resetSliders: true,
+    offsetSections: false,
+    resetSliders: false,
     fadingEffect: true,
     normalScrollElements: '#element1, .element2',
-    scrollOverflow: false,
+    scrollOverflow: true,
     scrollOverflowReset: false,
     scrollOverflowOptions: null,
-    touchSensitivity: 550,
+    touchSensitivity: 50,
     //normalScrollElementTouchThreshold: 5,
     bigSectionsDestination: null,
     navigation:true,
@@ -922,19 +1105,19 @@
     verticalCentered: true,
     sectionsColor : ['#000000', '#fff'],
     paddingTop: '3em',
-    paddingBottom: '10px',
-    fixedElements: '#header, .footer',
+    paddingBottom: '20px',
+    fixedElements: '#navbar, #footer',
     responsiveWidth: 0,
     responsiveHeight: 0,
     responsiveSlides: true,
-    parallax: true,
+    parallax: false,
     parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
 
     //Custom selectors
     sectionSelector: '.section',
     slideSelector: '.slide',
 
-    lazyLoading: false,
+    lazyLoading: true,
 
     //events
     onLeave: function(index, nextIndex, direction){},
@@ -944,6 +1127,39 @@
     afterResponsive: function(isResponsive){},
     afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
     onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+
+
+
+    scrollingSpeed: 600,
+            autoScrolling: false,
+            fitToSection: true,
+            fitToSectionDelay: 700,
+            anchors: ['Events','Technical', 'Cultural', 'Literary', 'Fun'],
+            sectionsColor: ['#ADADFF','#E59CF2', '#A8A9F0', '#45F2AD', '#F5C07F'],
+            verticalCentered: false,
+            navigation: true,
+            navigationPosition: 'right',
+            navigationTooltips: ['Events','Tech', 'Cultural', 'Literary','Fun'],
+            responsiveWidth: 800,
+            onLeave: function(index, nextIndex, direction){
+                  if(direction == "up"){
+                    $(".section").removeClass("down");
+                    $(".section").removeClass("next");
+                    $(".section").removeClass("prev");
+                    $("#homepage .section:nth-child("+nextIndex+")").addClass("up");
+                    $("#homepage .section:nth-child("+nextIndex+")").next().addClass("next up");
+                    $("#homepage .section:nth-child("+nextIndex+")").prev().addClass("prev up");
+                  }else{
+                    $(".section").removeClass("up");
+                    $(".section").removeClass("next");
+                    $(".section").removeClass("prev");
+                    $("#homepage .section:nth-child("+nextIndex+")").addClass("down");
+                    $("#homepage .section:nth-child("+nextIndex+")").next().addClass("next down");
+                    $("#homepage .section:nth-child("+nextIndex+")").prev().addClass("prev down");
+                  }
+                  console.log(direction + nextIndex);
+              },
+
   });
 });
 
@@ -953,7 +1169,7 @@
 <script>
   
   new fullpage('#fullpage', {
-  anchors:['firstPage', 'secondPage', 'thirdPage']
+  anchors:['firstPage', 'secondPage', 'third','fourth','fifth']
 });
 </script>
 
