@@ -2,11 +2,11 @@
 
 
   methods: {
-    hoverCard(selectedIndex) {
-      this.selectedCard = selectedIndex
+    hoverCard(selectedIndex){
+      this.selectedCard = selectedIndex;
     },
     isSelected (cardIndex) {
-      return this.selectedCard === cardIndex
+      return this.selectedCard === cardIndex;
     }
   }
   
