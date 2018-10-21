@@ -31,7 +31,7 @@ body {
   padding-left: 20px;
 }
 
-p {
+.heading p {
   display: flex;
   align-items: left;
   justify-content: left;
@@ -492,6 +492,10 @@ ul.card-stacks.transition li.stack.stack-2 {
 }
 ul.card-stacks.transition li.stack.stack-3 {
   left: 440px;
+}
+
+ul.card-stacks.transition li.stack.stack-4 {
+  left: 660px;
 }
 ul.card-stacks.transition li.stack ul.cards-down li.card {
   -webkit-transform: rotateZ(0deg);
