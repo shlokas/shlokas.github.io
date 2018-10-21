@@ -34,9 +34,11 @@
         .spinner {
             position: absolute;
             align-items: center;
-            top: 30%;
-            left: 30%;
+            top: calc(50% - 175px);
+            left: calc(50% - 175px);
             display: flex;
+            animation: anim 1s forwards ease-in;
+
         }
 
         .spinner-wrapper {
@@ -48,23 +50,110 @@
             background-color: white;
             z-index: 999999;
         }
+
+        #navbar {
+            color: white;
+            display: flex;
+            height: 5vh;
+            width: 100%;
+            /* padding: 10px; */
+            position: fixed;
+            top: 0;
+            z-index: 10;
+            justify-content: space-evenly;
+            align-items: center;
+            font-family: fourHandTrial;
+            font-size: 24px;
+            opacity: 1;
+            transition: opacity 0.25s ease;
+        }
+
+        #nav {
+            background-color: rgb(59, 59, 59);
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            box-shadow: 1px 1px rgb(82, 81, 81);
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 30%;
+            height: 5vh;
+            padding: 10px;
+            position: inherit;
+            top: 0;
+            
+        }
+
+        #navbar.disp {
+            opacity: 0;
+        }
+
+        @keyframes anim {
+            from {
+                position: fixed;
+                top: calc(50vh - 175px);
+                left: calc(50vw - 175px);
+                width: 350px;
+                height: auto;
+            }
+
+            to {
+                top: 12px;
+                width: auto;
+                height: 65px;
+            }
+        }
+
+
+        #nav div:nth-child(2) {
+            position: relative;
+            top: 12px;
+            /* width: auto; */
+            height: 65px;
+            width: 65px;
+            background-color: rgb(59, 59, 59);
+            background-size: 50%;
+            border-radius: 50%;
+            padding: 10px 14px 10px 10px;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* box-shadow: 1px 1px rgb(82, 81, 81); */
+
+        }
+
+        #nav img {
+            position: absolute;
+            /* top: 12px; */
+            /* height: 65px; */
+            animation: anim 0.75s linear normal forwards;
+        }
     </style>
 </head>
 
 <body>
 
+
     <!-- <div class="spinner-wrapper">
         <div class="spinner">
-            <img id="preload-img1" src="./images2/outer.png">
-            <img id="preload-img2" src="./images2/inner.png">
+            <img id="preload-img1" src="./images/outer.png">
+            <img id="preload-img2" src="./images/inner.png">
         </div>
     </div> -->
+
+    <div id="navbar">
+        <div id="nav">
+            <div>Sponsors</div>
+            <div><img src="oculus-favicon.png"></div>
+            <div>Events</div>
+        </div>
+
+        <div class="register"> Registering Soon!</div>
+    </div>
 
     <div id="fullpage">
         <div class="section"><img src="logotext.png"></div>
         <div class="section"><img src="oculus.png"></div>
         <div class="section">
-            <div class="slide">  <img src="images/outer.png"></div>
+            <div class="slide"> <img src="images/outer.png"></div>
             <div class="slide"> <img src="logotext.png"></div>
             <div class="slide"> Slide 3 </div>
             <div class="slide"> Slide 4 </div>
@@ -73,6 +162,27 @@
     </div>
 
 
+    <script>
+        $(document).ready(function () {
+            //Preloader
+            $(window).load(function () {
+
+
+
+                console.log('loaded');
+                preloaderFadeOutTime = 250;
+
+                function hidePreloader() {
+                    var preloader = $('.spinner-wrapper');
+                    preloader.fadeOut(preloaderFadeOutTime);
+                }
+
+                hidePreloader();
+
+                console.log('hidden');
+            });
+        });
+    </script>
     <script>
         var myFullpage = new fullpage('#fullpage', {
             //Navigation

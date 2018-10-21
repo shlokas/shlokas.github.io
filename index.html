@@ -34,6 +34,33 @@
             <img id="preload-img2" src="./images/inner.png">
         </div>
     </div>
+    <script>
+        var vid_over;
+        $(document).ready(function () {
+            vid_over = document.getElementById("videoOverlay");
+        });
+
+
+        function hideOverlay() {
+            // console.log(vid_over.style.bottom);
+            vid_over.style.bottom = "100%";
+        }
+
+        function showOverlay() {
+            vid_over.style.bottom = "0";
+        }
+    </script>
+    <!-- <button onclick="showOverlay()">click me</button> -->
+
+
+
+
+
+    <div id="videoOverlay" class="video-overlay">
+        <iframe width="80%" height="70%" style="margin-top: 15vh" src="https://www.youtube.com/embed/VlyZrYF5Emk">
+        </iframe>
+        <div class="close"><i onclick="hideOverlay()" class="fa fa-close"></i></div>
+    </div>
 
 
     <div id="navbar">
@@ -41,6 +68,14 @@
         position: absolute;
         left: 2vw;
         top: 1.5vh;" src="logotext.png">
+
+        <div class="swing">
+            <div class="hover" onclick="showOverlay()">
+                <div class="thread"></div>
+                <div class="handle"></div>
+            </div>
+        </div>
+
         <div id="nav">
             <div>Sponsors</div>
             <div style="background-color: inherit; border-radius: 50%;"><img src="oculus-favicon.png"></div>
@@ -48,6 +83,7 @@
         </div>
 
         <div class="register"> Registering Soon!</div>
+
     </div>
 
 
@@ -68,12 +104,12 @@
                 <div class="holder">
                     <span> Days</span>
                     <div class="time-card">
-                        <div class="digit hundredday">
+                        <!-- <div class="digit hundredday">
                             <span class="base"></span>
                             <div class="flap over front"></div>
                             <div class="flap over back"></div>
                             <div class="flap under"></div>
-                        </div>
+                        </div> -->
 
                         <div class="digit tenday">
                             <span class="base"></span>
@@ -171,74 +207,104 @@
                 <h1>GENERATION Z</h1>
                 <h2>IT'S ALL BALANCED</h2>
             </div>
+            <br><br>
 
-            <div>
+            <div style="margin: 0 auto; text-align: center; width: 80%">
 
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum Where does it come from? Contrary
-                to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature
-                from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College
-                in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-                going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum
-                comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good anelectronic
-                typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
-                sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
-                including versions of Lorem Ipsum.
-
+                The transition from the 20th century into the 21st was a momentous point in history. As December 31 of 1999 bled into January
+                1 of 2000, an era ended and another began. And unlike the millennials, who got to see the change with their
+                young eyes, we were born into the change. We were born in the short, tiny window of time between the end
+                of a millennium and the beginning of another. We are Generation Z, and we are as old as this new century
+                is. We have seen everything change and been a part of the change - we have used both flip phones and smart
+                phones, connected to the Internet using both dial-ups and WiFi, played both 8-bit games and The Last of Us.
+                We went from playing songs on cassettes to Spotify, from watching movies on cable to Netflix. We have been
+                a part of a transitioning world. Be it cultural change or technical, social or political, we have adapted
+                to everything smoothly. And it's not just self-reinvention that we've done smoothly - we have made the change
+                around us better. We strive for a better society, we crusade for a tolerant world. We are the youngest minds
+                in research, the youngest CEOs and entrepreneurs finding their footing in the world. SPIT found this generation
+                a fitting encapsulation of Oculus 2k19, and is proud to announce the theme for the same - Generation Z. We
+                believe it represents everything Oculus strives and stands for - change, flexibility, modernism and fun.
+                Oculus 2k19 will hopefully be the perfect generational paradigm.
+                <br><br>
             </div>
         </div>
 
         <div style="font-family: segoe ui;" class="section" id="section3">
-            <center>
+            <div class="heading">
                 <h1>EVENTS</h1>
-            </center>
+            </div>
             <div class="events">
                 <div class="event">
                     <h3>Technical</h3>
-                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem fugiat quis veniam rem eius
-                        laudantium iusto, exercitationem illum repellat, dolorum sunt incidunt, minima adipisci? Nostrum
-                        sapiente maiores autem vel quaerat?</div>
+                    <div>No problem can be solved from the same level of consciousness that created it. Technical Events
+                        provide a platform where participants can implement their astounding coding and technical skills.</div>
                 </div>
                 <div class="event">
                     <h3>Literary</h3>
-                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem fugiat quis veniam rem eius
-                        laudantium iusto, exercitationem illum repellat, dolorum sunt incidunt, minima adipisci? Nostrum
-                        sapiente maiores autem vel quaerat?</div>
+                    <div>Pen is mightier than sword. Oculus presents Literary Events which presents a golden opportunity
+                        to everyone to showcase their flair in content writing skills.</div>
                 </div>
                 <div class="event">
                     <h3>Cultural</h3>
-                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem fugiat quis veniam rem eius
-                        laudantium iusto, exercitationem illum repellat, dolorum sunt incidunt, minima adipisci? Nostrum
-                        sapiente maiores autem vel quaerat?</div>
+                    <div>Culture makes people understand each other better and collectively helps them evolve. Cultural Events
+                        are the perfect chance for participants to present and witness their singing, dancing and other vivid
+                        varities of cultural activities.</div>
                 </div>
                 <div class="event">
-                    <h3>Concerts and Pronites</h3>
-                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem fugiat quis veniam rem eius
-                        laudantium iusto, exercitationem illum repellat, dolorum sunt incidunt, minima adipisci? Nostrum
-                        sapiente maiores autem vel quaerat?</div>
+                    <h3>Fun</h3>
+                    <div>All work and no play makes jack a dull boy. Presenting to you Fun Events where participants can
+                        enjoy the time of their lives.</div>
                 </div>
             </div>
         </div>
 
         <div class="section" id="section4">
-            <h1>SOCIAL CAUSE</h1>
+            <br><br>
+            <div class="heading">
+                <h1>OCULUS FOR A CAUSE</h1>
+            </div>
+            <div style="display: inline-flex; justify-content: space-evenly">
+                <div class="ngo-content">
+                    <p>
+                        We at SPIT believe that students cannot be called engineers with just their degrees. What makes us engineers is a holistic
+                        development of our perspectives and being equipped to solve problems, not just on circuits or computers,
+                        but also in the world around us. Oculus 2019 is proud to be associated with Ratna Nidhi Charitable
+                        Trust and be a part of its efforts to attain its noble goal. As part of our collaboration with the
+                        organization, the students of SPIT will be organising a drive for donating spectacles and clothes
+                        for BMC drainage cleaners and people living in rural Maharashtra. To help educate children with lesser
+                        privileges and facilities, we will help the Trust in sending books and resources to such kids and
+                        to municipal schools. We will also be raising funds in the fest to pay for prosthetic limbs for the
+                        victims of terror attacks and other unforeseen accidents.
+                        <br><br>Oculus 2019 wishes to continue it's association with this cause and contribute to the Trust's
+                        humanitarian efforts.<br><br>
+                    </p>
+                </div>
+                <a href="https://ratnanidhi.org/" target="_blank"><img style="width: 400px;
+                height: 400px;
+                border-radius: 50%;
+                opacity: 0.7;
+                mix-blend-mode: luminosity;" src="images/ngo.jpeg"></a>
+            </div>
+            <br><br><br>
+
         </div>
 
 
         <div class="section" id="section10">
             <footer>
-                <center><img style="width: 200px; margin-top: 10px;" src="logotext.png"></center>
+                <center><img style="width: 200px; " src="logotext.png"></center>
                 <h2 style="text-align: center;margin-top: 5vh">LINKS</h2>
                 <div style="display: flex; justify-content: space-evenly;">
                     <div class="links">
-                        <p><a class="effect-shine" href="#section1">HOME</a></p>
+                        <p><a class="effect-shine" href="#particles-js">HOME</a></p>
                         <p><a class="effect-shine" href="#section3">EVENTS</a></p>
-                        <p><a class="effect-shine" href="#">REGISTER</a></p>
                         <p><a class="effect-shine" href="#">SCHEDULE</a></p>
-                        <p><a class="effect-shine" href="#">SOCIAL CAUSE</a></p>
+                        <p><a class="effect-shine" href="#section4">SOCIAL CAUSE</a></p>
                     </div>
                     <div class="links">
                         <p><a class="effect-shine" href="#">AFTERMOVIE</a></p>
                         <p><a class="effect-shine" href="#">TEAM</a></p>
+                        <p><a class="effect-shine" href="#">REGISTER</a></p>
                         <p><a class="effect-shine" href="#">PRIVACY POLICY</a></p>
                     </div>
 
