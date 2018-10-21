@@ -1,89 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<title></title>
+
+
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<style>
-  
-
-
-
-
-/*event_button*/
-
-body {
-  font-size: 6px;
-}
-@media only screen and (min-width: 480px) {
-  body {
-    font-size: 10px;
-  }
-}
-@media only screen and (min-width: 800px) {
-  body {
-    font-size: 16px;
-  }
-}
-
-.event_click_button {
-  display: block;
-  width: 18em;
-  height: 18em;
-  position: absolute;
-  top: 35%;
-  left:80%;
-  margin-top: -14em;
-  margin-left: -14.em;
-  border-radius: 28em;
-  background-image: linear-gradient(240deg, transparent 66.4%, #1A246F 0%, #24334C), linear-gradient(0deg, transparent 71.5%, #24334C 0%, #E34A35), linear-gradient(290deg, transparent 60%, #1A246F 0%, #24334C), linear-gradient(120deg, transparent 66%, #1A246F 0%, #24334C), linear-gradient(57deg, transparent 58%, #1A246F 0%, #4C699E), linear-gradient(190deg, transparent 58%, #1A246F 0%, #24334C);
-  box-shadow: inset 0 0 10em rgba(0, 0, 0, 0.05), 0 0 100px rgba(0, 0, 0, 0.05), 10 10 10px white;
-  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
-}
-.event_click_button::before, .event_click_button::after {
-  content: '';
-  display: block;
-}
-.event_click_button::before {
-  width: 1.75em;
-  height: 2.375em;
-  position: absolute;
-  top: 26.4375em;
-  left: 13.4375em;
-  border-bottom-right-radius: 14.0625em;
-  background-color: #FFCA38;
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
-}
-.event_click_button::after {
-  width: 10.625em;
-  height: 10.625em;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -5.3125em;
-  margin-left: -5.3125em;
-  border-radius: 14.0625em;
-  background-color: #24334C;
-  box-shadow: 0 0 0 0.9375em white;
-}
-.event_click_button:hover {
-  -webkit-transform: rotate(-720deg) scale(0.9);
-          transform: rotate(-720deg) scale(0.9);
-}
 
 
 
@@ -91,386 +21,29 @@ body {
 
 
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+<!--external files-->
 
 
 
-</style>
+<link rel="stylesheet" type="text/css" href="css/particle.trial.css">
+<script type="text/javascript" src="js/particle.trial.js"></script>
+
+
+<!--librarires-->
 
 
 
-
-
-<style>
-  
-h1 {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/6963bbf342d87b3a2150bd8f59682b89.jpg);
-    -webkit-background-clip: text;
-  background-size: contain;
-  width: 100%;
-  text-align: center;
-  color: transparent;
-  font-weight: 900;
-  
-  
-  &::before {
-    content: attr(data-heading);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    background: linear-gradient(45deg, rgba(255,255,255,0) 45%,rgba(255,255,255,0.8) 50%,rgba(255,255,255,0) 55%,rgba(255,255,255,0) 100%);
-    -webkit-background-clip: text;
-    color: transparent;
-    mix-blend-mode: screen;
-    animation: shine 3s infinite;
-    background-size: 200%;
-    text-shadow: 
-      2px 2px 10px rgba(#000, 0.2),
-      -2px 2px 10px rgba(#000, 0.2),
-      -2px -2px 10px rgba(#000, 0.2);
-  }
-}
-
-@keyframes shine {
-  0% {background-position: -100%;}
-  100% {background-position: 100%;}
-}
-
-
-
-/*text*/
-
-
-#text {
-  top: 54%;
-  left: -24%;
-  transform: translate(-70%, -50%);
-  position: absolute;
-  font-size: 60px;
-  margin: 1;
-  font-family: 'fourHandTrial';
-  font-weight: 800;
-  writing-mode: vertical-rl;
-  
-    text-orientation: upright;
-}
+    <style>
+        @font-face {
+            font-family: 'fourHandTrial';
+            src: url('fourHand_TRIAL.ttf');
+        }
+    </style>
 
 
 
 
-
-
-
-
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<style>
-  
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-
-
-ul.cards {
-  width: 660px;
-  margin: 0 auto 20px;
-  height: 300px;
-  list-style-type: none;
-  position: relative;
-  padding: 20px 0;
-  cursor: pointer;
-}
-ul.cards li.title {
-  margin: 0 0 20px;
-}
-ul.cards li.title h2 {
-  font-weight: 300;
-}
-ul.cards li.card {
-  background: #FFF;
-  overflow: hidden;
-  height: 200px;
-  width: 200px;
-  border-radius: 30px;
-  position: absolute;
-  left: 0px;
-  box-shadow: 7px 9px 12px 0 #aaa;
-  transition: all 0.4s cubic-bezier(0.63, 0.15, 0.03, 1.12);
-}
-ul.cards li.card img {
-  max-width: 100%;
-  height: auto;
-}
-ul.cards li.card div.content {
-  padding: 5px 10px;
-}
-ul.cards li.card.card-1 {
-  z-index: 10;
-  -webkit-transform: rotateZ(-20deg);
-          transform: rotateZ(-20deg);
-}
-ul.cards li.card.card-2 {
-  z-index: 9;
-  -webkit-transform: rotateZ(-7deg);
-          transform: rotateZ(-7deg);
-  transition-delay: 0.05s;
-}
-ul.cards li.card.card-3 {
-  z-index: 8;
-  -webkit-transform: rotateZ(5deg);
-          transform: rotateZ(5deg);
-  transition-delay: 0.1s;
-}
-ul.cards.transition li.card {
-  -webkit-transform: rotateZ(80deg);
-          transform: rotateZ(80deg);
-}
-ul.cards.transition li.card.card-1 {
-  left: 440px;
-}
-ul.cards.transition li.card.card-2 {
-  left: 220px;
-}
-
-ul.card-stacks {
-  width: 660px;
-  list-style-type: none;
-  margin: 0 auto 20px;
-  padding: 0;
-  position: relative;
-  cursor: pointer;
-  height: 800px;
-}
-ul.card-stacks li.title {
-  margin: 0 0 20px;
-}
-ul.card-stacks li.title h2 {
-  font-weight: 700;
-}
-ul.card-stacks li.stack {
-  position: absolute;
-  left: 0px;
-  transition: all 0.4s cubic-bezier(0.63, 0.15, 0.03, 1.02);
-}
-ul.card-stacks li.stack ul.cards-down {
-  position: relative;
-  margin: 0 0 20px;
-  padding: 20px;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-ul.card-stacks li.stack ul.cards-down li.card {
-  transition: all 0.4s cubic-bezier(0.63, 0.15, 0.03, 1.22);
-  left: 0px;
-  transition-delay: 0.4s;
-  background: #FFF;
-  overflow: hidden;
-  height: 270px;
-  width: 200px;
-  border-radius: 10px;
-  position: absolute;
-  top: 0px;
-  box-shadow: 1px 2px 2px 0 #aaa;
-}
-ul.card-stacks li.stack ul.cards-down li.card img {
-  max-width: 100%;
-  height: auto;
-}
-ul.card-stacks li.stack ul.cards-down li.card div.content {
-  padding: 5px 10px;
-}
-ul.card-stacks li.stack ul.cards-down li.card.card-1 {
-  z-index: 10;
-  -webkit-transform: rotateZ(-2deg);
-          transform: rotateZ(-2deg);
-}
-ul.card-stacks li.stack ul.cards-down li.card.card-2 {
-  z-index: 9;
-  -webkit-transform: rotateZ(-7deg);
-          transform: rotateZ(-7deg);
-}
-ul.card-stacks li.stack ul.cards-down li.card.card-3 {
-  z-index: 8;
-  -webkit-transform: rotateZ(5deg);
-          transform: rotateZ(5deg);
-}
-ul.card-stacks.transition li.stack.stack-1 {
-  left: 0px;
-}
-ul.card-stacks.transition li.stack.stack-2 {
-  left: 220px;
-}
-ul.card-stacks.transition li.stack.stack-3 {
-  left: 440px;
-}
-ul.card-stacks.transition li.stack.stack-4 {
-  left: 660px;
-}
-ul.card-stacks.transition li.stack.stack-5 {
-  left: 800px;
-}
-ul.card-stacks.transition li.stack ul.cards-down li.card {
-  -webkit-transform: rotateZ(0deg);
-          transform: rotateZ(0deg);
-}
-ul.card-stacks.transition li.stack ul.cards-down li.card.card-1 {
-  top: 640px;
-}
-ul.card-stacks.transition li.stack ul.cards-down li.card.card-2 {
-  top: 350px;
-}
-ul.card-stacks.transition li.stack ul.cards-down li.card.card-3 {
-  top: 60px;
-}
-
-ul.cards-split {
-  width: 660px;
-  height: 280px;
-  list-style-type: none;
-  position: relative;
-  margin: 0 auto 20px;
-  padding: 20px;
-  cursor: pointer;
-}
-ul.cards-split li.title {
-  margin: 0 0 20px;
-}
-ul.cards-split li.title h2 {
-  font-weight: 700;
-}
-ul.cards-split li.card {
-  background: #FFF;
-  overflow: hidden;
-  height: 200px;
-  width: 200px;
-  border-radius: 10px;
-  position: absolute;
-  left: 220px;
-  box-shadow: 1px 2px 2px 0 #aaa;
-  transition: all 0.4s cubic-bezier(0.63, 0.15, 0.03, 1.12);
-}
-ul.cards-split li.card img {
-  max-width: 100%;
-  height: auto;
-}
-ul.cards-split li.card div.content {
-  padding: 5px 10px;
-}
-ul.cards-split li.card.card-1 {
-  z-index: 10;
-  -webkit-transform: rotateZ(-2deg);
-          transform: rotateZ(-2deg);
-}
-ul.cards-split li.card.card-2 {
-  z-index: 9;
-  -webkit-transform: rotateZ(-7deg);
-          transform: rotateZ(-7deg);
-  transition-delay: 0.05s;
-}
-ul.cards-split li.card.card-3 {
-  z-index: 8;
-  -webkit-transform: rotateZ(5deg);
-          transform: rotateZ(5deg);
-  transition-delay: 0.1s;
-}
-ul.cards-split.transition li.card {
-  -webkit-transform: rotateZ(0deg);
-          transform: rotateZ(0deg);
-}
-ul.cards-split.transition li.card.card-1 {
-  left: 0px;
-}
-ul.cards-split.transition li.card.card-2 {
-  left: 440px;
-}
-ul.cards-split.transition li.card.card-3 {
-  left: 220px;
-}
-
-ul.cards-split-delay {
-  width: 660px;
-  height: 280px;
-  list-style-type: none;
-  position: relative;
-  margin: 0 auto 20px;
-  padding: 20px;
-  cursor: pointer;
-}
-ul.cards-split-delay li.title {
-  margin: 0 0 20px;
-}
-ul.cards-split-delay li.title h2 {
-  font-weight: 700;
-}
-ul.cards-split-delay li.card {
-  background: #FFF;
-  overflow: hidden;
-  height: 200px;
-  width: 200px;
-  border-radius: 10px;
-  position: absolute;
-  left: 220px;
-  box-shadow: 1px 2px 2px 0 #aaa;
-  transition: all 0.4s cubic-bezier(0.63, 0.15, 0.03, 1.12);
-}
-ul.cards-split-delay li.card img {
-  max-width: 100%;
-  height: auto;
-}
-ul.cards-split-delay li.card div.content {
-  padding: 5px 10px;
-}
-ul.cards-split-delay li.card.card-1 {
-  z-index: 10;
-  -webkit-transform: rotateZ(-2deg);
-          transform: rotateZ(-2deg);
-}
-ul.cards-split-delay li.card.card-2 {
-  z-index: 9;
-  -webkit-transform: rotateZ(-7deg);
-          transform: rotateZ(-7deg);
-  transition-delay: 0.6s;
-}
-ul.cards-split-delay li.card.card-3 {
-  z-index: 8;
-  -webkit-transform: rotateZ(5deg);
-          transform: rotateZ(5deg);
-  transition-delay: 0s;
-}
-ul.cards-split-delay.transition li.card {
-  -webkit-transform: rotateZ(0deg);
-          transform: rotateZ(0deg);
-}
-ul.cards-split-delay.transition li.card.card-1 {
-  left: 0px;
-}
-ul.cards-split-delay.transition li.card.card-2 {
-  left: 440px;
-}
-ul.cards-split-delay.transition li.card.card-3 {
-  left: 220px;
-  transition-delay: 0.6s;
-}
-
-
-
-
-
-</style>
 
 
 
@@ -480,12 +53,138 @@ ul.cards-split-delay.transition li.card.card-3 {
 </head>
 <body>
 
+<!--
+
+    <script type="text/javascript" src="./js/particles.min.js"></script>
+<script type="text/javascript" src="js/app.trial.js"></script>
+<link rel="stylesheet" type="text/css" href="css/particle.trial.css">
+-->
+
+
+<!--HEADER-->
+
+    <div id="navbar">
+        <div id="nav">
+            <div>Sponsors</div>
+            <div><img src="oculus-favicon.png"></div>
+            <div>Events</div>
+        </div>
+
+       
+    </div>
+
+
+<!--footer-->
+
+
+<div class="csstransforms">
+  <button class="cn-button" id="cn-button">EVENTS</button>
+
+  <div class="cn-wrapper" id="cn-wrapper">
+    <ul>
+      <li>
+      	
+  	<img src="images/icon7.png" height="20px" width="20px" style="z-index: 20">
 
 
 
 
-<div id="technical">
-<ul class="card-stacks">
+
+      </li>
+      <li><a href="#"><span class=""></span></a></li>
+      <li><a href="#"><span class=""></span></a></li>
+      <li><a href="#"><span class="">
+      	
+      </span></a></li>
+  
+    </ul>
+  </div>
+  <div id="cn-overlay" class="cn-overlay"></div>
+</div>
+
+
+<script>
+	
+
+(function () {
+  var button = document.getElementById('cn-button'),
+      wrapper = document.getElementById('cn-wrapper'),
+      overlay = document.getElementById('cn-overlay');
+
+  var open = false;
+  
+  button.addEventListener('click', handler, false);
+  wrapper.addEventListener('click', cnhandle, false);
+  
+  function cnhandle(e) {
+    e.stopPropagation();
+  }
+  
+  function handler(e) {
+    if (!e) var e = window.event;
+    e.stopPropagation();
+    
+    if(!open) {
+      openNav();
+    } else {
+      closeNav();
+    }
+  }
+  
+  function openNav() {
+    open = true;
+    button.innerHTML = 'CLOSE';
+    overlay.classList.add('on-overlay');
+    wrapper.classList.add('opened-nav');
+  }
+  
+  function closeNav() {
+    open = false;
+    button.innerHTML = 'EVENTS';
+    overlay.classList.remove('on-overlay');
+    wrapper.classList.remove('opened-nav');
+  }
+  
+  document.addEventListener('click', closeNav);
+})();
+
+
+
+
+
+</script>
+
+
+
+
+
+-
+
+
+
+
+
+
+
+<!--EVENT -SECTIONS-->
+
+
+	
+	<div class="technical">
+		<div class="heading">
+	<p data-heading="Slide">TECHNICAL <img src="images/icon7.png" style="height: 105px; width: 105px; left: 30px; ;"></p>
+
+
+</div>
+
+
+
+
+
+
+		<div></div>
+
+		<ul class="card-stacks">
   
   <li class="stack stack-1">
     <ul class="cards-down">
@@ -543,10 +242,6 @@ ul.cards-split-delay.transition li.card.card-3 {
       </div></div>
    
 </li>
-
-
-
-
     </ul>
   </li>
   <li class="stack stack-2">
@@ -629,40 +324,6 @@ ul.cards-split-delay.transition li.card.card-3 {
       </div></div>
    
 </li>
-      <li class="card card-2"><div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
-   
-      
-      <img class="card-image" src="images/zumba4.jpeg">
-      
-      <div class="card-footer">
-      <p>
-        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-        <h8>98%</h8>
-      </p>
-        <h3 class="card-title">CODATRON </h3>
-         
-        <p class="card-text"></p>
-       
-      </div></div>
-   
-</li>
-      <li class="card card-2"><div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
-   
-      
-      <img class="card-image" src="images/zumba4.jpeg">
-      
-      <div class="card-footer">
-      <p>
-        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-        <h8>98%</h8>
-      </p>
-        <h3 class="card-title">CODATRON </h3>
-         
-        <p class="card-text"></p>
-       
-      </div></div>
-   
-</li>
 
 
       <li class="card card-2"><div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
@@ -703,9 +364,6 @@ ul.cards-split-delay.transition li.card.card-3 {
 </li>
 
     </ul>
-  </li>
-
-
 
 
 <li class="stack stack-4">
@@ -770,16 +428,29 @@ ul.cards-split-delay.transition li.card.card-3 {
     </ul>
   </li>
 
-
-
+  </li>
 </ul>
 
+
+
+
+<br><br><br><br>
+
+
+
+
+
+	</div>
+
+
+	<div class="cultural">
+			<div class="technical">
+		<div class="heading">
+	<p data-heading="Slide">CULTURAL</p>
 </div>
 
 
-<div id="cultural">
-
-<ul class="card-stacks">
+		<ul class="card-stacks">
   
   <li class="stack stack-1">
     <ul class="cards-down">
@@ -859,40 +530,6 @@ ul.cards-split-delay.transition li.card.card-3 {
    
 </li>
 
-      <li class="card card-2"><div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
-   
-      
-      <img class="card-image" src="images/zumba4.jpeg">
-      
-      <div class="card-footer">
-      <p>
-        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-        <h8>98%</h8>
-      </p>
-        <h3 class="card-title">CODATRON </h3>
-         
-        <p class="card-text"></p>
-       
-      </div></div>
-   
-</li>
-      <li class="card card-2"><div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
-   
-      
-      <img class="card-image" src="images/zumba4.jpeg">
-      
-      <div class="card-footer">
-      <p>
-        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-        <h8>98%</h8>
-      </p>
-        <h3 class="card-title">CODATRON </h3>
-         
-        <p class="card-text"></p>
-       
-      </div></div>
-   
-</li>
 
       <li class="card card-2"><div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
    
@@ -972,6 +609,136 @@ ul.cards-split-delay.transition li.card.card-3 {
       </div></div>
    
 </li>
+
+
+      <li class="card card-3"><div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+   
+      
+      <img class="card-image" src="images/zumba4.jpeg">
+      
+      <div class="card-footer">
+      <p>
+        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
+        <h8>98%</h8>
+      </p>
+        <h3 class="card-title">CODATRON </h3>
+         
+        <p class="card-text"></p>
+       
+      </div></div>
+   
+</li>
+
+    </ul>
+  </li>
+</ul>
+
+
+<script>
+  
+jQuery(document).ready(function($){
+  $('.heading').on('click', function(){
+    $("ul.card-stacks").toggleClass('transition');
+  });
+    
+});
+ 
+</script>
+
+
+<br><br><br><br>
+
+		
+	</div>
+
+
+	<div class="literary">
+		<div class="technical">
+		<div class="heading">
+	<p data-heading="Slide">LITERARY</p>
+</div>
+
+		<ul class="card-stacks">
+  
+  <li class="stack stack-1">
+    <ul class="cards-down">
+ <li class="card card-1"><div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+   
+      
+      <img class="card-image" src="images/zumba4.jpeg">
+      
+      <div class="card-footer">
+      <p>
+        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
+        <h8>98%</h8>
+      </p>
+        <h3 class="card-title">CODATRON </h3>
+         
+        <p class="card-text"></p>
+       
+      </div></div>
+   
+</li>
+
+
+<li class="card card-2"><div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+   
+      
+      <img class="card-image" src="images/zumba4.jpeg">
+      
+      <div class="card-footer">
+      <p>
+        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
+        <h8>98%</h8>
+      </p>
+        <h3 class="card-title">CODATRON </h3>
+         
+        <p class="card-text"></p>
+       
+      </div></div>
+   
+</li>
+
+<li class="card card-3"><div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+   
+      
+      <img class="card-image" src="images/zumba4.jpeg">
+      
+      <div class="card-footer">
+      <p>
+        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
+        <h8>98%</h8>
+      </p>
+        <h3 class="card-title">CODATRON </h3>
+         
+        <p class="card-text"></p>
+       
+      </div></div>
+   
+</li>
+    </ul>
+  </li>
+  <li class="stack stack-2">
+    <ul class="cards-down">
+      <li class="card card-1"><div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+   
+      
+      <img class="card-image" src="images/zumba4.jpeg">
+      
+      <div class="card-footer">
+      <p>
+        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
+        <h8>98%</h8>
+      </p>
+        <h3 class="card-title">CODATRON </h3>
+         
+        <p class="card-text"></p>
+       
+      </div></div>
+   
+</li>
+
+
       <li class="card card-2"><div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
    
       
@@ -989,6 +756,50 @@ ul.cards-split-delay.transition li.card.card-3 {
       </div></div>
    
 </li>
+
+
+      <li class="card card-3"><div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+   
+      
+      <img class="card-image" src="images/zumba4.jpeg">
+      
+      <div class="card-footer">
+      <p>
+        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
+        <h8>98%</h8>
+      </p>
+        <h3 class="card-title">CODATRON </h3>
+         
+        <p class="card-text"></p>
+       
+      </div></div>
+   
+</li>
+
+
+    </ul>
+  </li>
+  <li class="stack stack-3">
+    <ul class="cards-down">
+      <li class="card card-1"><div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+   
+      
+      <img class="card-image" src="images/zumba4.jpeg">
+      
+      <div class="card-footer">
+      <p>
+        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
+        <h8>98%</h8>
+      </p>
+        <h3 class="card-title">CODATRON </h3>
+         
+        <p class="card-text"></p>
+       
+      </div></div>
+   
+</li>
+
+
       <li class="card card-2"><div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
    
       
@@ -1030,7 +841,212 @@ ul.cards-split-delay.transition li.card.card-3 {
   </li>
 </ul>
 
+
+
+	</div>
+<br><br><br><br>
+
+	<div class="fun" >
+		
+		<div class="technical">
+		<div class="heading">
+	<p data-heading="Slide">FUN</p>
 </div>
+
+		<ul class="card-stacks">
+  
+  <li class="stack stack-1">
+    <ul class="cards-down">
+ <li class="card card-1"><div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+   
+      
+      <img class="card-image" src="images/zumba4.jpeg">
+      
+      <div class="card-footer">
+      <p>
+        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
+        <h8>98%</h8>
+      </p>
+        <h3 class="card-title">CODATRON </h3>
+         
+        <p class="card-text"></p>
+       
+      </div></div>
+   
+</li>
+
+
+<li class="card card-2"><div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+   
+      
+      <img class="card-image" src="images/zumba4.jpeg">
+      
+      <div class="card-footer">
+      <p>
+        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
+        <h8>98%</h8>
+      </p>
+        <h3 class="card-title">CODATRON </h3>
+         
+        <p class="card-text"></p>
+       
+      </div></div>
+   
+</li>
+
+<li class="card card-3"><div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+   
+      
+      <img class="card-image" src="images/zumba4.jpeg">
+      
+      <div class="card-footer">
+      <p>
+        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
+        <h8>98%</h8>
+      </p>
+        <h3 class="card-title">CODATRON </h3>
+         
+        <p class="card-text"></p>
+       
+      </div></div>
+   
+</li>
+    </ul>
+  </li>
+  <li class="stack stack-2">
+    <ul class="cards-down">
+      <li class="card card-1"><div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+   
+      
+      <img class="card-image" src="images/zumba4.jpeg">
+      
+      <div class="card-footer">
+      <p>
+        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
+        <h8>98%</h8>
+      </p>
+        <h3 class="card-title">CODATRON </h3>
+         
+        <p class="card-text"></p>
+       
+      </div></div>
+   
+</li>
+
+
+      <li class="card card-2"><div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+   
+      
+      <img class="card-image" src="images/zumba4.jpeg">
+      
+      <div class="card-footer">
+      <p>
+        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
+        <h8>98%</h8>
+      </p>
+        <h3 class="card-title">CODATRON </h3>
+         
+        <p class="card-text"></p>
+       
+      </div></div>
+   
+</li>
+
+
+      <li class="card card-3"><div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+   
+      
+      <img class="card-image" src="images/zumba4.jpeg">
+      
+      <div class="card-footer">
+      <p>
+        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
+        <h8>98%</h8>
+      </p>
+        <h3 class="card-title">CODATRON </h3>
+         
+        <p class="card-text"></p>
+       
+      </div></div>
+   
+</li>
+
+
+    </ul>
+  </li>
+  <li class="stack stack-3">
+    <ul class="cards-down">
+      <li class="card card-1"><div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+   
+      
+      <img class="card-image" src="images/zumba4.jpeg">
+      
+      <div class="card-footer">
+      <p>
+        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
+        <h8>98%</h8>
+      </p>
+        <h3 class="card-title">CODATRON </h3>
+         
+        <p class="card-text"></p>
+       
+      </div></div>
+   
+</li>
+
+
+      <li class="card card-2"><div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+   
+      
+      <img class="card-image" src="images/zumba4.jpeg">
+      
+      <div class="card-footer">
+      <p>
+        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
+        <h8>98%</h8>
+      </p>
+        <h3 class="card-title">CODATRON </h3>
+         
+        <p class="card-text"></p>
+       
+      </div></div>
+   
+</li>
+
+
+      <li class="card card-3"><div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+   
+      
+      <img class="card-image" src="images/zumba4.jpeg">
+      
+      <div class="card-footer">
+      <p>
+        <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
+        <h8>98%</h8>
+      </p>
+        <h3 class="card-title">CODATRON </h3>
+         
+        <p class="card-text"></p>
+       
+      </div></div>
+   
+</li>
+
+    </ul>
+  </li>
+</ul>
+
+
+
+
+
+	</div>
+
+
+
+
+
+
 
 
 
@@ -1040,8 +1056,8 @@ ul.cards-split-delay.transition li.card.card-3 {
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLabel">EVENT NAME</h3>
+      <div class="modal-header" style="height: 60px;">
+        <h2 class="modal-title" id="exampleModalLabel">EVENT NAME</h2>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -1049,17 +1065,17 @@ ul.cards-split-delay.transition li.card.card-3 {
       <div class="modal-body">
           <div class="row">
           <div class="col-8 col-sm-6">
-            <p>
-            <img alt="event_img" src="images/zumba4.jpeg"></img>
+          	<p>
+          	<img alt="event_img" src="images/zumba4.jpeg" style="height: 80% ;width: 80%"></img>
           </p>
             <h5>Contact:</h5>
             <ul>
-              <li>Person_1_name   : 9000000000000</li>
-              <li>Person_2_name   : 9000000000000</li>
+            	<li>Person_1_name   : 9000000000000</li>
+            	<li>Person_2_name   : 9000000000000</li>
             </ul>
           </div>
           <div class="col-4 col-sm-6">
-            <h4>Description</h4>
+          	<h4>Description</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
             <p>Registration fee: 10000000</p>
@@ -1069,48 +1085,13 @@ ul.cards-split-delay.transition li.card.card-3 {
           </div>
         </div>
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer"  style="height: 40px">
        
         <button type="button" class="btn btn-primary">Register!</button>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-<h1 id="text">TECHNICAL
-
-</h1>
-
-
-
-
-<script>
-  
-jQuery(document).ready(function($){
-  $('#event_button').on('click', function(){
-    $("ul.card-stacks").toggleClass('transition');
-  });
-    
-});
- 
-</script>
-
-
-<!--event_button-->
-
-<div id="event_button" class="event_click_button">
-  <h1>click here</h1>
-
-
-</div>
-
-
-
 
 
 
