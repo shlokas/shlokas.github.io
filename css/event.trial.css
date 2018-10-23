@@ -63,21 +63,21 @@ body::after {
 
 /*footer*/
 
-/* 
+/*
 FancyCSS
-FancyCSS is a project by Moaaz Sidat to learn more some of the lesser known features, tricks and properties of CSS. 
+FancyCSS is a project by Moaaz Sidat to learn more some of the lesser known features, tricks and properties of CSS.
 
-Tutorial source: 
+Tutorial source:
 https://tympanus.net/codrops/2013/08/09/building-a-circular-navigation-with-css-transforms/
 */
 
-* {
+/* * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     list-style: none;
     position: relative
-}
+} */
 
 .cn-wrapper {
     font-size: 1.3em;
@@ -233,11 +233,11 @@ https://tympanus.net/codrops/2013/08/09/building-a-circular-navigation-with-css-
 
 /*cards*/
 
-*,
+/* *,
 *:before,
 *:after {
     box-sizing: border-box;
-}
+} */
 
 /* ul.cards {
     width: 880px;
@@ -247,7 +247,7 @@ https://tympanus.net/codrops/2013/08/09/building-a-circular-navigation-with-css-
     position: relative;
     padding: 20px 0;
     cursor: pointer;
-} 
+}
 
 ul.cards li.title {
     margin: 0 0 20px;
@@ -305,7 +305,7 @@ ul.cards li.card.card-3 {
     -webkit-transform: rotateZ(5deg);
     transform: rotateZ(5deg);
     transition-delay: 0.1s;
-} 
+}
 
 ul.cards.transition li.card {
     -webkit-transform: rotateZ(80deg);
@@ -345,7 +345,7 @@ ul.card-stacks li.title h2 {
     position: absolute;
     left: 0px;
     transition: all 0.1s cubic-bezier(0.63, 0.15, 0.03, 1.02);
-} 
+}
 
  ul.card-stacks li.stack ul.cards-down {
     position: relative;
@@ -656,4 +656,52 @@ ul.card-stacks.transition li.card {
     transform: translateY(-10vh);
     /* left: 20px; */
     font-size: 4rem;
+}
+
+.event-holder {
+  display: none;
+}
+
+.events-logo {
+  background: white;
+    width: 25vw;
+    position: absolute;
+    height: 25vw;
+    top: calc(50vh - 12.5vw);
+    left: 37.5vw;
+    border-radius: 50%;
+}
+
+.events-landing {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 10;
+}
+
+.landing-performing {
+  width: 50%;
+  height:50%;
+  background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+}
+
+.landing-tech {
+  width: 50%;
+  height:50%;
+  background: linear-gradient(to right, #43e97b, #38f9d7);
+}
+
+.landing-literary {
+  width: 50%;
+  height:50%;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+}
+
+.landing-fun {
+  width: 50%;
+  height:50%;
+  background: linear-gradient(to right, #f093fb, #f5576c);
 }
