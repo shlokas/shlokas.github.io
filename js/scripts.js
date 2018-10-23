@@ -33,10 +33,10 @@ function getTimeRemaining(endtime) {
 
 function updateGroup(group, n, flip) {
     var digh = $('.hundred' + group);
-    var nh = n/10;
+    var nh = n / 10;
     var digit1 = $('.ten' + group);
     var digit2 = $('.' + group);
-    var numh = Math.floor(n/100);
+    var numh = Math.floor(n / 100);
     var num1 = Math.floor(nh % 10);
     var num2 = Math.floor(n % 10);
     if (digh.attr('data-num') != numh) {
@@ -70,3 +70,18 @@ $(document).ready(function () {
     }, 1000);
 
 });
+
+var vid_over;
+$(document).ready(function () {
+    vid_over = document.getElementById("videoOverlay");
+});
+
+
+function hideOverlay() {
+    // console.log(vid_over.style.bottom);
+    vid_over.style.bottom = "100%";
+}
+
+function showOverlay() {
+    vid_over.style.bottom = "0";
+}
