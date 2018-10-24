@@ -474,11 +474,12 @@ a.effect-shine:hover {
     /* background-color: #4165e1 !important; */
     padding: 30px;
     font-family: 'segoe ui';
-    background: linear-gradient(to left, #00bbff, #007eff) !important;
-    /* background-size: 40% 80%;
+    background: url(../images/brain.png), linear-gradient(to left, #00bbff, #007eff);
+    /* background: url(../images/brain.png), linear-gradient(to right, #e0c3fc, #8ec5fc); */
+    background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(../images/brain.png);
-    background-position: center; */
+    /* background-image: url(../images/brain.png); */
+    background-position: center;
 }
 
 #section2::after {

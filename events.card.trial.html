@@ -4,26 +4,15 @@
 <head>
   <title></title>
 
-
-  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"    crossorigin="anonymous"></script> -->
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" -->
-    <!-- crossorigin="anonymous"> -->
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="stylesheet" type="text/css" href="css/event.trial.css">
-  <!-- <script type="text/javascript" src="js/particle.trial.js"></script> -->
-
-
-  <!--librarires-->
 
   <style>
     @font-face {
@@ -45,51 +34,19 @@
 <body>
   <script>
 
-    $(document).ready(function () {
-      $('.technical .heading').on('click', function () {
-        $(".heading").removeClass('moveheading');
-        $('.technical .heading').toggleClass("moveheading");
-        $("ul.card-stacks").removeClass('transition');
-        $(".technical ul.card-stacks").toggleClass('transition');
-      });
+    function navtransition(classname) {
+      $(".heading").removeClass('moveheading');
+      $(classname + '.heading').toggleClass("moveheading");
+      $("ul.card-stacks").removeClass('transition');
+      $(classname + " ul.card-stacks").toggleClass('transition');
 
-      $('.cultural .heading').on('click', function () {
-        $(".heading").removeClass('moveheading');
-        $('.cultural .heading').toggleClass("moveheading");
-        $("ul.card-stacks").removeClass('transition');
-        $(".cultural ul.card-stacks").toggleClass('transition');
-      });
+    }
 
-      $('.literary .heading').on('click', function () {
-        $(".heading").removeClass('moveheading');
-
-        $('.literary .heading').toggleClass("moveheading");
-        $("ul.card-stacks").removeClass('transition');
-        $(".literary ul.card-stacks").toggleClass('transition');
-      });
-
-      $('.fun .heading').on('click', function () {
-        $(".heading").removeClass('moveheading');
-
-        $('.fun .heading').toggleClass("moveheading");
-        $("ul.card-stacks").removeClass('transition');
-        $(".fun ul.card-stacks").toggleClass('transition');
-      });
-
-    });
 
   </script>
 
-  <!--
-
-    <script type="text/javascript" src="./js/particles.min.js"></script>
-<script type="text/javascript" src="js/app.trial.js"></script>
-<link rel="stylesheet" type="text/css" href="css/particle.trial.css">
--->
-
-
   <!--HEADER-->
-  <div class="bottom-nav"></div>
+  <div id="particles-js"></div>
 
   <div id="videoOverlay" class="video-overlay">
     <iframe width="80%" height="70%" style="margin-top: 15vh" src="https://www.youtube.com/embed/VlyZrYF5Emk">
@@ -129,285 +86,279 @@
     <a href="#"><i class="fa fa-instagram"></i> </a>
   </div>
 
-
-  <!--footer-->
-
-
-  <!-- <div class="csstransforms">
-    <button class="cn-button" id="cn-button">EVENTS</button>
-
-    <div class="cn-wrapper" id="cn-wrapper">
-      <ul>
-        <li>
-
-          <img src="images/icon7.png" height="20px" width="20px" style="z-index: 20">
-
-
-
-
-
-        </li>
-        <li><a href="#"><span class=""></span></a></li>
-        <li><a href="#"><span class=""></span></a></li>
-        <li><a href="#"><span class="">
-
-            </span></a></li>
-
-      </ul>
-    </div>
-    <div id="cn-overlay" class="cn-overlay"></div>
-  </div> -->
-
-
-  <!-- <script>
-
-
-    (function () {
-      var button = document.getElementById('cn-button'),
-        wrapper = document.getElementById('cn-wrapper'),
-        overlay = document.getElementById('cn-overlay');
-
-      var open = false;
-
-      button.addEventListener('click', handler, false);
-      wrapper.addEventListener('click', cnhandle, false);
-
-      function cnhandle(e) {
-        e.stopPropagation();
-      }
-
-      function handler(e) {
-        if (!e) var e = window.event;
-        e.stopPropagation();
-
-        if (!open) {
-          openNav();
-        } else {
-          closeNav();
-        }
-      }
-
-      function openNav() {
-        open = true;
-        button.innerHTML = 'CLOSE';
-        overlay.classList.add('on-overlay');
-        wrapper.classList.add('opened-nav');
-      }
-
-      function closeNav() {
-        open = false;
-        button.innerHTML = 'EVENTS';
-        overlay.classList.remove('on-overlay');
-        wrapper.classList.remove('opened-nav');
-      }
-
-      document.addEventListener('click', closeNav);
-    })();
-
-  </script> -->
-
-
-  <div id="particles-js"></div>
-
   <!--EVENT -SECTIONS-->
 
-<div class="events-landing">
-  <div class="landing-performing">
-  </div>
-  <div class="landing-tech">
-  </div>
-  <div class="landing-literary">
-  </div>
-  <div class="landing-fun">
-  </div>
-  <div class="events-logo"></div>
-</div>
+  <script>
 
-<div class="event-holder">
+    // events cycle through images
 
-  <div class="technical">
-    <div class="heading">
+    function cycleBackgrounds1() {
+      var index = 0;
+      $image1 = $('.slide');
+      setInterval(function () {
+        index = index + 1 < $image1.length ? index + 1 : 0;
+        $image1.eq(index).addClass('show');
+        $image1.eq(index - 1).removeClass('show');
+      }, 2300);
+    };
+
+    function cycleBackgrounds2() {
+      var index = 0;
+      $image2 = $('.slide2');
+      setInterval(function () {
+        index = index + 1 < $image2.length ? index + 1 : 0;
+        $image2.eq(index).addClass('show');
+        $image2.eq(index - 1).removeClass('show');
+      }, 3000);
+    };
+
+    function cycleBackgrounds3() {
+      var index = 0;
+      $image3 = $('.slide3');
+      setInterval(function () {
+        index = index + 1 < $image3.length ? index + 1 : 0;
+        $image3.eq(index).addClass('show');
+        $image3.eq(index - 1).removeClass('show');
+      }, 3700);
+    };
+
+    function cycleBackgrounds4() {
+      var index = 0;
+      $image4 = $('.slide4');
+      setInterval(function () {
+        index = index + 1 < $image4.length ? index + 1 : 0;
+        $image4.eq(index).addClass('show');
+        $image4.eq(index - 1).removeClass('show');
+      }, 4200);
+    };
+
+
+
+    $(function () {
+      cycleBackgrounds1();
+      cycleBackgrounds2();
+      cycleBackgrounds3();
+      cycleBackgrounds4();
+    });
+
+    $(document).ready(function () {
+      $('.events-landing span').on('click', function () {
+        $('.events-landing').css({ "opacity": "0", "z-index": "-5" });
+        $('.event-holder').css({ "opacity": "1", "z-index": "10" });
+      });
+    });
+  </script>
+
+  <div class="events-landing">
+
+    <div class="landing-tech" onclick="navtransition('.technical')">
+      <div class="event-category"><span>TECHNICAL</span></div>
+      <div style="background-image: url('./images/vsm02.png')" class="slide2 "></div>
+      <div style="background-image: url('./images/rubiks02.png')" class="slide2 show"></div>
+      <div style="background-image: url('./images/robowars02.png')" class="slide2"></div>
+      <div style="background-image: url('./images/TPP02.png')" class="slide2"></div>
+      <div style="background-image: url('./images/aw_coda_sq.png')" class="slide2"></div>
+
+    </div>
+
+    <div class="landing-performing" onclick="navtransition('.cultural')">
+      <div class="event-category"><span>PERFORMING ARTS</span></div>
+
+      <div style="background-image: url('./images/aw_sargam_sq.png')" class="slide "></div>
+      <div style="background-image: url('./images/aw_streetd_sq.png')" class="slide show"></div>
+      <div style="background-image: url('./images/zumba02.png')" class="slide"></div>
+      <div style="background-image: url('./images/aw_wob_sq.png')" class="slide"></div>
+      <div style="background-image: url('./images/aej02.png')" class="slide"></div>
+
+    </div>
+
+    <div class="landing-fun" onclick="navtransition('.fun')">
+      <div class="event-category"><span>FUN EVENTS</span></div>
+
+      <div style="background-image: url('./images/aw_carnival_sq.png')" class="slide4 "></div>
+      <div style="background-image: url('./images/ipl02.png')" class="slide4 show"></div>
+      <div style="background-image: url('./images/concerts02.png')" class="slide4"></div>
+      <div style="background-image: url('./images/LANgaming02.png')" class="slide4"></div>
+      <div style="background-image: url('./images/hog02.png')" class="slide4"></div>
+
+    </div>
+
+    <div class="landing-literary" onclick="navtransition('.literary')">
+      <div class="event-category"><span>LITERARY ARTS</span></div>
+
+      <div style="background-image: url('./images/jam02.png')" class="slide3 "></div>
+      <div style="background-image: url('./images/TTTales02.png')" class="slide3 show"></div>
+      <div style="background-image: url('./images/mun-poster.jpg')" class="slide3"></div>
+    </div>
+
+    <div class="events-logo" onclick="navtransition('.technical')"></div>
+  </div>
+
+  <div class="event-holder">
+
+    <div class="technical heading" onclick="navtransition('.technical')">
       <p>
         <img src="images/icon7.png">&nbsp;&nbsp;&nbsp;TECHNICAL
       </p>
     </div>
 
-    <ul class="card-stacks">
-
-      <li class="card">
-        <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
-          <img class="card-image" src="images/vsm02.png">
-          <div class="card-footer">
-            <!-- <p>
-                  <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-                  <h8>98%</h8>
-                </p> -->
-            <p class="card-title">VIRTUAL STOCK MARKET </p>
-            <p class="card-text"></p>
-          </div>
-        </div>
-      </li>
-
-      <li class="card">
-        <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
-          <img class="card-image" src="images/rubiks02.png">
-          <div class="card-footer">
-            <!-- <p>
-                  <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-                  <h8>98%</h8>
-                </p> -->
-            <p class="card-title">RUBIK'S CUBE </p>
-            <p class="card-text"></p>
-          </div>
-        </div>
-      </li>
-
-
-
-      <li class="card">
-        <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
-          <img class="card-image" src="images/robowars02.png">
-          <div class="card-footer">
-            <!-- <p>
-                  <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-                  <h8>98%</h8>
-                </p> -->
-            <p class="card-title">ROBOWARS </p>
-            <p class="card-text"></p>
-          </div>
-        </div>
-      </li>
-
-      <li class="card">
-        <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
-          <img class="card-image" src="images/TPP02.png">
-          <div class="card-footer">
-            <!-- <p>
-                  <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-                  <h8>98%</h8>
-                </p> -->
-            <p class="card-title">TECHNICAL PAPER PRESENTATION </p>
-            <p class="card-text"></p>
-          </div>
-        </div>
-      </li>
-
-
-
-      <li class="card">
-        <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
-          <img class="card-image" src="images/aw_coda_sq.png">
-          <div class="card-footer">
-            <!-- <p>
-                  <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-                  <h8>98%</h8>
-                </p> -->
-            <p class="card-title">CODATRON </p>
-            <p class="card-text"></p>
-          </div>
-        </div>
-      </li>
-
-    </ul>
-
-  </div>
-  <br><br>
-
-  <div class="cultural">
-    <div class="heading">
+    <div class="cultural heading" onclick="navtransition('.cultural')">
       <p data-heading="Slide"><img src="images/icon4.png">&nbsp;&nbsp;&nbsp;PERFORMING ARTS</p>
     </div>
 
 
-    <ul class="card-stacks">
+    <div class="fun heading" onclick="navtransition('.fun')">
+      <p data-heading="Slide"><img src="images/icon2.png">&nbsp;&nbsp;&nbsp;FUN</p>
+    </div>
 
-      <li class="card">
-        <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
-          <img class="card-image" src="images/aw_sargam_sq.png">
+    <div class="literary heading" onclick="navtransition('.literary')">
+      <p data-heading="Slide"><img src="images/icon1.png">&nbsp;&nbsp;&nbsp;LITERARY ARTS</p>
+    </div>
 
-          <div class="card-footer">
-            <!-- <p>
-                    <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-                    <h8>98%</h8>
-                  </p> -->
-            <p class="card-title">SARGAM</p>
 
-            <p class="card-text"></p>
+    <div class="technical">
 
+      <ul class="card-stacks">
+
+        <li class="card">
+          <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <img class="card-image" src="images/vsm02.png">
+            <div class="card-footer">
+
+              <p class="card-title">VIRTUAL STOCK MARKET </p>
+              <p class="card-text"></p>
+            </div>
           </div>
-        </div>
+        </li>
 
-      </li>
+        <li class="card">
+          <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <img class="card-image" src="images/rubiks02.png">
+            <div class="card-footer">
 
-      <li class="card">
-        <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
-
-
-          <img class="card-image" src="images/aw_streetd_sq.png">
-
-          <div class="card-footer">
-            <!-- <p>
-                    <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-                    <h8>98%</h8>
-                  </p> -->
-            <p class="card-title">STREET DANCE</p>
-
-            <p class="card-text"></p>
-
+              <p class="card-title">RUBIK'S CUBE </p>
+              <p class="card-text"></p>
+            </div>
           </div>
-        </div>
-
-      </li>
+        </li>
 
 
-      <li class="card">
-        <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
-          <img class="card-image" src="images/zumba02.png">
 
-          <div class="card-footer">
-            <!-- <p>
-                    <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-                    <h8>98%</h8>
-                  </p> -->
-            <p class="card-title">ZUMBA</p>
+        <li class="card">
+          <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <img class="card-image" src="images/robowars02.png">
+            <div class="card-footer">
 
-            <p class="card-text"></p>
-
+              <p class="card-title">ROBOWARS </p>
+              <p class="card-text"></p>
+            </div>
           </div>
-        </div>
+        </li>
 
-      </li>
+        <li class="card">
+          <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <img class="card-image" src="images/TPP02.png">
+            <div class="card-footer">
 
-
-
-
-      <li class="card">
-        <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
-          <img class="card-image" src="images/aw_wob_sq.png">
-
-          <div class="card-footer">
-            <!-- <p>
-                    <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-                    <h8>98%</h8>
-                  </p> -->
-            <p class="card-title">WAR OF BRANCHES</p>
-
-            <p class="card-text"></p>
-
+              <p class="card-title">TECHNICAL PAPER PRESENTATION </p>
+              <p class="card-text"></p>
+            </div>
           </div>
-        </div>
+        </li>
 
-      </li>
 
-      <li class="card">
+
+        <li class="card">
+          <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <img class="card-image" src="images/aw_coda_sq.png">
+            <div class="card-footer">
+
+              <p class="card-title">CODATRON </p>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+    <br><br>
+
+    <div class="cultural">
+
+      <ul class="card-stacks">
+
+        <li class="card">
+          <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <img class="card-image" src="images/aw_sargam_sq.png">
+
+            <div class="card-footer">
+
+              <p class="card-title">SARGAM</p>
+
+              <p class="card-text"></p>
+
+            </div>
+          </div>
+
+        </li>
+
+        <li class="card">
+          <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+
+
+            <img class="card-image" src="images/aw_streetd_sq.png">
+
+            <div class="card-footer">
+
+              <p class="card-title">STREET DANCE</p>
+
+              <p class="card-text"></p>
+
+            </div>
+          </div>
+
+        </li>
+
+
+        <li class="card">
+          <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <img class="card-image" src="images/zumba02.png">
+
+            <div class="card-footer">
+
+              <p class="card-title">ZUMBA</p>
+
+              <p class="card-text"></p>
+
+            </div>
+          </div>
+
+        </li>
+
+
+
+
+        <li class="card">
+          <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <img class="card-image" src="images/aw_wob_sq.png">
+
+            <div class="card-footer">
+              <p class="card-title">WAR OF BRANCHES</p>
+
+              <p class="card-text"></p>
+
+            </div>
+          </div>
+
+        </li>
+
+        <li class="card">
           <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
             <img class="card-image" src="images/aej02.png">
 
             <div class="card-footer">
-              <!-- <p>
-                      <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-                      <h8>98%</h8>
-                    </p> -->
+
               <p class="card-title">AELAAN-E-JUNG</p>
 
               <p class="card-text"></p>
@@ -417,69 +368,55 @@
 
         </li>
 
-    </ul>
+      </ul>
 
-  </div>
-
-  <br><br>
-
-
-
-  <div class="fun">
-    <div class="heading">
-      <p data-heading="Slide"><img src="images/icon2.png">&nbsp;&nbsp;&nbsp;FUN</p>
     </div>
 
-    <ul class="card-stacks">
+    <br><br>
 
-      <li class="card">
-        <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+    <div class="fun">
 
-          <img class="card-image" src="images/aw_carnival_sq.png">
+      <ul class="card-stacks">
 
-          <div class="card-footer">
-            <!-- <p>
-                  <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-                  <h8>98%</h8>
-                </p> -->
-            <p class="card-title">CARNIVAL</p>
+        <li class="card">
+          <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
 
-            <p class="card-text"></p>
+            <img class="card-image" src="images/aw_carnival_sq.png">
 
+            <div class="card-footer">
+
+              <p class="card-title">CARNIVAL</p>
+
+              <p class="card-text"></p>
+
+            </div>
           </div>
-        </div>
 
-      </li>
-
+        </li>
 
 
-      <li class="card">
-        <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
-          <img class="card-image" src="images/ipl02.png">
 
-          <div class="card-footer">
-            <!-- <p>
-                  <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-                  <h8>98%</h8>
-                </p> -->
-            <p class="card-title">IPL AUCTION</p>
+        <li class="card">
+          <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <img class="card-image" src="images/ipl02.png">
 
-            <p class="card-text"></p>
+            <div class="card-footer">
 
+              <p class="card-title">IPL AUCTION</p>
+
+              <p class="card-text"></p>
+
+            </div>
           </div>
-        </div>
 
-      </li>
+        </li>
 
-      <li class="card">
+        <li class="card">
           <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
             <img class="card-image" src="images/concerts02.png">
 
             <div class="card-footer">
-              <!-- <p>
-                    <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-                    <h8>98%</h8>
-                  </p> -->
+
               <p class="card-title">CONCERTS</p>
 
               <p class="card-text"></p>
@@ -492,103 +429,86 @@
 
 
 
-      <li class="card">
-        <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
-          <img class="card-image" src="images/LANgaming02.png">
+        <li class="card">
+          <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <img class="card-image" src="images/LANgaming02.png">
 
-          <div class="card-footer">
-            <!-- <p>
-                  <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-                  <h8>98%</h8>
-                </p> -->
-            <p class="card-title">LAN GAMING</p>
+            <div class="card-footer">
 
-            <p class="card-text"></p>
+              <p class="card-title">LAN GAMING</p>
 
+              <p class="card-text"></p>
+
+            </div>
           </div>
-        </div>
 
-      </li>
+        </li>
 
 
-      <li class="card ">
-        <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
-          <img class="card-image" src="images/hog02.png">
+        <li class="card ">
+          <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <img class="card-image" src="images/hog02.png">
 
-          <div class="card-footer">
-            <!-- <p>
-                      <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-                      <h8>98%</h8>
-                    </p> -->
-            <p class="card-title">HOGATHON</p>
+            <div class="card-footer">
 
-            <p class="card-text"></p>
+              <p class="card-title">HOGATHON</p>
 
+              <p class="card-text"></p>
+
+            </div>
           </div>
-        </div>
 
-      </li>
+        </li>
 
-    </ul>
+      </ul>
 
-  </div>
-  <br><br>
-
-  <div class="literary">
-    <div class="heading">
-      <p data-heading="Slide"><img src="images/icon1.png">&nbsp;&nbsp;&nbsp;LITERARY ARTS</p>
     </div>
+    <br><br>
 
-    <ul class="card-stacks">
+    <div class="literary">
 
-      <li class="card">
-        <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
-          <img class="card-image" src="images/jam02.png">
 
-          <div class="card-footer">
-            <!-- <p>
-                    <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-                    <h8>98%</h8>
-                  </p> -->
-            <p class="card-title">JUST A MINUTE</p>
+      <ul class="card-stacks">
 
-            <p class="card-text"></p>
+        <li class="card">
+          <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <img class="card-image" src="images/jam02.png">
 
+            <div class="card-footer">
+
+              <p class="card-title">JUST A MINUTE</p>
+
+              <p class="card-text"></p>
+
+            </div>
           </div>
-        </div>
 
-      </li>
+        </li>
 
-      <li class="card">
-        <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
-          <img class="card-image" src="images/TTTales02.png">
+        <li class="card">
+          <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <img class="card-image" src="images/TTTales02.png">
 
-          <div class="card-footer">
-            <!-- <p>
-                    <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-                    <h8>98%</h8>
-                  </p> -->
-            <p class="card-title">TERRIBLY TINY TALES</p>
+            <div class="card-footer">
 
-            <p class="card-text"></p>
+              <p class="card-title">TERRIBLY TINY TALES</p>
 
+              <p class="card-text"></p>
+
+            </div>
           </div>
-        </div>
 
-      </li>
+        </li>
 
-      <li class="card">
+        <li class="card">
           <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
             <div style="width: 100%; height: 178px; overflow: hidden">
-            <img class="card-image" src="images/mun-poster.jpg">
+              <img class="card-image" src="images/mun-poster.jpg">
 
             </div>
 
             <div class="card-footer">
-              <!-- <p>
-                      <i class="fa fa-heart" aria-hidden="true" style=color:red></i>
-                      <h8>98%</h8>
-                    </p> -->
+
               <p class="card-title">MUN</p>
 
               <p class="card-text"></p>
@@ -600,20 +520,14 @@
 
 
 
-    </ul>
+      </ul>
+    </div>
+
+
+    <br><br>
+
+
   </div>
-
-
-  <br><br>
-
-
-</div>
-
-
-
-
-
-
 
   <!--modal-->
 
