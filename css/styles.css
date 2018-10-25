@@ -54,6 +54,10 @@ body {
     /* box-shadow: 1px 1px rgb(82, 81, 81); */
 }
 
+#nav a {
+    text-decoration: none;
+}
+
 .register {
     /* background: #ff8307; */
     color: #3b3b3b;
@@ -428,15 +432,15 @@ a.effect-shine:hover {
 
 #preload-img1 {
     animation: spin 2.8s ease-in-out alternate infinite;
-    height: 350px;
+    height: 175px;
 }
 
 #preload-img2 {
-    width: 200px;
+    width: 95px;
     height: auto;
     z-index: 2;
     position: inherit;
-    left: 22%;
+    left: 24%;
 }
 
 @keyframes spin {
@@ -459,8 +463,8 @@ a.effect-shine:hover {
 .spinner {
     position: absolute;
     align-items: center;
-    top: calc(50% - 175px);
-    left: calc(50% - 175px);
+    top: calc(50% - 125px);
+    left: calc(50% - 125px);
     display: flex;
 }
 
@@ -679,6 +683,7 @@ a.effect-shine:hover {
 .menu-button:hover a .fa {
     color: inherit;
 }
+
 
 .menu-button:hover a:nth-child(2):hover {
     -webkit-transition-delay: 0s;
