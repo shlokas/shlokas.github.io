@@ -1,0 +1,29 @@
+.sponsor-content {
+    margin-top: 15vh;
+    position: relative;
+    z-index: 1;
+}
+
+.co-sponsors {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    justify-content: space-evenly;
+}
+
+.sponsors {
+    margin-top: 5vh;
+    width: 100%;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+#sponsorlogo {
+    height: 80px;
+    width: auto;
+    margin: 15px;
+    justify-self: center;
+}

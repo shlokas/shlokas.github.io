@@ -1,3 +1,4 @@
+// clock functions
 function flipTo(digit, n) {
     var current = digit.attr('data-num');
     digit.attr('data-num', n);
@@ -71,6 +72,9 @@ $(document).ready(function () {
 
 });
 
+
+
+
 var vid_over;
 $(document).ready(function () {
     vid_over = document.getElementById("videoOverlay");
@@ -78,10 +82,56 @@ $(document).ready(function () {
 
 
 function hideOverlay() {
-    // console.log(vid_over.style.bottom);
     vid_over.style.bottom = "100%";
 }
 
 function showOverlay() {
     vid_over.style.bottom = "0";
 }
+
+
+//Preloader time out
+$(document).ready(function () {
+
+    $(window).load(function () {
+
+        console.log('loaded');
+        preloaderFadeOutTime = 500;
+
+        function hidePreloader() {
+            var preloader = $('.spinner-wrapper');
+            preloader.fadeOut(preloaderFadeOutTime);
+        }
+
+        hidePreloader();
+
+        console.log('hidden');
+    });
+});
+
+
+//fade navbar on reaching footer
+var footer_height;
+$(document).ready(function () {
+    footer_height = $("footer").offset().top;
+    console.log("footer height is " + footer_height);
+
+});
+
+window.onscroll = function () {
+    scrollFunction()
+};
+
+function scrollFunction() {
+
+    if (document.body.scrollTop > (footer_height - 100) || document.documentElement.scrollTop > (footer_height -
+        100)) {
+        // console.log("hide");
+        $('#navbar').addClass("disp");
+    } else {
+        // console.log("unhide");
+        $('#navbar').removeClass("disp");
+
+    }
+}
+
