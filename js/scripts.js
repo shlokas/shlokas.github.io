@@ -1,3 +1,4 @@
+// clock functions
 function flipTo(digit, n) {
     var current = digit.attr('data-num');
     digit.attr('data-num', n);
@@ -33,10 +34,10 @@ function getTimeRemaining(endtime) {
 
 function updateGroup(group, n, flip) {
     var digh = $('.hundred' + group);
-    var nh = n/10;
+    var nh = n / 10;
     var digit1 = $('.ten' + group);
     var digit2 = $('.' + group);
-    var numh = Math.floor(n/100);
+    var numh = Math.floor(n / 100);
     var num1 = Math.floor(nh % 10);
     var num2 = Math.floor(n % 10);
     if (digh.attr('data-num') != numh) {
@@ -70,3 +71,67 @@ $(document).ready(function () {
     }, 1000);
 
 });
+
+
+
+
+var vid_over;
+$(document).ready(function () {
+    vid_over = document.getElementById("videoOverlay");
+});
+
+
+function hideOverlay() {
+    vid_over.style.bottom = "100%";
+}
+
+function showOverlay() {
+    vid_over.style.bottom = "0";
+}
+
+
+//Preloader time out
+$(document).ready(function () {
+
+    $(window).load(function () {
+
+        console.log('loaded');
+        preloaderFadeOutTime = 500;
+
+        function hidePreloader() {
+            var preloader = $('.spinner-wrapper');
+            preloader.fadeOut(preloaderFadeOutTime);
+        }
+
+        hidePreloader();
+
+        console.log('hidden');
+    });
+});
+
+
+//fade navbar on reaching footer
+var footer_height;
+$(document).ready(function () {
+    footer_height = $("footer").offset().top;
+    console.log("footer height is " + footer_height);
+
+});
+
+window.onscroll = function () {
+    scrollFunction()
+};
+
+function scrollFunction() {
+
+    if (document.body.scrollTop > (footer_height - 100) || document.documentElement.scrollTop > (footer_height -
+        100)) {
+        // console.log("hide");
+        $('#navbar').addClass("disp");
+    } else {
+        // console.log("unhide");
+        $('#navbar').removeClass("disp");
+
+    }
+}
+

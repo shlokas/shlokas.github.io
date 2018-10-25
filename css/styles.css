@@ -1,12 +1,14 @@
 body {
     height: 100%;
+    font-family: 'segoe ui';
     /* background: linear-gradient(to bottom right, #010130, #3c003c); */
 }
 
 #navbar {
     color: white;
+    background: none;
     display: flex;
-    height: 5vh;
+    height: 8vh;
     width: 100%;
     /* padding: 10px; */
     position: fixed;
@@ -21,37 +23,35 @@ body {
 }
 
 #nav {
-    background-color: rgb(59, 59, 59);
+    background-color: #4b4b4b;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    box-shadow: 1px 1px rgb(82, 81, 81);
+    /* box-shadow: 1px 1px rgb(82, 81, 81); */
     display: flex;
+    color: #a9a9a9;
     justify-content: space-evenly;
     align-items: center;
     width: 30%;
     height: 5vh;
-    padding: 10px;
+    padding: 2vh;
     position: inherit;
     top: 0;
-
 }
 
 #navbar.disp {
     opacity: 0;
 }
 
-
 #nav img {
     position: relative;
-    top: 12px;
-    height: 65px;
+    top: 15px;
+    height: 75px;
     width: auto;
-    background-color: rgb(59, 59, 59);
+    /* background-color: rgb(59, 59, 59); */
     background-size: 50%;
     border-radius: 50%;
     padding: 10px 14px 10px 10px;
     /* box-shadow: 1px 1px rgb(82, 81, 81); */
-
 }
 
 #nav a {
@@ -66,7 +66,7 @@ body {
     border-radius: 3px;
     right: 10px;
     /* top: 10px; */
-    margin-top: 15px;
+    /* margin-top: 15px; */
     /* height: 60px; */
     font-size: 30px;
     padding: 5px;
@@ -105,19 +105,63 @@ body {
     transition: 800ms ease all;
 }
 
+.video-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 100%;
+    left: 0;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    -moz-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+    -webkit-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+    transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+}
+
+.video-overlay .close {
+    position: absolute;
+    top: 5vh;
+    right: 5vw;
+}
+
+.video-overlay .fa {
+    color: grey;
+}
+
+.video-overlay .fa:hover {
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.15s ease;
+}
+
+#nav a:hover {
+    color: white;
+}
+
 /* countdown styling starts here */
+
 /* { */
+
 .digit {
     position: relative;
     float: left;
     width: 48%;
-    height: 12vh;
+    height: 10vh;
     /* background-color: #3a3a3c; */
     /* opacity: 0.2; */
     border-radius: 8px;
     text-align: center;
     font-family: 'fourHand_TRIAL', sans-serif;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .base {
@@ -233,10 +277,8 @@ body {
     0% {
         -webkit-transform: rotateX(0deg);
         transform: rotateX(0deg);
-
         color: whitesmoke;
     }
-
     100% {
         -webkit-transform: rotateX(-180deg);
         transform: rotateX(-180deg);
@@ -250,10 +292,8 @@ body {
         -webkit-transform: rotateY(180deg) rotateX(0deg);
         transform: rotateY(180deg) rotateX(0deg);
         opacity: 1;
-
         color: whitesmoke;
     }
-
     100% {
         -webkit-transform: rotateY(180deg) rotateX(180deg);
         transform: rotateY(180deg) rotateX(180deg);
@@ -264,10 +304,8 @@ body {
 @keyframes fade-under {
     0% {
         opacity: 1;
-
         color: whitesmoke;
     }
-
     100% {
         color: whitesmoke;
     }
@@ -275,14 +313,14 @@ body {
 
 .clock {
     font-family: fourHandTrial;
-    font-size: 24px;
+    font-size: 25px;
     position: absolute;
-    width: 35%;
+    width: 30%;
     left: 6.5%;
-    bottom: 35%;
+    bottom: 30%;
     z-index: 3;
     display: grid;
-    grid-template-columns: 1fr repeat(3, 0.66fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 5px;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -303,15 +341,16 @@ body {
     color: black;
 }
 
-.holder:first-child .digit {
+/* .holder:first-child .digit {
     width: 32%;
-}
+} */
 
 .clock .digit {
-    margin-right: 1.2%;
+    margin-right: 2%;
 }
 
 /* } */
+
 /* countdown clock styling ends here */
 
 .about-oculus {
@@ -334,7 +373,6 @@ footer h2 {
 .fa {
     font-size: 30px;
     color: white;
-
 }
 
 #scrollUp {
@@ -373,12 +411,12 @@ footer h2 {
 .links a {
     text-decoration: none;
     color: whitesmoke;
-
 }
 
 a.effect-shine:hover {
     -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
     -webkit-mask-size: 200%;
+    cursor: pointer;
     -webkit-animation: shine 2s infinite;
     animation: shine 2s infinite;
 }
@@ -387,7 +425,6 @@ a.effect-shine:hover {
     from {
         -webkit-mask-position: 150%;
     }
-
     to {
         -webkit-mask-position: -50%;
     }
@@ -432,8 +469,9 @@ a.effect-shine:hover {
 }
 
 .section {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+    /* padding-top: 0 !important; */
+    /* padding-bottom: 0 !important; */
+    padding: 30px;
 }
 
 #particles-js {
@@ -448,28 +486,51 @@ a.effect-shine:hover {
 }
 
 #section2 {
-    background-color: #4165e1 !important;
+    /* background-color: #4165e1 !important; */
     padding: 30px;
     font-family: 'segoe ui';
+    background: linear-gradient(to left, #00bbff, #007eff);
+    /* background: url(../images/brain.png), linear-gradient(to right, #e0c3fc, #8ec5fc); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-image: url(../images/brain.png); */
+    background-position: center;
 }
 
-#section2 h1 {
+#section2::after {
+    content: "";
+    background-image: url("../images/brain.png");
+    background-size: 40% 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* filter: grayscale(100%); */
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.heading {
+    color: white;
+    text-align: center;
+    font-family: 'Segoe UI';
+}
+
+.heading h1 {
     font-size: 55px;
 }
 
-#section2 .heading {
-    color: white;
-    text-align: center;
-
+#section3 .heading h1,
+#section4 .heading h1 {
+    color: black;
 }
 
 #section3 {
-    background-color: #00ff9e !important;
-}
-
-#section3 h1 {
-    font-size: 55px;
-
+    /* background-color: #00ff9e !important; */
+    background: linear-gradient(to bottom right, #06fda8, #39e9a3);
 }
 
 #section3 .events {
@@ -478,12 +539,12 @@ a.effect-shine:hover {
 }
 
 #section3 .event {
-    width: 30%;
-    text-align: center;
+    width: 23%;
 }
 
 #section4 {
-    background-color: #fff35b !important;
+    /* background-color: #fff35b !important; */
+    background: linear-gradient(to bottom, #fbf767, #fff82a);
 }
 
 #section10 {
@@ -492,9 +553,16 @@ a.effect-shine:hover {
     font-family: 'segoe ui';
 }
 
-
+.ngo-content {
+    align-self: center;
+    /* font-size: 18px; */
+    line-height: 20px;
+    width: 50%;
+    font-family: 'segoe ui';
+}
 
 /* share buttons */
+
 .menu-button {
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
@@ -556,6 +624,10 @@ a.effect-shine:hover {
     color: #55acee;
     border: 1px solid #55acee;
 }
+
+/* .menu-button a {
+    background: whitesmoke;
+} */
 
 .menu-button a .fa {
     color: inherit;
@@ -658,4 +730,140 @@ a.effect-shine:hover {
     -moz-transition-delay: 0s;
     transition-delay: 0s;
     background: #ee338a;
+}
+
+/* swinging thread */
+
+.swing {
+    -webkit-perspective: 500;
+    cursor: pointer;
+    -moz-perspective: 500;
+    -o-perspective: 500;
+    perspective: 400px;
+    margin: 0px auto;
+    display: block;
+    text-align: center;
+    width: 100px;
+    position: fixed;
+    left: 20vw;
+}
+
+.thread {
+    height: 50px;
+    border: 1px solid black;
+    width: 0px;
+}
+
+.handle {
+    /* background: red; */
+    background: linear-gradient(to bottom right, #fbd2d2, red, maroon);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-left: -5px;
+}
+
+.hover {
+    position: relative;
+    z-index: 1;
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
+    transition: all 250ms ease;
+    /* background: #00aced; padding: 15px; */
+    display: block;
+    /* margin:0 8px; */
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    /* padding:40px; */
+    font-size: 30px;
+}
+
+.hover:hover {
+    -webkit-transform-origin: top;
+    -moz-transform-origin: top;
+    -o-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top;
+    -webkit-animation: balance 1.5s ease-in-out 110ms 1 alternate;
+    -moz-animation: balance 1.5s ease-in-out 110ms 1 alternate;
+    -ms-animation: balance 1.5s ease-in-out 110ms 1 alternate;
+    -o-animation: balance 1.5s ease-in-out 110ms 1 alternate;
+    animation: balance 1.5s ease-in-out 110ms 1 alternate;
+}
+
+@keyframes balance {
+    0% {}
+    15% {
+        -webkit-transform: rotateX(-50deg);
+        -moz-transform: rotateX(-50deg);
+        -o-transform: rotateX(-50deg);
+        -ms-transform: rotateX(-50deg);
+        transform: rotateX(-50deg);
+    }
+    30% {
+        -webkit-transform: rotateX(50deg);
+        -moz-transform: rotateX(50deg);
+        -o-transform: rotateX(50deg);
+        -ms-transform: rotateX(50deg);
+        transform: rotateX(50deg);
+    }
+    45% {
+        -webkit-transform: rotateX(-30deg);
+        -moz-transform: rotateX(-30deg);
+        -o-transform: rotateX(-30deg);
+        -ms-transform: rotateX(-30deg);
+        transform: rotateX(-30deg);
+    }
+    60% {
+        -webkit-transform: rotateX(30deg);
+        -moz-transform: rotateX(30deg);
+        -o-transform: rotateX(30deg);
+        -ms-transform: rotateX(30deg);
+        transform: rotateX(30deg);
+    }
+    75% {
+        -webkit-transform: rotateX(-30deg);
+        -moz-transform: rotateX(-30deg);
+        -o-transform: rotateX(-30deg);
+        -ms-transform: rotateX(-30deg);
+        transform: rotateX(-30deg);
+    }
+    100% {
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        -o-transform: rotateX(0deg);
+        -ms-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+    }
+}
+
+@-moz-keyframes balance {
+    0% {}
+    15% {
+        -moz-transform: rotateX(-50deg);
+        transform: rotateX(-50deg);
+    }
+    30% {
+        -moz-transform: rotateX(50deg);
+        transform: rotateX(50deg);
+    }
+    45% {
+        -moz-transform: rotateX(-30deg);
+        transform: rotateX(-30deg);
+    }
+    60% {
+        -moz-transform: rotateX(30deg);
+        transform: rotateX(30deg);
+    }
+    75% {
+        -moz-transform: rotateX(-30deg);
+        transform: rotateX(-30deg);
+    }
+    100% {
+        -moz-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+    }
 }

@@ -6,29 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" media="screen" href="css/fullpage.min.css"> -->
     <link rel="stylesheet" media="screen" href="css/styles.css">
+    <link rel="stylesheet" media="screen" href="css/sponsors.css">
     <link rel="icon" type="icon" href="oculus-favicon.png">
-
-
     <title>Oculus 2019 | Oculus Sees All</title>
-
     <style>
         @font-face {
             font-family: 'fourHandTrial';
             src: url('fourHand_TRIAL.ttf');
         }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
     </style>
 </head>
 
 <body>
+
+
+    <!-- common navbar elements -->
+
+    <div id="videoOverlay" class="video-overlay">
+
+        <iframe width="80%" height="70%" style="margin-top: 15vh" src="https://www.youtube.com/embed/VlyZrYF5Emk" frameborder="0"
+            gesture="media" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div class="close"><i onclick="hideOverlay()" class="fa fa-close"></i></div>
+    </div>
+
     <div id="navbar">
-        <div id="nav">
-            <a href="#" style="color: #ffffff">Sponsors</a>
-            <div><img src="oculus-favicon.png"></div>
-            <a href="#" style="color: #bcbcbc">Events</a>
+        <img style="width: 80px;
+        position: absolute;
+        left: 2vw;
+        top: 1.5vh;" src="logotext.png">
+
+        <div class="swing">
+            <div class="hover" onclick="showOverlay()">
+                <div class="thread"></div>
+                <div class="handle"></div>
+            </div>
         </div>
 
-        <div class="register"> Registering Soon!</div>
+        <div id="nav">
+            <div style="color: white"><a href="sponsors.html">Sponsors</a></div>
+            <div style="background-color: inherit; border-radius: 50%;"><a href="index.html"><img src="oculus-favicon.png"></a></div>
+            <div><a href="events.final.html">Events</a></div>
+        </div>
+
+        <div class="register"> Coming Soon!</div>
+
     </div>
 
 
@@ -39,6 +70,51 @@
         <a href="#"><i class="fa fa-instagram"></i> </a>
     </div>
 
+
+
+
+    <div id="particles-js"></div>
+    <div class="sponsor-content">
+        <h1><span style="left: 2vw;
+            position: relative;">Past Partnerships</span><span style="position: absolute; right: 1vw;font-weight: 300;font-size: 1.6rem"><a
+                    class="effect-shine" target="_blank" href="./Oculus_Marketing_Deck.pdf" download>Sponsorship brochure</a></span></h1>
+
+        <div class="co-sponsors">
+            <p>Co-sponsored by</p>
+            <img id="sponsorlogo" src="images/sponsors/india_today.JPG" alt="Co-sponsor" />
+            <img id="sponsorlogo" src="images/sponsors/wellness-forever.png" alt="Co-sponsor" />
+
+        </div>
+        <div class="sponsors">
+
+            <img id="sponsorlogo" src="images/sponsors/star-sports.jpg" alt="Eco-system Partner" />
+            <img id="sponsorlogo" src="images/sponsors/cetking.png" alt="Gifting Partner" />
+            <img id="sponsorlogo" src="images/sponsors/mt.jpg" alt="Student Partner" />
+
+            <img id="sponsorlogo" src="images/sponsors/internshala.png" alt="Advertising Partner" />
+            <img id="sponsorlogo" src="images/sponsors/Nerolac.jpg" alt="Voucher Partner" />
+            <img id="sponsorlogo" src="images/sponsors/waghbakri.jpg" alt="Industry Partner" />
+            <img id="sponsorlogo" src="images/sponsors/muskaan.png" alt="Industry Partner" />
+            <img id="sponsorlogo" src="images/sponsors/rio.jpg" alt="Industry Partner" />
+            <img id="sponsorlogo" src="images/sponsors/red-fm.png" alt="Industry Partner" />
+            <img id="sponsorlogo" src="images/sponsors/tcs.png" alt="Industry Partner" />
+            <img id="sponsorlogo" src="images/sponsors/nestle.png" alt="Industry Partner" />
+            <img id="sponsorlogo" src="images/sponsors/beingStudent.png" alt="Industry Partner" />
+            <img id="sponsorlogo" src="images/sponsors/ttraxx.jpg " alt="Industry Partner" />
+            <img id="sponsorlogo" src="images/sponsors/frapp.png " alt="Industry Partner" />
+            <img id="sponsorlogo" src="images/sponsors/good-food-tourism.png " alt="Industry Partner" />
+            <img id="sponsorlogo" src="images/sponsors/Amore Logo.jpg " alt="Industry Partner" />
+            <img id="sponsorlogo" src="images/sponsors/fcb-ulka.png " alt="Industry Partner" />
+            <img id="sponsorlogo" src="images/sponsors/grapevine.png " alt="Industry Partner" />
+
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./js/particles.min.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
 
 </body>
 
