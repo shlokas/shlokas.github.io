@@ -231,25 +231,25 @@ ul.card-stacks.transition li.card {
 }
 
 .landing-performing {
-    width: 50%;
+    width: 50vw;
     height: 50%;
     background: linear-gradient(to right, #e0c3fc, #8ec5fc);
 }
 
 .landing-tech {
-    width: 50%;
+    width: 50vw;
     height: 50%;
     background: linear-gradient(to right, #43e97b, #38f9d7);
 }
 
 .landing-literary {
-    width: 50%;
+    width: 50vw;
     height: 50%;
     background: linear-gradient(to right, #4facfe, #00f2fe);
 }
 
 .landing-fun {
-    width: 50%;
+    width: 50vw;
     height: 50%;
     background: linear-gradient(to right, #f093fb, #f5576c);
 }
@@ -318,4 +318,18 @@ ul.card-stacks.transition li.card {
 .event-category:hover:after {
     width: 100%;
     transition: 800ms ease all;
+}
+
+@media screen and (max-width: 600px){
+    .event-category {
+        z-index: 2;
+        position: absolute;
+        margin: 24vh 0 0 7vw;
+        cursor: pointer;
+        color: white;
+        font-size: 2.5rem;
+        font-weight: 700;
+        transition: 800ms ease all;
+        outline: none;
+    }
 }
