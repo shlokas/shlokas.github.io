@@ -105,6 +105,18 @@ body {
     transition: 800ms ease all;
 }
 
+
+/* media queries for mobile */
+
+@media screen and (max-width: 425px) {
+    .register {
+        display: none;
+    }
+     #navbar>img {
+         display: none;
+     }
+}
+
 .video-overlay {
     position: fixed;
     top: 0;
@@ -683,7 +695,6 @@ a.effect-shine:hover {
 .menu-button:hover a .fa {
     color: inherit;
 }
-
 
 .menu-button:hover a:nth-child(2):hover {
     -webkit-transition-delay: 0s;
