@@ -1,29 +1,52 @@
 .sponsor-content {
-    margin-top: 15vh;
+    margin-top: 20vh;
     position: relative;
     z-index: 1;
 }
 
+@media screen and (max-width: 600px) {
+    .brochure {
+        /* position: absolute; */
+        /* right: 1vw; */
+        top: -6vh;
+        /* font-weight: 300; */
+        font-size: 1.3rem;
+    }
+}
+
 .co-sponsors {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     font-size: 1.5rem;
+    font-weight: 600;
     justify-content: space-evenly;
 }
 
 .sponsors {
     margin-top: 5vh;
     width: 100%;
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* flex-wrap: wrap; */
-    display: grid;
-    grid-template-columns: repeat(3, auto);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #sponsorlogo {
-    height: 80px;
+    height: 8vh;
     width: auto;
     margin: 15px;
     justify-self: center;
+}
+
+.co-sponsors img {
+    height: 13vh !important;
+}
+
+.brochure {
+    position: absolute;
+    right: 1vw;
+    font-weight: 300;
+    font-size: 1.6rem;
 }

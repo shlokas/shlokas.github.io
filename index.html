@@ -9,6 +9,9 @@
     <link rel="stylesheet" media="screen" href="css/fullpage.min.css">
     <link rel="stylesheet" media="screen" href="css/styles.css">
     <link rel="icon" type="icon" href="oculus-favicon.png">
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
     <title>Oculus 2019 | Oculus Sees All</title>
     <style>
         @font-face {
@@ -19,6 +22,55 @@
 </head>
 
 <body>
+    <script>
+
+
+        //Preloader time out
+        $(document).ready(function () {
+
+            $(window).load(function () {
+
+                console.log('loaded');
+                preloaderFadeOutTime = 500;
+
+                function hidePreloader() {
+                    var preloader = $('.spinner-wrapper');
+                    preloader.fadeOut(preloaderFadeOutTime);
+                }
+
+                hidePreloader();
+
+                console.log('hidden');
+            });
+        });
+
+
+        //fade navbar on reaching footer
+        var footer_height;
+        $(document).ready(function () {
+            footer_height = $("footer").offset().top;
+            console.log("footer height is " + footer_height);
+
+        });
+
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+
+            if (document.body.scrollTop > (footer_height - 100) || document.documentElement.scrollTop > (footer_height -
+                100)) {
+                // console.log("hide");
+                $('#navbar').addClass("disp");
+            } else {
+                // console.log("unhide");
+                $('#navbar').removeClass("disp");
+
+            }
+        }
+
+    </script>
     <div class="spinner-wrapper">
         <div class="spinner">
             <img id="preload-img1" src="./images/outer.png">
@@ -158,10 +210,11 @@
 
             <div class="about-oculus">
                 <a href="#"><img src="oculus.png"></a>
-                <p>
-                    Sardar Patel Institute of Technology presents to you Oculus 2019. Oculus is a Techno-Cultural festival that represents the
-                    synergy between Culture and Technology. Be it performing arts, or hackathons. Writing poetry or Technical
-                    Papers, Oculus sees all.
+                <p class="about-oculus-para">
+                    Sardar Patel Institute of Technology presents to you Oculus 2019.
+                    <span class="about-oculus-hide-mobile"> Oculus is a Techno-Cultural festival that represents the synergy
+                        between Culture and Technology.</span>
+                    Be it performing arts, or hackathons. Writing poetry or Technical Papers, Oculus sees all.
                 </p>
 
             </div>
@@ -179,23 +232,23 @@
             </div> -->
             <br><br>
 
-            <div style="z-index: 2;margin: 0 auto; font-size: 1.2rem;z-index: 2;position: relative; text-align: center; width: 80%;">
+            <div class="contentgenz">
 
                 The transition from the 20th century into the 21st was a momentous point in history. As December 31 of 1999 bled into January
                 1 of 2000, an era ended and another began. And unlike the millennials, who got to see the change with their
                 young eyes, we were born into the change. We were born in the short, tiny window of time between the end
                 of a millennium and the beginning of another. We are Generation Z, and we are as old as this new century
-                is. We have seen everything change and been a part of the change - we have used both flip phones and smart
-                phones, connected to the Internet using both dial-ups and WiFi, played both 8-bit games and The Last of Us.
-                We went from playing songs on cassettes to Spotify, from watching movies on cable to Netflix. We have been
-                a part of a transitioning world. Be it cultural change or technical, social or political, we have adapted
-                to everything smoothly. And it's not just self-reinvention that we've done smoothly - we have made the change
-                around us better. We strive for a better society, we crusade for a tolerant world. We are the youngest minds
-                in research, the youngest CEOs and entrepreneurs finding their footing in the world. SPIT found this generation
-                a fitting encapsulation of Oculus 2k19, and is proud to announce the theme for the same - Generation Z. We
-                believe it represents everything Oculus strives and stands for - change, flexibility, modernism and fun.
-                Oculus 2k19 will hopefully be the perfect generational paradigm.
-                <br><br><br><br><br>
+                is.
+                <span class="hiddenmobile">
+                    We have seen everything change and been a part of the change - we have used both flip phones and smart phones, connected
+                    to the Internet using both dial-ups and WiFi, played both 8-bit games and The Last of Us. We went from
+                    playing songs on cassettes to Spotify, from watching movies on cable to Netflix. We have been a part
+                    of a transitioning world. And it's not just self-reinvention that we've done smoothly - we have made
+                    the change around us better.
+                </span> We are the youngest minds in research, the youngest CEOs and entrepreneurs finding their footing
+                in the world. SPIT found this generation a fitting encapsulation of Oculus 2k19, and is proud to announce
+                the theme for the same - Generation Z. We believe it represents everything Oculus strives and stands for
+                - change, flexibility, modernism and fun. Oculus 2k19 will hopefully be the perfect generational paradigm.
             </div>
         </div>
 
@@ -205,32 +258,59 @@
             </div>
             <div class="events">
                 <div class="event">
-                    <h3>Technical</h3>
-                    <div>No problem can be solved from the same level of consciousness that created it. Technical Events
-                        provide a platform where participants can implement their astounding coding and technical skills.</div>
+
+                    <div class="eventpara">
+                        <!-- <h3>Technical</h3> -->
+                        No problem can be solved from the same level of consciousness that created it. <strong>Technical
+                            Events
+                        </strong> provide a platform where participants can implement their astounding coding and technical
+                        skills.
+                        <br><br>
+                    </div>
+                    <img src="./images/cutout-tech.png">
+
                 </div>
                 <div class="event">
-                    <h3>Literary</h3>
-                    <div>Pen is mightier than sword. Oculus presents Literary Events which presents a golden opportunity
-                        to everyone to showcase their flair in content writing skills.</div>
+                    <img src="./images/cutout-literary.png"><br><br>
+
+                    <div class="eventpara">
+                        <!-- <h3>Literary Arts</h3> -->
+                        Pen is mightier than sword. Oculus presents
+                        <strong>Literary Events</strong> which presents a golden opportunity to everyone to showcase their
+                        flair in content writing skills.
+
+                    </div>
                 </div>
                 <div class="event">
-                    <h3>Cultural</h3>
-                    <div>Culture makes people understand each other better and collectively helps them evolve. Cultural Events
-                        are the perfect chance for participants to present and witness their singing, dancing and other vivid
-                        varities of cultural activities.</div>
+
+                    <div class="eventpara"><br>
+                        <!-- <h3>Performing Arts</h3> -->
+                        <span class="hiddenmobile">Culture makes people understand each other better and collectively helps them evolve.</span><strong>Performing
+                            Arts
+                        </strong> are the perfect chance for participants to present <span class="hiddenmobile">and witness</span> their singing, dancing
+                        and other vivid varities of cultural activities.<br><br>
+
+                    </div>
+                    <img class="performArtImg" src="./images/cutout-performing.png">
+
                 </div>
                 <div class="event">
-                    <h3>Fun</h3>
-                    <div>All work and no play makes jack a dull boy. Presenting to you Fun Events where participants can
-                        enjoy the time of their lives.</div>
+                    <img src="./images/cutout-fun.png"><br><br>
+                    <div class="eventpara">
+                        <!-- <h3>Fun</h3> -->
+
+
+                        All work and no play makes jack a dull boy. Presenting to you <strong>Fun Events</strong> where participants
+                        can enjoy the time of their lives.
+
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="section" id="section4">
-            <br><br>
-            <div class="heading">
+            <span class="hiddenmobile"><br/></span><br>
+            <div class="ngoheading">
                 <h1>OCULUS FOR A CAUSE</h1>
             </div>
             <div style="display: inline-flex; justify-content: space-evenly">
@@ -249,13 +329,14 @@
                         humanitarian efforts.<br><br>
                     </p>
                 </div>
-                <a href="https://ratnanidhi.org/" target="_blank"><img style="width: 400px;
+                <a href="https://ratnanidhi.org/" class="hiddenmobile" target="_blank"><img style="width: 400px;
                 height: 400px;
                 border-radius: 50%;
                 opacity: 0.7;
                 mix-blend-mode: luminosity;" src="images/ngo.jpeg"></a>
             </div>
-            <br><br><br>
+            <span class="hiddenmobile"><br/><br/></span>
+            <br>
 
         </div>
 

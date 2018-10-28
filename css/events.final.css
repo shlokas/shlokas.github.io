@@ -32,7 +32,7 @@ body {
 }
 
 .heading p {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: left;
     font-weight: normal;
@@ -103,20 +103,22 @@ ul.card-stacks li.card div.content {
     padding: 5px 10px;
 }
 
+/* problem with overlapping packets */
+
 ul.card-stacks li.card:nth-of-type(1) {
-    z-index: 10;
+    /* z-index: 4; */
     -webkit-transform: rotateZ(-2deg);
     transform: rotateZ(-2deg);
 }
 
 ul.card-stacks li.card:nth-of-type(2) {
-    z-index: 9;
+    /* z-index: 3; */
     -webkit-transform: rotateZ(-7deg);
     transform: rotateZ(-7deg);
 }
 
 ul.card-stacks li.card:nth-of-type(3) {
-    z-index: 8;
+    /* z-index: 2; */
     -webkit-transform: rotateZ(5deg);
     transform: rotateZ(5deg);
 }
@@ -191,10 +193,8 @@ ul.card-stacks.transition li.card {
     height: 250px;
 }
 
-.moveheading {
-    transform: translateY(-10vh);
-    /* left: 20px; */
-    font-size: 4rem;
+.categoryHeading {
+    display: none;
 }
 
 /* events landing page */
@@ -202,6 +202,8 @@ ul.card-stacks.transition li.card {
 .event-holder {
     opacity: 0;
     z-index: -5;
+    height: 0;
+    display: none;
 }
 
 .events-logo {
@@ -231,25 +233,25 @@ ul.card-stacks.transition li.card {
 }
 
 .landing-performing {
-    width: 50%;
+    width: 50vw;
     height: 50%;
     background: linear-gradient(to right, #e0c3fc, #8ec5fc);
 }
 
 .landing-tech {
-    width: 50%;
+    width: 50vw;
     height: 50%;
     background: linear-gradient(to right, #43e97b, #38f9d7);
 }
 
 .landing-literary {
-    width: 50%;
+    width: 50vw;
     height: 50%;
     background: linear-gradient(to right, #4facfe, #00f2fe);
 }
 
 .landing-fun {
-    width: 50%;
+    width: 50vw;
     height: 50%;
     background: linear-gradient(to right, #f093fb, #f5576c);
 }
@@ -318,4 +320,54 @@ ul.card-stacks.transition li.card {
 .event-category:hover:after {
     width: 100%;
     transition: 800ms ease all;
+}
+
+@media screen and (max-width: 425px) {
+    .event-category {
+        z-index: 2;
+        position: absolute;
+        margin: 24vh 0 0 7vw;
+        cursor: pointer;
+        color: white;
+        font-size: 2.5rem;
+        font-weight: 700;
+        transition: 800ms ease all;
+        outline: none;
+    }
+    ul.card-stacks.transition li.card {
+        width: 76%;
+        margin-left: 12%;
+        height: 250px;
+    }
+    .technical .card-stacks {
+        left: 0;
+    }
+    .cultural .card-stacks {
+        left: 25vw;
+    }
+    .fun .card-stacks {
+        left: 50vw;
+    }
+    ul.card-stacks {
+        top: 77vh;
+    }
+    .moveheading {
+        display: block;
+        color: black;
+        font-weight: normal;
+        width: 100%;
+        margin-top: 20%;
+        margin-bottom: 0%;
+        text-align: center;
+        font-size: 2.2rem;
+        color: rgb(77, 75, 75);
+        background-size: 20px 20px;
+        background-position: 0 0;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .event-category {
+        font-size: 18px;
+    }
 }
