@@ -322,7 +322,7 @@ ul.card-stacks.transition li.card {
     transition: 800ms ease all;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 600px) {
     .event-category {
         z-index: 2;
         position: absolute;

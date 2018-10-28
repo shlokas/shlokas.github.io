@@ -9,6 +9,9 @@
     <link rel="stylesheet" media="screen" href="css/fullpage.min.css">
     <link rel="stylesheet" media="screen" href="css/styles.css">
     <link rel="icon" type="icon" href="oculus-favicon.png">
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
     <title>Oculus 2019 | Oculus Sees All</title>
     <style>
         @font-face {
@@ -19,6 +22,55 @@
 </head>
 
 <body>
+    <script>
+
+
+        //Preloader time out
+        $(document).ready(function () {
+
+            $(window).load(function () {
+
+                console.log('loaded');
+                preloaderFadeOutTime = 500;
+
+                function hidePreloader() {
+                    var preloader = $('.spinner-wrapper');
+                    preloader.fadeOut(preloaderFadeOutTime);
+                }
+
+                hidePreloader();
+
+                console.log('hidden');
+            });
+        });
+
+
+        //fade navbar on reaching footer
+        var footer_height;
+        $(document).ready(function () {
+            footer_height = $("footer").offset().top;
+            console.log("footer height is " + footer_height);
+
+        });
+
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+
+            if (document.body.scrollTop > (footer_height - 100) || document.documentElement.scrollTop > (footer_height -
+                100)) {
+                // console.log("hide");
+                $('#navbar').addClass("disp");
+            } else {
+                // console.log("unhide");
+                $('#navbar').removeClass("disp");
+
+            }
+        }
+
+    </script>
     <div class="spinner-wrapper">
         <div class="spinner">
             <img id="preload-img1" src="./images/outer.png">

@@ -108,7 +108,7 @@ body {
 
 /* media queries for mobile */
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 600px) {
     .register {
         display: none;
     }
@@ -444,15 +444,16 @@ a.effect-shine:hover {
 
 #preload-img1 {
     animation: spin 2.8s ease-in-out alternate infinite;
-    height: 175px;
+    height: 100%;
+    width: auto;
 }
 
 #preload-img2 {
-    width: 95px;
-    height: auto;
+    width: auto;
+    height: 57%;
     z-index: 2;
     position: inherit;
-    left: 24%;
+    /* left: 24%; */
 }
 
 @keyframes spin {
@@ -475,8 +476,11 @@ a.effect-shine:hover {
 .spinner {
     position: absolute;
     align-items: center;
-    top: calc(50% - 125px);
-    left: calc(50% - 125px);
+    height: 30vh;
+    width: 30vh;
+    justify-content: center;
+    top: calc(50vh - 15vh);
+    left: calc(50vw - 15vh);
     display: flex;
 }
 
