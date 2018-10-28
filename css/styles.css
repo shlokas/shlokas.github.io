@@ -105,16 +105,15 @@ body {
     transition: 800ms ease all;
 }
 
-
 /* media queries for mobile */
 
 @media screen and (max-width: 600px) {
     .register {
         display: none;
     }
-     #navbar>img {
-         display: none;
-     }
+    #navbar>img {
+        display: none;
+    }
 }
 
 .video-overlay {
@@ -554,16 +553,29 @@ a.effect-shine:hover {
 }
 
 #section3 .event {
-    width: 23%;
+    width: 20%;
+    text-align: center;
 }
 
-@media screen and (max-width: 425px) {
+#section3 .event img {
+    width: 80%;
+    mix-blend-mode: luminosity;
+}
+
+@media screen and (max-width: 600px) {
     #section3 .events {
         display: unset;
         justify-content: space-around;
     }
     #section3 .event {
+        display: flex;
+        align-items: center; 
         width: 100%;
+    }
+    
+    #section3 .event img {
+        width: 80px;
+        height: 100px;
     }
 }
 
@@ -772,11 +784,11 @@ a.effect-shine:hover {
     left: 20vw;
 }
 
-@media screen and (max-width: 600px){
-    .swing{
+@media screen and (max-width: 600px) {
+    .swing {
         left: 10vw;
     }
-    #nav{
+    #nav {
         width: 60%;
     }
 }
@@ -900,7 +912,8 @@ a.effect-shine:hover {
         transform: rotateX(0deg);
     }
 }
-.contentgenz{
+
+.contentgenz {
     z-index: 2;
     margin: 0 auto;
     font-size: 1.2rem;
@@ -920,20 +933,20 @@ a.effect-shine:hover {
         margin-right:5%;
     }
 
-    .clock{
-        width:50%;
-        left:20%;
-        margin-top:25%;
-    }
 
-    .contentgenz{
+    .clock {
+        width: 50%;
+        left: 20%;
+        margin-top: 25%;
+    }
+    .contentgenz {
         z-index: 2;
         margin: 0 auto;
         font-size: 17.5px;
         position: relative;
         text-align: justify;
         width: 100%;
-        margin-bottom:3%;
+        margin-bottom: 3%;
     }
 
     #section2::after {
@@ -965,8 +978,9 @@ a.effect-shine:hover {
         text-align:center;
     }
 }
-@media screen and (min-width:601px){
-    .clock{
-        bottom:30%;
+
+@media screen and (min-width:601px) {
+    .clock {
+        bottom: 30%;
     }
 }
