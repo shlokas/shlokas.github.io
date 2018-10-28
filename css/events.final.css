@@ -341,6 +341,19 @@ ul.card-stacks.transition li.card {
         margin-left: 12%;
         height: 250px;
     }
+
+    .technical .card-stacks{
+        left:0;
+    }
+    .cultural .card-stacks {
+        left: 25vw;
+    }
+    .fun .card-stacks{
+        left:50vw;
+    }
+    ul.card-stacks{
+        top:77vh;
+    }
 }
 
 @media screen and (max-width: 380px){

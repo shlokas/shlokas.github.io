@@ -528,18 +528,18 @@ a.effect-shine:hover {
     z-index: 1;
 }
 
-.heading {
+.heading ,.ngoheading {
     color: white;
     text-align: center;
     font-family: 'Segoe UI';
 }
 
-.heading h1 {
+.heading h1,.ngoheading h1 {
     font-size: 55px;
 }
 
 #section3 .heading h1,
-#section4 .heading h1 {
+#section4 .ngoheading h1 {
     color: black;
 }
 
@@ -914,6 +914,11 @@ a.effect-shine:hover {
         left:0%;
         margin-top:10%;
     }
+    .about-oculus-para{
+        text-align: justify;
+        margin-left:5%;
+        margin-right:5%;
+    }
 
     .clock{
         width:50%;
@@ -930,8 +935,34 @@ a.effect-shine:hover {
         width: 100%;
         margin-bottom:3%;
     }
+
+    #section2::after {
+        content: "";
+        background-image: url("../images/brain.png");
+        background-size: 90% 90%;
+        background-position: center;
+        background-repeat: no-repeat;
+        /* filter: grayscale(100%); */
+        opacity: 0.3;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: 1;
+    }
+
     .hiddenmobile{
         display:none;
+    }
+    .ngo-content{
+        text-align:justify;
+        width:100%;
+    }
+    
+    .ngoheading h1 {
+        font-size: 40px;
+        text-align:center;
     }
 }
 @media screen and (min-width:601px){
