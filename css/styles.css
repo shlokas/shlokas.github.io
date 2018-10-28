@@ -329,7 +329,6 @@ a {
     position: absolute;
     width: 30%;
     left: 6.5%;
-    bottom: 30%;
     z-index: 3;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -558,6 +557,16 @@ a.effect-shine:hover {
     width: 23%;
 }
 
+@media screen and (max-width: 425px) {
+    #section3 .events {
+        display: unset;
+        justify-content: space-around;
+    }
+    #section3 .event {
+        width: 100%;
+    }
+}
+
 #section4 {
     /* background-color: #fff35b !important; */
     background: linear-gradient(to bottom, #fbf767, #fff82a);
@@ -763,6 +772,15 @@ a.effect-shine:hover {
     left: 20vw;
 }
 
+@media screen and (max-width: 600px){
+    .swing{
+        left: 10vw;
+    }
+    #nav{
+        width: 60%;
+    }
+}
+
 .thread {
     height: 50px;
     border: 1px solid black;
@@ -880,5 +898,44 @@ a.effect-shine:hover {
     100% {
         -moz-transform: rotateX(0deg);
         transform: rotateX(0deg);
+    }
+}
+.contentgenz{
+    z-index: 2;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    position: relative;
+    text-align: center;
+    width: 80%;
+}
+@media screen and (max-width:600px){
+    .about-oculus{
+        width:100%;
+        left:0%;
+        margin-top:10%;
+    }
+
+    .clock{
+        width:50%;
+        left:20%;
+        margin-top:25%;
+    }
+
+    .contentgenz{
+        z-index: 2;
+        margin: 0 auto;
+        font-size: 17.5px;
+        position: relative;
+        text-align: justify;
+        width: 100%;
+        margin-bottom:3%;
+    }
+    .hiddenmobile{
+        display:none;
+    }
+}
+@media screen and (min-width:601px){
+    .clock{
+        bottom:30%;
     }
 }

@@ -102,21 +102,21 @@ ul.card-stacks li.card img {
 ul.card-stacks li.card div.content {
     padding: 5px 10px;
 }
-
+/* problem with overlapping packets */
 ul.card-stacks li.card:nth-of-type(1) {
-    z-index: 4;
+    /* z-index: 4; */
     -webkit-transform: rotateZ(-2deg);
     transform: rotateZ(-2deg);
 }
 
 ul.card-stacks li.card:nth-of-type(2) {
-    z-index: 3;
+    /* z-index: 3; */
     -webkit-transform: rotateZ(-7deg);
     transform: rotateZ(-7deg);
 }
 
 ul.card-stacks li.card:nth-of-type(3) {
-    z-index: 2;
+    /* z-index: 2; */
     -webkit-transform: rotateZ(5deg);
     transform: rotateZ(5deg);
 }
@@ -318,11 +318,12 @@ ul.card-stacks.transition li.card {
 
 .event-category:hover:before,
 .event-category:hover:after {
+
     width: 100%;
     transition: 800ms ease all;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 425px) {
     .event-category {
         z-index: 2;
         position: absolute;
@@ -333,5 +334,17 @@ ul.card-stacks.transition li.card {
         font-weight: 700;
         transition: 800ms ease all;
         outline: none;
+    }
+
+    ul.card-stacks.transition li.card {
+        width: 76%;
+        margin-left: 12%;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 380px){
+    .event-category{
+        font-size: 18px;
     }
 }
