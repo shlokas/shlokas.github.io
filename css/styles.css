@@ -578,6 +578,10 @@ a.effect-shine:hover {
         width: 80px;
         height: 100px;
     }
+
+    #section10 {
+        font-size: small;
+    }
 }
 
 #section4 {
@@ -926,19 +930,22 @@ a.effect-shine:hover {
     .about-oculus{
         width:100%;
         left:0%;
-        margin-top:10%;
+        margin-top:20%;
     }
     .about-oculus-para{
         text-align: justify;
         margin-left:5%;
         margin-right:5%;
     }
+    .about-oculus-hide-mobile {
+        display: none;
+    }
 
 
     .clock {
         width: 50%;
         left: 20%;
-        margin-top: 25%;
+        margin-top: 35%;
     }
     .contentgenz {
         z-index: 2;
