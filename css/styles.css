@@ -571,6 +571,7 @@ a.effect-shine:hover {
         display: flex;
         align-items: center; 
         width: 100%;
+        margin-top: -10px;
     }
     
     #section3 .event img {
@@ -976,6 +977,19 @@ a.effect-shine:hover {
     .ngoheading h1 {
         font-size: 40px;
         text-align:center;
+    }
+
+    #section3{
+        padding-left:10px;
+        padding-right:10px;
+    }
+    .eventpara{
+        text-align:justify;
+        padding:2px;
+    }
+    .performArtImg{
+        margin-left: 15px;
+        margin-right: -12px;
     }
 }
 

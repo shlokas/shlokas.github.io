@@ -37,8 +37,8 @@
     // events nav transition
 
     function navtransition(classname) {
-      $(".heading").removeClass('moveheading');
-      $(classname + '.heading').toggleClass("moveheading");
+      $(".categoryHeading").removeClass('moveheading');
+      $(classname + '.categoryHeading').toggleClass("moveheading");
       $("ul.card-stacks").removeClass('transition');
       $(classname + " ul.card-stacks").toggleClass('transition');
 
@@ -197,24 +197,17 @@
   <div class="event-holder">
 
     <div class="technical heading" onclick="navtransition('.technical')">
-      <!-- <p>
-        <img src="images/icon7.png">&nbsp;&nbsp;&nbsp;TECHNICAL
-      </p> -->
     </div>
-
     <div class="cultural heading" onclick="navtransition('.cultural')">
-      <!-- <p data-heading="Slide"><img src="images/icon4.png">&nbsp;&nbsp;&nbsp;PERFORMING ARTS</p> -->
     </div>
-
-
     <div class="fun heading" onclick="navtransition('.fun')">
-      <!-- <p data-heading="Slide"><img src="images/icon2.png">&nbsp;&nbsp;&nbsp;FUN</p> -->
     </div>
-
     <div class="literary heading" onclick="navtransition('.literary')">
-      <!-- <p data-heading="Slide"><img src="images/icon1.png">&nbsp;&nbsp;&nbsp;LITERARY ARTS</p> -->
     </div>
-
+    <p class="technical categoryHeading" data-heading="Slide"><img style="width:10%;height:10%;" src="images/icon7.png">&nbsp;&nbsp;&nbsp;TECHNICAL</p>
+    <p class="cultural categoryHeading" data-heading="Slide"><img style="width:10%;height:10%;" src="images/icon4.png">&nbsp;&nbsp;&nbsp;PERFORMING ARTS</p>
+    <p class="fun categoryHeading" data-heading="Slide"><img style="width:10%;height:10%;" src="images/icon2.png">&nbsp;&nbsp;&nbsp;FUN</p>
+    <p class="literary categoryHeading" data-heading="Slide" ><img style="width:10%;height:10%;" src="images/icon1.png">&nbsp;&nbsp;&nbsp;LITERARY ARTS</p>
 
     <div class="technical">
 
@@ -282,12 +275,12 @@
       </ul>
 
     </div>
-    <br><br>
+    
 
     <div class="cultural">
-
+      
       <ul class="card-stacks" onclick="navtransition('.cultural')">
-
+        <br><br>
         <li class="card">
           <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
             <img class="card-image" src="images/aw_sargam_sq.png">
@@ -372,12 +365,12 @@
 
     </div>
 
-    <br><br>
+    
 
     <div class="fun">
-
+      
       <ul class="card-stacks" onclick="navtransition('.fun')">
-
+        <br><br>
         <li class="card">
           <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
 
@@ -463,13 +456,13 @@
       </ul>
 
     </div>
-    <br><br>
+    
 
     <div class="literary">
-
+      
 
       <ul class="card-stacks" onclick="navtransition('.literary')">
-
+        <br><br>
         <li class="card">
           <div class="content" data-toggle="modal" data-target=".bd-example-modal-lg">
             <img class="card-image" src="images/jam02.png">
