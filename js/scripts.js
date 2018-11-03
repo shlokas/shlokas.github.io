@@ -83,8 +83,10 @@ $(document).ready(function () {
 
 function hideOverlay() {
     vid_over.style.bottom = "100%";
-    $('#after-movie')[0].contentWindow.
-    postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+    $('#after-movie').each(function(index) {
+        $(this).attr('src', $(this).attr('src'));
+        return false;
+    });
 }
 
 function showOverlay() {
