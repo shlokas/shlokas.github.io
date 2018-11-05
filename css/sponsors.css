@@ -49,4 +49,10 @@
     right: 1vw;
     font-weight: 300;
     font-size: 1.6rem;
+    animation: shine 2s infinite;
+}
+
+.brochure .fa {
+    color: black;
+    font-size: 14px;
 }
