@@ -215,7 +215,7 @@ ul.card-stacks.transition li.card {
     top: calc(50vh - 11vw);
     left: 39vw;
     border-radius: 50%;
-    background: url(../images/brain.png), linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    background: url(../images/brain.jpeg), linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;

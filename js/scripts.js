@@ -83,6 +83,10 @@ $(document).ready(function () {
 
 function hideOverlay() {
     vid_over.style.bottom = "100%";
+    $('#after-movie').each(function(index) {
+        $(this).attr('src', $(this).attr('src'));
+        return false;
+    });
 }
 
 function showOverlay() {

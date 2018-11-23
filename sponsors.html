@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" media="screen" href="css/fullpage.min.css"> -->
-    <link rel="stylesheet" media="screen" href="css/styles.css">
+    <link rel="stylesheet" media="screen" href="css/styles.min.css">
     <link rel="stylesheet" media="screen" href="css/sponsors.css">
     <link rel="icon" type="icon" href="oculus-favicon.png">
     <title>Oculus 2019 | Oculus Sees All</title>
@@ -34,8 +34,8 @@
 
     <div id="videoOverlay" class="video-overlay">
 
-        <iframe width="80%" height="70%" style="margin-top: 15vh" src="https://www.youtube.com/embed/VlyZrYF5Emk" frameborder="0"
-            gesture="media" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe id="after-movie" width="80%" height="70%" style="margin-top: 15vh" src="https://www.youtube.com/embed/VlyZrYF5Emk"
+            frameborder="0" gesture="media" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         <div class="close"><i onclick="hideOverlay()" class="fa fa-close"></i></div>
     </div>
 
@@ -76,13 +76,21 @@
     <div id="particles-js"></div>
     <div class="sponsor-content">
         <h1><span style="left: 2vw;
-            position: relative;">Past Partnerships</span><span class="brochure"><a
-                    class="effect-shine" target="_blank" href="./Oculus_Marketing_Deck.pdf" download>Sponsorship brochure</a></span></h1>
+            position: relative;">Past Partnerships</span><span class="brochure"><a class="effect-shine" target="_blank"
+                    href="./Oculus_Marketing_Deck.pdf" download><i class="fa fa-download"></i>&nbsp;Sponsorship brochure</a></span></h1>
 
+
+        <div class="co-sponsors">
+                <p>Presented by</p>
+
+            <img id="sponsorlogo" src="images/sponsors/wellness-forever.png" alt="Co-sponsor" />
+
+        </div>
         <div class="co-sponsors">
             <p>Co-sponsored by</p>
             <img id="sponsorlogo" src="images/sponsors/india_today.JPG" alt="Co-sponsor" />
-            <img id="sponsorlogo" src="images/sponsors/wellness-forever.png" alt="Co-sponsor" />
+            <img id="sponsorlogo" src="images/sponsors/Amore Logo.jpg " alt="Industry Partner" />
+
 
         </div>
         <div class="sponsors">
@@ -103,7 +111,6 @@
             <img id="sponsorlogo" src="images/sponsors/ttraxx.jpg " alt="Industry Partner" />
             <img id="sponsorlogo" src="images/sponsors/frapp.png " alt="Industry Partner" />
             <img id="sponsorlogo" src="images/sponsors/good-food-tourism.png " alt="Industry Partner" />
-            <img id="sponsorlogo" src="images/sponsors/Amore Logo.jpg " alt="Industry Partner" />
             <img id="sponsorlogo" src="images/sponsors/fcb-ulka.png " alt="Industry Partner" />
             <img id="sponsorlogo" src="images/sponsors/grapevine.png " alt="Industry Partner" />
 
