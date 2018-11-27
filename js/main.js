@@ -99,7 +99,7 @@ $("#old1").removeClass('notransition');
 function centerText(i){
     $("#container").css({
         background: "linear-gradient(39deg, #302d2c, #c8b130, #3a64cc, #c83131, #f58706, #7505d0, #3e850e)",
-backgroundSize: "1400% 1400%",
+ backgroundSize: "1400% 1400%",
 
 webkitAnimation: "hello 25s ease infinite",
 mozAnimation: "hello 25s ease infinite",
@@ -257,10 +257,13 @@ animation: "hello 25s ease infinite",
         $("#old5").css('display','none');
         $("#old11").css('display','none');
         $("#old12").css('display','none');
-        $("#container").css({
-            backgroundColor:"black"});
+        $("#container").css({backgroundColor:"black"});
+        // $("#container").load();
+       // $("#container").fadeOut('slow').load().fadeIn('slow');
+        // var container = document.getElementById("container");
+        // container.location.reload();
         window.location.reload();
-        oldgen();
+       // oldgen();
         return;
     }
     $("#myCanvas3").css('display','none'); 

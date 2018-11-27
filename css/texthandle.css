@@ -59,7 +59,8 @@ svg {
     #oldtext1:after {
       content: attr(data-shadow);
       position: fixed;
-      top: .06em; left: .06em;
+	  /* top: .06em;  */
+	  left: .06em;
       z-index: -1;
       text-shadow: none;
       background-image:
@@ -90,7 +91,8 @@ svg {
 		  content: attr(data-shadow);
 		  position: fixed;
 		  padding-left:20vw;
-		  top: .06em; left: .06em;
+		  /* top: .06em;  */
+		  left: .06em;
 		  z-index: -1;
 		  text-shadow: none;
 		  background-image:
@@ -119,8 +121,9 @@ svg {
 		{
 			  content: attr(data-shadow);
 			  position: fixed;
-			  padding-top:20vh;
-			  top: .06em; left: .06em;
+			  /* padding-top:20vh; */
+			  /* top: .06em; */
+			   left: .06em;
 			  z-index: -1;
 			  text-shadow: none;
 			  background-image:
@@ -132,6 +135,7 @@ svg {
 				  transparent 0
 				  );
 			  background-size: .05em .05em;
+			  background-clip: text;
 			  -webkit-background-clip: text;
 			  -webkit-text-fill-color: transparent;
 			
@@ -238,7 +242,8 @@ svg {
 		#oldtext1:after {
 		  content: attr(data-shadow);
 		  position: fixed;
-		  top: .06em; left: .06em;
+		  /* top: .06em; */
+		   left: .06em;
 		  z-index: -1;
 		  text-shadow: none;
 		  background-image:
@@ -269,7 +274,8 @@ svg {
 			  content: attr(data-shadow);
 			  position: fixed;
 			  padding-left:20vw;
-			  top: .06em; left: .06em;
+			  /* top: .06em; */
+			   left: .06em;
 			  z-index: -1;
 			  text-shadow: none;
 			  background-image:
@@ -298,8 +304,9 @@ svg {
 			{
 				  content: attr(data-shadow);
 				  position: fixed;
-				  padding-top:20vh;
-				  top: .06em; left: .06em;
+				  /* padding-top:20vh; */
+				  /* top: .06em; */
+				   left: .06em;
 				  z-index: -1;
 				  text-shadow: none;
 				  background-image:
