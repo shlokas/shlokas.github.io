@@ -15,6 +15,22 @@ canvas {
   }
 }
 
+
+@-webkit-keyframes hello {
+    0%{background-position:0% 81%}
+    50%{background-position:100% 20%}
+    100%{background-position:0% 81%}
+}
+@-moz-keyframes hello {
+    0%{background-position:0% 81%}
+    50%{background-position:100% 20%}
+    100%{background-position:0% 81%}
+}
+@keyframes hello { 
+    0%{background-position:0% 81%}
+    50%{background-position:100% 20%}
+    100%{background-position:0% 81%}
+}
 @media screen and (max-width:799px){
     #boxforcanvas
     {

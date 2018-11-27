@@ -97,7 +97,14 @@ $("#old1").removeClass('notransition');
 // function looping over itself
 
 function centerText(i){
-    $("#container").css('backgroundColor','#808080');
+    $("#container").css({
+        background: "linear-gradient(39deg, #302d2c, #c8b130, #3a64cc, #c83131, #f58706, #7505d0, #3e850e)",
+backgroundSize: "1400% 1400%",
+
+webkitAnimation: "hello 25s ease infinite",
+mozAnimation: "hello 25s ease infinite",
+animation: "hello 25s ease infinite",
+    });
     if(i%4==0)
     {
         // 2,5,11,12
@@ -250,6 +257,9 @@ function centerText(i){
         $("#old5").css('display','none');
         $("#old11").css('display','none');
         $("#old12").css('display','none');
+        $("#container").css({
+            backgroundColor:"black"});
+        window.location.reload();
         oldgen();
         return;
     }
