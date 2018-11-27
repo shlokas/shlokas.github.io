@@ -1,12 +1,11 @@
 
 (function ($) {
     'use strict';
-
+ window.onload=oldgen();
    
 
-
-
-
+function oldgen(){
+    $("#container").css('backgroundColor','black');
     $("#container1").css('animationName','middle');  
     $("#container1").css('animationDuration','7s'); 
     $('#container1').css('animationIterationCount','infinite');
@@ -17,22 +16,41 @@
         newimg = img + i;
         $(newimg).css('display','none');
     }
+
+    // text display
+    $("#oldtext1").fadeIn(0);
+    $("#oldtext2").fadeIn(0);
+    $("#oldtext3").fadeIn(0);
+    $("#s-text").fadeIn(0);
+
+
+    $("#old1").addClass('notransition'); // Disable transitions
+$("#old1").removeClass('notransition');
     $('#old1').css('display','flex');
     $('#old1').css('position','fixed');
     $("#old1").css('animationName','old1');  
     $("#old1").css('animationDuration','4s'); 
+    $("#old1").css('animationTimingFunction','ease-in-out');
 
     setTimeout(function(){
             $('#old8').css('display','flex');
             $('#old8').css('position','fixed');
             $('#old8').fadeIn(3000);
-            $('#old8').css('paddingLeft','80vw');
+            if($(window).width()>=600)
+            {
+                $('#old8').css('paddingLeft','75vw');
+            }
+            else{
+                $('#old8').css('paddingLeft','40vw');
+            }
+            
             setTimeout(() => {
                 $('#old7').css({
                     display : 'flex',
                     position : 'fixed',
                     animationName : 'old7',
-                    animationDuration : '4s'
+                    animationDuration : '4s',
+                    animationTimingFunction:"ease-in-out"
                 });
             }, 3000);
             // trigger termination of container movement
@@ -59,6 +77,8 @@
                     }, 1000);   
             });   
         }, 4000);   
+}
+  
 // new generation starts
         function newGenMethod(){
             $("#intro").css(
@@ -71,12 +91,168 @@
             var  intro= document.getElementById("intro");
             intro.addEventListener("animationend", function(){
                 $("#intro").css('display','none');
-                centerText();
+                centerText(0);
             });
         }
 // function looping over itself
 
-function centerText(){
+function centerText(i){
+    $("#container").css('backgroundColor','#808080');
+    if(i%4==0)
+    {
+        // 2,5,11,12
+        $('#old2').css(
+            {
+                display:"flex",
+                position:"fixed",
+                animationName:"old2",
+                animationDuration:"4s",
+                animationTimingFunction:"ease-in-out"
+            }
+        );
+        $('#old5').css(
+            {
+                display:"flex",
+                position:"fixed",
+                animationName:"old5",
+                animationDuration:"4s",
+                animationTimingFunction:"ease-in-out"
+            }
+        );
+        $('#old11').css(
+            {
+                display:"flex",
+                position:"fixed",
+                animationName:"old11",
+                animationDuration:"4s",
+                animationTimingFunction:"ease-in-out"
+            }
+        );
+        $('#old12').css(
+            {
+                display:"flex",
+                position:"fixed",
+                animationName:"old12",
+                animationDuration:"4s",
+                animationTimingFunction:"ease-in-out"
+            }
+        );
+    }
+    else if(i%4==1)
+    {
+        $('#old2').css(
+            {
+                display:"flex",
+                position:"fixed",
+                animationName:"old5",
+                animationDuration:"4s"
+            }
+        );
+        $('#old5').css(
+            {
+                display:"flex",
+                position:"fixed",
+                animationName:"old11",
+                animationDuration:"4s"
+            }
+        );
+        $('#old11').css(
+            {
+                display:"flex",
+                position:"fixed",
+                animationName:"old12",
+                animationDuration:"4s"
+            }
+        );
+        $('#old12').css(
+            {
+                display:"flex",
+                position:"fixed",
+                animationName:"old2",
+                animationDuration:"4s"
+            }
+        );
+    }
+    else if(i%4==2){
+        $('#old2').css(
+            {
+                display:"flex",
+                position:"fixed",
+                animationName:"old11",
+                animationDuration:"4s"
+            }
+        );
+        $('#old5').css(
+            {
+                display:"flex",
+                position:"fixed",
+                animationName:"old12",
+                animationDuration:"4s"
+            }
+        );
+        $('#old11').css(
+            {
+                display:"flex",
+                position:"fixed",
+                animationName:"old2",
+                animationDuration:"4s"
+            }
+        );
+        $('#old12').css(
+            {
+                display:"flex",
+                position:"fixed",
+                animationName:"old5",
+                animationDuration:"4s"
+            }
+        );
+    }
+    else {
+        $('#old2').css(
+            {
+                display:"flex",
+                position:"fixed",
+                animationName:"old12",
+                animationDuration:"4s"
+            }
+        );
+        $('#old5').css(
+            {
+                display:"flex",
+                position:"fixed",
+                animationName:"old2",
+                animationDuration:"4s"
+            }
+        );
+        $('#old11').css(
+            {
+                display:"flex",
+                position:"fixed",
+                animationName:"old5",
+                animationDuration:"4s"
+            }
+        );
+        $('#old12').css(
+            {
+                display:"flex",
+                position:"fixed",
+                animationName:"old11",
+                animationDuration:"4s"
+            }
+        );
+    }
+    if(i==4)
+    {
+        $("#myCanvas3").css('display','none'); 
+        $("#myCanvas1").css('display','none');
+        $("#myCanvas2").css('display','none'); 
+        $("#old2").css('display','none');
+        $("#old5").css('display','none');
+        $("#old11").css('display','none');
+        $("#old12").css('display','none');
+        oldgen();
+        return;
+    }
     $("#myCanvas3").css('display','none'); 
     $("#myCanvas1").css('display','flex');
     $("#myCanvas2").css('display','none'); 
@@ -91,6 +267,7 @@ function centerText(){
             $("#myCanvas2").css('display','none');  
             $("#myCanvas3").css('display','flex');  
             genzDisplay("third","myCanvas3");
+            setTimeout(centerText(++i),5000);
         },5000);
    }, 5000);
 }
@@ -102,13 +279,23 @@ function centerText(){
             var mask;
             var str=str1;
             var pointCount = 500;
-            var fontStr = "bold 128pt Helvetica Neue, Helvetica, Arial, sans-serif";
+            var fontStr;
+            if($(window).width()>=600)
+        {
+            fontStr = "bold 128pt Helvetica Neue, Helvetica, Arial, sans-serif";
+            c.height=128;
+        }
+        else
+        {
+            fontStr = "bold 64pt Helvetica Neue, Helvetica, Arial, sans-serif";
+            c.height=64;
+        }
+         
 
             ctx.font = fontStr;
             ctx.textAlign = "center";
             c.width = ctx.measureText(str).width;
-            c.height = 128; // Set to font size
-
+            //c.height = 128; // Set to font size
             var whitePixels = [];
             var points = [];
             var point = function(x,y,vx,vy){
@@ -119,7 +306,7 @@ function centerText(){
             }
             point.prototype.update = function() {
             ctx.beginPath();
-            ctx.fillStyle = "white";
+            ctx.fillStyle = "black";
             ctx.arc(this.x,this.y,1,0,2*Math.PI);
             ctx.fill();
             ctx.closePath();
