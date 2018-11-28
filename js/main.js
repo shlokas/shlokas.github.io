@@ -16,16 +16,16 @@ function oldgen(){
         newimg = img + i;
         $(newimg).css('display','none');
     }
-
+    $('#messenger1').css('display','none');
+    $('#messenger2').css('display','none');
+    $('#messenger3').css('display','none');
     // text display
-    $("#oldtext1").fadeIn(0);
-    $("#oldtext2").fadeIn(0);
-    $("#oldtext3").fadeIn(0);
     $("#s-text").fadeIn(0);
 
 
     $("#old1").addClass('notransition'); // Disable transitions
 $("#old1").removeClass('notransition');
+    $('#messenger1').fadeIn(3000);
     $('#old1').css('display','flex');
     $('#old1').css('position','fixed');
     $("#old1").css('animationName','old1');  
@@ -36,6 +36,7 @@ $("#old1").removeClass('notransition');
             $('#old8').css('display','flex');
             $('#old8').css('position','fixed');
             $('#old8').fadeIn(3000);
+            $('#messenger2').fadeIn(3000);
             if($(window).width()>=600)
             {
                 $('#old8').css('paddingLeft','75vw');
@@ -45,6 +46,7 @@ $("#old1").removeClass('notransition');
             }
             
             setTimeout(() => {
+                $('#messenger3').fadeIn(3000);
                 $('#old7').css({
                     display : 'flex',
                     position : 'fixed',
@@ -66,9 +68,9 @@ $("#old1").removeClass('notransition');
                             $("#old1").fadeOut(1000);
                             $("#old7").fadeOut(2000);
                             $("#old8").fadeOut(3000);
-                            $("#oldtext1").fadeOut(1000);
-                            $("#oldtext2").fadeOut(2000);
-                            $("#oldtext3").fadeOut(3000);
+                            $("#messenger1").fadeOut(1000);
+                            $("#messenger2").fadeOut(2000);
+                            $("#messenger3").fadeOut(3000);
                             $("#s-text").fadeOut(4000);
                             setTimeout(() => {
                             newGenMethod();
@@ -416,4 +418,107 @@ animation: "hello 25s ease infinite",
             setInterval(loop,50);
             init();
     }
+// for text animation
+
+    var Messenger = function(el,mes){
+        'use strict';
+        var m = this;
+        
+        m.init = function(){
+          m.codeletters = "&#*+%?£@§$";
+          m.message = 0;
+          m.current_length = 0;
+          m.fadeBuffer = false;
+        //   m.messages = [
+        //     'This is a message, which can be long and all.',
+        //     'This could be another message.',
+        //     'Also short ones work!',
+        //     'Cool.'
+        //   ];
+          m.messages=mes;
+          setTimeout(m.animateIn, 100);
+        };
+        
+        m.generateRandomString = function(length){
+          var random_text = '';
+          while(random_text.length < length){
+            random_text += m.codeletters.charAt(Math.floor(Math.random()*m.codeletters.length));
+          } 
+          
+          return random_text;
+        };
+        
+        m.animateIn = function(){
+          if(m.current_length < m.messages[m.message].length){
+            m.current_length = m.current_length + 2;
+            if(m.current_length > m.messages[m.message].length) {
+              m.current_length = m.messages[m.message].length;
+            }
+            
+            var message = m.generateRandomString(m.current_length);
+            $(el).html(message);
+            
+            setTimeout(m.animateIn, 20);
+          } else { 
+            setTimeout(m.animateFadeBuffer, 20);
+          }
+        };
+        
+        m.animateFadeBuffer = function(){
+          if(m.fadeBuffer === false){
+            m.fadeBuffer = [];
+            for(var i = 0; i < m.messages[m.message].length; i++){
+              m.fadeBuffer.push({c: (Math.floor(Math.random()*12))+1, l: m.messages[m.message].charAt(i)});
+            }
+          }
+          
+          var do_cycles = false;
+          var message = ''; 
+          
+          for(var i = 0; i < m.fadeBuffer.length; i++){
+            var fader = m.fadeBuffer[i];
+            if(fader.c > 0){
+              do_cycles = true;
+              fader.c--;
+              message += m.codeletters.charAt(Math.floor(Math.random()*m.codeletters.length));
+            } else {
+              message += fader.l;
+            }
+          }
+          
+          $(el).html(message);
+          
+          if(do_cycles === true){
+            setTimeout(m.animateFadeBuffer, 50);
+          } else {
+            setTimeout(m.cycleText, 2000);
+          }
+        };
+        
+        m.cycleText = function(){
+          m.message = m.message + 1;
+          if(m.message >= m.messages.length){
+            m.message = 0;
+          }
+          
+          m.current_length = 0;
+          m.fadeBuffer = false;
+          $(el).html('');
+          
+          setTimeout(m.animateIn, 200);
+        };
+        
+        m.init();
+      }
+      
+      console.clear();
+      var messenger1 = new Messenger($('#messenger1'),[
+            '#Aeroplane','Wright brothers','1870-1900','@Flight'
+          ]);
+     var messenger2 = new Messenger($('#messenger2'),[
+            'Graham Bell','hello !!!','1885-1890','#Telephone'
+          ]);
+    var messenger3 = new Messenger($('#messenger3'),[
+            '#Camera','George Eastman','Say Cheese ;)','1905-1913'
+          ]);
 })(jQuery);
