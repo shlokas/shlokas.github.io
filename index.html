@@ -2,14 +2,6 @@
 <html lang="en">
 
 <head>
-    <!-- Global Site Tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129763562-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-129763562-1');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -17,14 +9,22 @@
     <link rel="stylesheet" media="screen" href="css/fullpage.min.css">
     <link rel="stylesheet" media="screen" href="css/styles.min.css">
     <link rel="icon" type="icon" href="oculus-favicon.png">
-
+    <link rel="stylesheet" media="screen" href="css/main1.css">
+    <link rel="stylesheet" media="screen" href="css/main2.css">
+    <link rel="stylesheet" media="screen" href="css/main3.css">
+    <link rel="stylesheet" media="screen" href="css/texthandle.css">
+    <link rel="stylesheet" media="screen" href="css/newgen.css">
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     <title>Oculus 2019 | Oculus Sees All</title>
     <style>
         @font-face {
             font-family: 'fourHandTrial';
             src: url('fourHand_TRIAL.ttf');
+        }
+
+        .section:first-child {
+            padding: 0px !important;
         }
     </style>
 </head>
@@ -79,7 +79,7 @@
         }
 
     </script>
-    <div class="spinner-wrapper">
+    <div id="preloader" class="spinner-wrapper">
         <div class="spinner">
             <img id="preload-img1" src="./images/outer.png">
             <img id="preload-img2" src="./images/inner.png">
@@ -116,7 +116,7 @@
             <div><a href="events.final.html">Events</a></div>
         </div>
 
-        <div class="register"> Coming Soon!</div>
+        <!-- <div class="register"> Coming Soon!</div> -->
 
     </div>
 
@@ -134,96 +134,81 @@
     <!-- scroll to top button -->
     <!-- <i class="fa fa-angle-up" id="scrollUp" onclick="topFunction()"></i> -->
 
+    <script>
+
+        // setInterval("my_function();", 7000);
+        // function my_function() {
+        //     console.log("reload container");
+        //     var container = document.getElementById("container");
+        //     var content = container.innerHTML;
+        //     container.innerHTML = "";
+        //     setTimeout(function() {
+        //         console.log("wait na");
+        //     }, 1000);
+        //     container.innerHTML = content;
+
+        // }
+    </script>
+
     <div id="fullpage">
-        <div class="section" id="particles-js">
+        <div class="section" style="overflow:hidden !important;padding: 0px !important">
+            <div id="container">
 
-            <div class="clock">
-                <div class="holder">
-                    <span> Days</span>
-                    <div class="time-card">
-                        <div class="digit tenday">
-                            <span class="base"></span>
-                            <div class="flap over front"></div>
-                            <div class="flap over back"></div>
-                            <div class="flap under"></div>
-                        </div>
-                        <div class="digit day">
-                            <span class="base"></span>
-                            <div class="flap over front"></div>
-                            <div class="flap over back"></div>
-                            <div class="flap under"></div>
-                        </div>
-                    </div>
+                <div id="container1"></div>
+                <svg>
+                    <symbol id="s-text">
+                        <text text-anchor="middle" x="50%" y="80%">OLD GENERATION</text>
+                    </symbol>
+
+                    <g class="g-ants">
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                    </g>
+                </svg>
+                <div id="boxmes1">
+                    <div id="messenger1"></div>
                 </div>
 
-
-
-                <div class="holder">
-                    <span>Hours</span>
-                    <div class="time-card">
-                        <div class="digit tenhour">
-                            <span class="base"></span>
-                            <div class="flap over front"></div>
-                            <div class="flap over back"></div>
-                            <div class="flap under"></div>
-                        </div>
-
-                        <div class="digit hour">
-                            <span class="base"></span>
-                            <div class="flap over front"></div>
-                            <div class="flap over back"></div>
-                            <div class="flap under"></div>
-                        </div>
-                    </div>
+                <div id="messenger2"></div>
+                <div id="messenger3"></div>
+                <!-- <div id="oldtext1" data-shadow='dang!'>dang</div>
+                <div id="oldtext2" data-shadow='hello'>hello</div>
+                <div id="oldtext3" data-shadow='world'>world</div> -->
+                <div id="old1">
+                    <img id="oldimg1" src="./svgs/1.svg" />
+                </div>
+                <div id="old2">
+                    <img id="oldimg2" src="./svgs/2.svg" />
+                </div>
+                <div id="old5">
+                    <img id="oldimg5" src="./svgs/5.svg" />
+                </div>
+                <div id="old7">
+                    <img id="oldimg7" src="./svgs/6.svg" />
+                </div>
+                <div id="old6">
+                    <img id="oldimg6" src="./svgs/7.svg" />
+                </div>
+                <div id="old8">
+                    <img id="oldimg8" src="./svgs/8.svg" />
+                </div>
+                <div id="old11">
+                    <img id="oldimg11" src="./svgs/11.svg" />
+                </div>
+                <div id="old12">
+                    <img id="oldimg12" src="./svgs/12.svg" />
                 </div>
 
-                <div class="holder">
-                    <span>Minutes</span>
-                    <div class="time-card">
-                        <div class="digit tenmin">
-                            <span class="base"></span>
-                            <div class="flap over front"></div>
-                            <div class="flap over back"></div>
-                            <div class="flap under"></div>
-                        </div>
-
-                        <div class="digit min">
-                            <span class="base"></span>
-                            <div class="flap over front"></div>
-                            <div class="flap over back"></div>
-                            <div class="flap under"></div>
-                        </div>
-                    </div>
+                <!-- new generation html -->
+                <div id="intro">SPIT presents</div>
+                <div id="boxforcanvas">
+                    <canvas id="myCanvas1"></canvas>
+                    <canvas id="myCanvas2"></canvas>
+                    <canvas id="myCanvas3"></canvas>
                 </div>
-
-                <div class="holder">
-                    <span>Seconds</span>
-                    <div class="time-card">
-                        <div class="digit tensec">
-                            <span class="base"></span>
-                            <div class="flap over front"></div>
-                            <div class="flap over back"></div>
-                            <div class="flap under"></div>
-                        </div>
-
-                        <div class="digit sec">
-                            <span class="base"></span>
-                            <div class="flap over front"></div>
-                            <div class="flap over back"></div>
-                            <div class="flap under"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="about-oculus">
-                <a href="#"><img src="oculus.png"></a>
-                <p class="about-oculus-para">
-                    Sardar Patel Institute of Technology presents to you Oculus 2019.
-                    <span class="about-oculus-hide-mobile"> Oculus is a Techno-Cultural festival that represents the synergy
-                        between Culture and Technology.</span>
-                    Be it performing arts, or hackathons. Writing poetry or Technical Papers, Oculus sees all.
-                </p>
 
             </div>
 
@@ -246,8 +231,8 @@
 
                     The transition from the 20th century into the 21st was a momentous point in history. As December 31 of 1999 bled into January
                     1 of 2000, an era ended and another began. And unlike the millennials, who got to see the change with
-                    their young eyes, we were born into the change. We are Generation Z, and we are as old as this
-                    new century is.
+                    their young eyes, we were born into the change. We are Generation Z, and we are as old as this new century
+                    is.
                     <span class="hiddenmobile">
                         We have seen everything change and been a part of the change - we have used both flip phones and smart phones, connected
                         to the Internet using both dial-ups and WiFi, played both 8-bit games and The Last of Us. We went
@@ -260,8 +245,8 @@
                     for - change, flexibility, modernism and fun. Oculus 2k19 will hopefully be the perfect generational
                     paradigm.
                 </div>
-            </div> 
-        
+            </div>
+
         </div>
 
         <div style="font-family: segoe ui;" class="section" id="section3">
@@ -352,7 +337,7 @@
 
         </div>
 
-        
+
 
         <div class="section" id="section10">
             <footer>
@@ -408,7 +393,7 @@
     <script type="text/javascript" src="js/fullpage.min.js"></script>
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="./js/particles.min.js"></script>
-    <script type="text/javascript" src="./js/app.js"></script>
+    <!-- <script type="text/javascript" src="./js/app.js"></script> -->
     <script type="text/javascript" src="js/scripts.js"></script>
 
     <script>
@@ -490,7 +475,7 @@
             onSlideLeave: function (section, origin, destination, direction) { }
         });
     </script>
-
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>

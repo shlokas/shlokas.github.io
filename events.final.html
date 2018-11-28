@@ -152,7 +152,7 @@
       <div style="color: white"><a href="events.final.html">Events</a></div>
     </div>
 
-    <div class="register"> Coming Soon!</div>
+    <!-- <div class="register"> Coming Soon!</div> -->
 
   </div>
 
@@ -307,7 +307,7 @@
     </div>
     <div class="literary heading" onclick="navtransition('.literary')">
     </div>
-    <p class="technical categoryHeading" data-heading="Slide"><img style="width:10%;height:10%;" src="images/icon7.png">&nbsp;&nbsp;&nbsp;TECHNICAL</p>
+    <p class="technical categoryHeading" data-heading="Slide"><img style="width:10%;height:10%;vertical-align: middle !important" src="images/icon7.png">&nbsp;&nbsp;&nbsp;TECHNICAL</p>
     <p class="cultural categoryHeading" data-heading="Slide"><img style="width:10%;height:10%;" src="images/icon4.png">&nbsp;&nbsp;&nbsp;PERFORMING
       ARTS
     </p>
@@ -324,6 +324,7 @@
 
       <ul id="tech-cards" class="card-stacks transition" onclick="navtransition('.technical')">
         <!-- <br><br> -->
+        
         <script>
           var firedb = firebase.database().ref().child("Event");
           var count = 1;
