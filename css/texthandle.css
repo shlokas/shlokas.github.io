@@ -46,6 +46,51 @@ svg {
 	100% {stroke-dashoffset: -35%;}
 }
 
+#messenger1 {
+	position: fixed;
+	top: 25%;
+	left: 60%;
+	transform: translate(-50%, -50%) rotate(-30deg); 
+	font-family: monospace;
+	font-size: 30px;
+	white-space: nowrap;
+	color: white;
+	text-shadow: 0 2px 2px rgba(#000, 0.9);
+/* animation: turn 4s ease-in-out ; */
+  }
+@keyframes turn{
+	0%{
+		transform: rotate(-30deg);
+	}
+	100%{
+		transform:rotate(-50deg);
+	}
+}
+
+  #messenger2 {
+	position: fixed;
+	top: 30%;
+	left: 35%;
+	transform: translate(-50%, -50%) rotate(50deg); 
+	font-family: monospace;
+	font-size: 30px;
+	white-space: nowrap;
+	color: white;
+	text-shadow: 0 2px 2px rgba(#000, 0.9);
+  }
+
+  
+  #messenger3 {
+	position: fixed;
+	top: 25%;
+	left: 15%;
+	transform: translate(-50%, -50%) rotate(-30deg);
+	font-family: monospace;
+	font-size: 30px;
+	white-space: nowrap;
+	color: white;
+	text-shadow: 0 2px 2px rgba(#000, 0.9);
+  }
 
 /* for side text related to images */
 
@@ -229,6 +274,51 @@ svg {
 		100% {stroke-dashoffset: -35%;}
 	}
 	
+	#messenger1 {
+		position: fixed;
+		top: 90vh;
+		left: 30vw;
+		transform: translate(-50%, -50%) rotate(-30deg); 
+		font-family: monospace;
+		font-size: 30px;
+		white-space: nowrap;
+		color: white;
+		text-shadow: 0 2px 2px rgba(#000, 0.9);
+	/* animation: turn 4s ease-in-out ; */
+	  }
+	@keyframes turn{
+		0%{
+			transform: rotate(-30deg);
+		}
+		100%{
+			transform:rotate(-50deg);
+		}
+	}
+	
+	  #messenger2 {
+		position: fixed;
+		top: 30%;
+		left: 35%;
+		transform: translate(-50%, -50%) rotate(-40deg); 
+		font-family: monospace;
+		font-size: 30px;
+		white-space: nowrap;
+		color: white;
+		text-shadow: 0 2px 2px rgba(#000, 0.9);
+	  }
+	
+	  
+	  #messenger3 {
+		position: fixed;
+		top: 65vh;
+		left: 60vw;
+		transform: translate(-50%, -50%) rotate(30deg);
+		font-family: monospace;
+		font-size: 30px;
+		white-space: nowrap;
+		color: white;
+		text-shadow: 0 2px 2px rgba(#000, 0.9);
+	  }
 	
 	/* for side text related to images */
 	
@@ -362,3 +452,5 @@ svg {
 	}
 	
 	}
+
+
