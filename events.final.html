@@ -204,7 +204,7 @@
 
       var eventTitle = snap.node_.children_.root_.right.value.value_;
       $("#eventTitle").html(eventTitle);
-      var eventDesc = snap.node_.children_.root_.left.left.value.value_;
+      var eventDesc = snap.node_.children_.root_.left.left.left.right.value.value_;
       $("#eventDesc").html(eventDesc);
       var eventFee = snap.node_.children_.root_.right.left.value.value_;
       $("#eventFee").html(eventFee);
@@ -216,7 +216,8 @@
       $("#eventTiming").html(eventTiming);
       var eventImg = snap.node_.children_.root_.left.right.value.value_;
       $("#eventImg").attr("src", eventImg);
-      var eventUrl = snap.node_.children_.root_.left.value.value_;
+      var eventUrl = snap.node_.children_.root_.left.left.right.value.value_;
+      
 
       $("#eventUrl").click(function () {
         if (eventTitle == "Hackathon" || eventTitle == "Oculus Cube Open") {
