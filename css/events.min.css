@@ -315,9 +315,7 @@ ul.card-stacks.transition li.card {
         transition: .8s ease all;
         outline: 0
     }
-    .about-oculus img {
-        width: 140px;
-    }
+    
     ul.card-stacks.transition li.card {
         width: 76%;
         margin-left: 12%;
