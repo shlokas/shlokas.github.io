@@ -36,6 +36,11 @@
       src: url('fourHand_TRIAL.ttf');
     }
 
+    @font-face {
+      font-family: 'segoe ui';
+      src: url('Segoe UI.ttf');
+    }
+
     /* * {
       box-sizing: unset;
     } */
@@ -56,8 +61,8 @@
     // events nav transition
 
     function navtransition(classname) {
-      $(".categoryHeading").removeClass('moveheading');
-      $(classname + '.categoryHeading').toggleClass("moveheading");
+      $(".heading").removeClass('hide');
+      $(classname + '.heading').toggleClass("hide");
       $("ul.card-stacks").removeClass('transition');
       $(classname + " ul.card-stacks").toggleClass('transition');
 
@@ -157,12 +162,13 @@
   </div>
 
 
-  <!-- <div class="menu-button"><i class="fa fa-share-alt"></i>
-    <a href="#"><i class="fa fa-twitter"></i></a>
-    <a href="#"><i class="fa fa-linkedin"></i></a>
-    <a href="#"><i class="fa fa-facebook"></i> </a>
-    <a href="#"><i class="fa fa-instagram"></i> </a>
-  </div> -->
+  <div class="icon-bar">
+    <a target="_blank" href="https://facebook.com/OculusSeesAll" class="facebook"><i class="fa fa-facebook"></i></a>
+    <a target="_blank" href="https://mobile.twitter.com/OculusSeesAll" class="twitter"><i class="fa fa-twitter"></i></a>
+    <a target="_blank" href="https://www.instagram.com/oculus2k19/" class="google"><i class="fa fa-instagram"></i></a>
+    <a target="_blank" href="https://www.linkedin.com/company/oculusseesall" class="linkedin"><i class="fa fa-linkedin"></i></a>
+    <a target="_blank" href="https://www.youtube.com/channel/UCm5gXAKIwUQTuGngoGlM4pg" class="youtube"><i class="fa fa-youtube"></i></a>
+  </div>
 
 
   <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
@@ -217,7 +223,7 @@
       var eventImg = snap.node_.children_.root_.left.right.value.value_;
       $("#eventImg").attr("src", eventImg);
       var eventUrl = snap.node_.children_.root_.left.left.right.value.value_;
-      
+
 
       $("#eventUrl").click(function () {
         if (eventTitle == "Hackathon" || eventTitle == "Oculus Cube Open") {
@@ -300,22 +306,24 @@
 
 
 
-    <div class="technical heading" onclick="navtransition('.technical')">
+    <div class="technical heading" onclick="navtransition('.technical')">TECHNICAL
     </div>
-    <div class="cultural heading" onclick="navtransition('.cultural')">
+    <div class="cultural heading" onclick="navtransition('.cultural')">PERFORMING ARTS
     </div>
-    <div class="fun heading" onclick="navtransition('.fun')">
+    <div class="fun heading" onclick="navtransition('.fun')">FUN
     </div>
-    <div class="literary heading" onclick="navtransition('.literary')">
+    <div class="literary heading" onclick="navtransition('.literary')">LITERARY ARTS
     </div>
-    <p class="technical categoryHeading" data-heading="Slide"><img style="width:10%;height:10%;vertical-align: middle !important" src="images/icon7.png">&nbsp;&nbsp;&nbsp;TECHNICAL</p>
+
+    <!-- <p class="technical categoryHeading" data-heading="Slide"><img style="width:10%;height:10%;vertical-align: middle !important"
+        src="images/icon7.png">&nbsp;&nbsp;&nbsp;TECHNICAL</p>
     <p class="cultural categoryHeading" data-heading="Slide"><img style="width:10%;height:10%;" src="images/icon4.png">&nbsp;&nbsp;&nbsp;PERFORMING
       ARTS
     </p>
     <p class="fun categoryHeading" data-heading="Slide"><img style="width:10%;height:10%;" src="images/icon2.png">&nbsp;&nbsp;&nbsp;FUN</p>
     <p class="literary categoryHeading" data-heading="Slide"><img style="width:10%;height:10%;" src="images/icon1.png">&nbsp;&nbsp;&nbsp;LITERARY
       ARTS
-    </p>
+    </p> -->
 
 
     <span class="hiddenmobile"><br><br></span>
@@ -325,7 +333,7 @@
 
       <ul id="tech-cards" class="card-stacks transition" onclick="navtransition('.technical')">
         <!-- <br><br> -->
-        
+
         <script>
           var firedb = firebase.database().ref().child("Event");
           var count = 1;
