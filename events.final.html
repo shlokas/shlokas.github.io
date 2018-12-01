@@ -225,6 +225,12 @@
       var eventUrl = snap.node_.children_.root_.left.left.right.value.value_;
 
 
+      if(eventTitle=="Hackathon"){
+        console.log("show the video");
+      $("#eventVid").html('<p>Watch the video to find out more!</p><iframe id="after-movie" width="80%" height="70%" src="https://www.youtube.com/embed/93hkBjwGYD0" frameborder="0" gesture="media" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+
+      }
+
       $("#eventUrl").click(function () {
         if (eventTitle == "Hackathon" || eventTitle == "Oculus Cube Open") {
           window.open(eventUrl, "_blank");
@@ -514,6 +520,7 @@
                 ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
                 dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
                 deserunt mollit anim id est laborum.</p>
+                <p id="eventVid" style="text-align: center"></p>
               <strong><p>Fees</p></strong>
               <p id="eventFee">Registration fee: 10000000</p>
               <strong>
