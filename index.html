@@ -36,40 +36,30 @@
         [hidden] {
             display: inherit !important;
         }
-
         @font-face {
             font-family: 'fourHandTrial';
             src: url('fourHand_TRIAL.ttf');
         }
-
         @font-face {
             font-family: 'segoe ui';
             src: url('Segoe UI.ttf');
         }
-
         @font-face {
             font-family: 'comic sans';
             src: url('comic-sans-ms.ttf');
         }
-
-
-
         #hi {
             position: absolute;
             top: 30%;
             width: 100%;
             text-align: center;
         }
-
-
         @media only screen and (max-width: 767px) {
             #hi {
                 top: 20%;
             }
         }
-
         body {
-
             font-size: 16px;
             line-height: 1.75;
         }
@@ -77,20 +67,14 @@
 
     <script>
         $(document).ready(function () {
-
             // Initialize the plugin
-
             $('#fadeandscale').popup({
                 transition: 'all 0.3s'
             });
-
             $('#fadeandscale1').popup({
                 transition: 'all 0.3s'
             });
-
         });
-
-
     </script>
 
 
@@ -99,41 +83,29 @@
 
 <body>
     <script>
-
-
         //Preloader time out
         $(document).ready(function () {
-
             // $(window).load(function () {
-
             console.log('loaded');
             preloaderFadeOutTime = 500;
-
             function hidePreloader() {
                 var preloader = $('.spinner-wrapper');
                 preloader.fadeOut(preloaderFadeOutTime);
             }
-
             hidePreloader();
-
             console.log('hidden');
             // });
         });
-
         //fade navbar on reaching footer
         var footer_height;
         $(document).ready(function () {
             footer_height = $("footer").offset().top;
             console.log("footer height is " + footer_height);
-
         });
-
         window.onscroll = function () {
             scrollFunction()
         };
-
         function scrollFunction() {
-
             if (document.body.scrollTop > (footer_height - 100) || document.documentElement.scrollTop > (footer_height -
                 100)) {
                 // console.log("hide");
@@ -141,11 +113,8 @@
             } else {
                 // console.log("unhide");
                 $('#navbar').removeClass("disp");
-
             }
         }
-
-
     </script>
 
     <div class="spinner-wrapper">
@@ -191,9 +160,7 @@
 
     </div>
     <!--
-
 <div id="fadeandscale"><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FOculusSeesAll%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1853031124748176" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></div>
-
 <div id="fadeandscale1"><a class="twitter-timeline" href="https://twitter.com/OculusSeesAll?ref_src=twsrc%5Etfw">Tweets by OculusSeesAll</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>-->
     <!-- <div class="menu-button"><i class="fa fa-share-alt"></i>
         <a target="_blank" href="https://mobile.twitter.com/OculusSeesAll"><i class="fa fa-twitter"></i></a>
@@ -229,29 +196,21 @@
             display: block;
             letter-spacing: 2px;
         }
-
         .size_svg {
             margin: 20px auto;
             width: 36%;
             height: auto;
-
         }
-
         .smoke_hand {
             height: 400px;
             margin: 0 auto;
-
             z-index: -10;
-
             width: auto;
         }
-
-
         .shadowfilter {
             -webkit-filter: drop-shadow(-3px 13px 13px yellow);
             filter: drop-shadow(-3px 13px 13px yellow);
         }
-
         @keyframes glowing {
             0% {}
             40% {
@@ -264,29 +223,21 @@
             }
             100% {}
         }
-
-
         .glow {
             animation: glowing 3000ms infinite;
         }
-
         .era {
             opacity: 1;
             margin: 0 auto;
-
         }
-
         .brain {
             width: 22%;
             height: auto;
             margin: 2% auto;
         }
-
         .scrolldown-container {
-
             position: relative;
         }
-
         .scrolldown-container .scrolldown-btn {
             width: 50px;
             height: 100px;
@@ -302,7 +253,6 @@
             transform: translateX(-50%) translateY(-50%);
             text-align: center;
         }
-
         .scrolldown-container .scrolldown-btn svg {
             position: absolute;
             bottom: 70%;
@@ -310,16 +260,13 @@
             width: 100%;
             height: auto;
         }
-
         .scrolldown-container .scrolldown-btn svg path.first-path {
             animation: scrollanim 1s ease-in-out infinite;
             animation-delay: 0.8s;
         }
-
         .scrolldown-container .scrolldown-btn svg path.second-path {
             animation: scrollanim2 1s ease-in-out infinite;
         }
-
         @-webkit-keyframes scrollanim {
             0% {
                 -webkit-transform: translate(0, -40px);
@@ -330,7 +277,6 @@
                 opacity: 0.8;
             }
         }
-
         @-moz-keyframes scrollanim {
             0% {
                 -moz-transform: translate(0, -40px);
@@ -341,7 +287,6 @@
                 opacity: 0.8;
             }
         }
-
         @keyframes scrollanim {
             0% {
                 -webkit-transform: translate(0, -40px);
@@ -360,7 +305,6 @@
                 opacity: 0.8;
             }
         }
-
         @-webkit-keyframes scrollanim2 {
             0% {
                 -webkit-transform: translate(0, -40px);
@@ -371,7 +315,6 @@
                 opacity: 0.6;
             }
         }
-
         @-moz-keyframes scrollanim2 {
             0% {
                 -moz-transform: translate(0, -40px);
@@ -382,7 +325,6 @@
                 opacity: 0.6;
             }
         }
-
         @keyframes scrollanim2 {
             0% {
                 -webkit-transform: translate(0, -40px);
@@ -401,23 +343,16 @@
                 opacity: 0.6;
             }
         }
-
-
-
         @media only screen and (max-width: 767px) {
-
             .slide_text {
                 font-size: 1.5em;
                 width: 83%;
             }
-
             .size_svg {
                 margin: 10% auto;
                 width: 80%;
                 height: auto;
             }
-
-
             .smoke_hand {
                 width: 100vw;
                 height: auto;
@@ -425,13 +360,10 @@
                 position: absolute;
                 left: 0%;
             }
-
             .era {
-
                 height: 146px;
                 margin: 33% auto 10% auto;
             }
-
             .brain {
                 width: 55%;
             }
@@ -490,7 +422,7 @@
 
                 </section>
 
-                <section data-background-image="./genztech.png" data-background-color="black" data-background-opacity="0.5" data-transition="zoom"
+                <section data-background-image="./genztech.jpg" data-background-color="black" data-background-opacity="0.5" data-transition="zoom"
                     data-background-size="cover" data-background-position="center">
                     <p class="slide_text" style="text-align: center;">We have seen everything change and been a part of the
                         change - we have used both flip phones and smart phones, connected to the Internet using both dial-ups
@@ -630,10 +562,7 @@
                 margin: 0,
                 minScale: 1,
                 maxScale: 1,
-
-
             });
-
         </script>
 
         <style type="text/css">
@@ -645,7 +574,6 @@
                 height: auto;
                 opacity: 0.5;
             }
-
             .literary {
                 position: absolute;
                 mix-blend-mode: luminosity;
@@ -655,7 +583,6 @@
                 opacity: 0.5;
                 top: 10%;
             }
-
             .cultural {
                 position: absolute;
                 mix-blend-mode: luminosity;
@@ -663,7 +590,6 @@
                 width: 130%;
                 height: auto;
             }
-
             .fun {
                 position: absolute;
                 mix-blend-mode: luminosity;
@@ -671,48 +597,36 @@
                 width: 130%;
                 height: auto;
             }
-
             ._spacing {
                 margin: 20% auto;
             }
-
             .literary_img {
                 height: auto;
                 width: 110%;
                 opacity: 0.5
             }
-
             .littext {
                 padding-top: 35%;
             }
-
             @media only screen and (max-width: 767px) {
-
                 .literary_img {
                     width: 64%;
                 }
-
                 .technical,
                 .cultural {
                     width: 30%;
-
                 }
                 .fun {
                     bottom: 0px;
                     width: 33%;
                 }
-
                 .literary {
                     width: 55%;
                     top: 0px;
-
-
                 }
-
                 .littext {
                     padding-top: 5%;
                 }
-
                 ._spacing {
                     margin: 3% auto;
                 }
@@ -912,16 +826,10 @@
     <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"> </script>
     <script src="js/smoke.js"></script>
     <script>
-
         var canvas = document.getElementById('canvas');
         var ctx = canvas.getContext('2d');
-
-
-
         canvas.width = innerHeight
         canvas.height = innerWidth
-
-
         var party = smokemachine(ctx, [220, 46, 51]);
         party.start(); // start animating
         party.setPreDrawCallback(function (dt) {
@@ -929,15 +837,11 @@
             canvas.width = innerWidth;
             canvas.height = innerHeight;
         })
-
-
-
     // party.addsmoke(innerWidth/2, innerHeight, 100)
     // onclick=e => {
     //  console.log(e)
     //  party.step()
     // }
-
   //  onmousemove = function (e) {
     //    var x = e.clientX
       //  var y = e.clientY
@@ -945,7 +849,6 @@
        // var t = Math.floor(Math.random() * 200) + 3800
        // party.addsmoke(x, y, n, t)
    // }
-
     </script>
 
 
@@ -968,7 +871,6 @@
             showActiveTooltip: false,
             slidesNavigation: false,
             slidesNavPosition: 'bottom',
-
             //Scrolling
             css3: true,
             scrollingSpeed: 700,
@@ -996,12 +898,10 @@
             touchSensitivity: 15,
             normalScrollElementTouchThreshold: 5,
             bigSectionsDestination: null,
-
             //Accessibility
             keyboardScrolling: true,
             animateAnchor: true,
             recordHistory: true,
-
             //Design
             controlArrows: true,
             verticalCentered: true,
@@ -1018,13 +918,10 @@
                 percentage: 62,
                 property: 'translate'
             },
-
             //Custom selectors
             sectionSelector: '.section',
             slideSelector: '.slide',
-
             lazyLoading: true,
-
             //events
             onLeave: function (origin, destination, direction) { },
             afterLoad: function (origin, destination, direction) { },
