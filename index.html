@@ -28,7 +28,8 @@
 
     <link rel="stylesheet" media="screen" href="css/mainevent.css">
 
-
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
     <title>Oculus 2019 | Oculus Sees All</title>
 
     <style>
@@ -105,17 +106,17 @@
 
             // $(window).load(function () {
 
-                console.log('loaded');
-                preloaderFadeOutTime = 500;
+            console.log('loaded');
+            preloaderFadeOutTime = 500;
 
-                function hidePreloader() {
-                    var preloader = $('.spinner-wrapper');
-                    preloader.fadeOut(preloaderFadeOutTime);
-                }
+            function hidePreloader() {
+                var preloader = $('.spinner-wrapper');
+                preloader.fadeOut(preloaderFadeOutTime);
+            }
 
-                hidePreloader();
+            hidePreloader();
 
-                console.log('hidden');
+            console.log('hidden');
             // });
         });
 
@@ -146,7 +147,7 @@
 
 
     </script>
-    
+
     <div class="spinner-wrapper">
         <div class="spinner">
             <img id="preload-img1" src="./images/outer.png">
@@ -434,6 +435,7 @@
             .brain {
                 width: 55%;
             }
+        }
     </style>
 
 
@@ -452,7 +454,7 @@
                         <img data-src="era.png" class="glow era">
                         <p class="slide_text">The transition from the 20th century into the 21st was a momentous point in
                             history. As December 31 of 1999 bled into January 1 of 2000, an era ended and another began.
-                            </p>
+                        </p>
 
                     </div>
                 </section>
@@ -901,8 +903,7 @@
 
     <!-- scripts -->
     <script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.0.4/dist/fullpage.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+    
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script type="text/javascript" src="./js/app.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
