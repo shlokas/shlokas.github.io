@@ -12,33 +12,30 @@
         gtag('config', 'UA-129763562-1');
     </script>
     <meta charset="UTF-8">
-   
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <link rel="stylesheet" media="screen" href="css/fullpage.min.css">
     <link rel="stylesheet" media="screen" href="css/styles.min.css">
     <link rel="icon" type="icon" href="oculus-favicon.png">
     <link rel="stylesheet" href="css/reveal.min.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald:500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
-      
+
     <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
-    
+
     <link rel="stylesheet" media="screen" href="css/mainevent.css">
-    
+
 
     <title>Oculus 2019 | Oculus Sees All</title>
 
-<style>
+    <style>
+        [hidden] {
+            display: inherit !important;
+        }
 
-
-
-
-
-[hidden] {
-  display: inherit !important;
-}
         @font-face {
             font-family: 'fourHandTrial';
             src: url('fourHand_TRIAL.ttf');
@@ -56,48 +53,44 @@
 
 
 
-#hi{
-        position: absolute;
-        top: 30%;
-        width: 100%;
-        text-align: center;
-    }
-
-   
-   @media only screen and (max-width: 767px)
-   {
-     #hi{
-        top: 20%;
-     }
-   }
-
-body {
-  
-  font-size: 16px;
-  line-height: 1.75;
-}
+        #hi {
+            position: absolute;
+            top: 30%;
+            width: 100%;
+            text-align: center;
+        }
 
 
+        @media only screen and (max-width: 767px) {
+            #hi {
+                top: 20%;
+            }
+        }
 
+        body {
+
+            font-size: 16px;
+            line-height: 1.75;
+        }
     </style>
 
-  <script>
-    $(document).ready(function() {
+    <script>
+        $(document).ready(function () {
 
-      // Initialize the plugin
-      
-      $('#fadeandscale').popup({
-  transition: 'all 0.3s'
-});
+            // Initialize the plugin
+
+            $('#fadeandscale').popup({
+                transition: 'all 0.3s'
+            });
 
             $('#fadeandscale1').popup({
-  transition: 'all 0.3s'
-});
+                transition: 'all 0.3s'
+            });
 
-    });
+        });
 
 
-  </script>
+    </script>
 
 
 
@@ -108,7 +101,23 @@ body {
 
 
         //Preloader time out
+        $(document).ready(function () {
 
+            $(window).load(function () {
+
+                console.log('loaded');
+                preloaderFadeOutTime = 500;
+
+                function hidePreloader() {
+                    var preloader = $('.spinner-wrapper');
+                    preloader.fadeOut(preloaderFadeOutTime);
+                }
+
+                hidePreloader();
+
+                console.log('hidden');
+            });
+        });
 
         //fade navbar on reaching footer
         var footer_height;
@@ -137,14 +146,14 @@ body {
 
 
     </script>
-    <!--
+    
     <div class="spinner-wrapper">
         <div class="spinner">
             <img id="preload-img1" src="./images/outer.png">
             <img id="preload-img2" src="./images/inner.png">
         </div>
     </div>
--->
+
 
     <!-- common navbar elements -->
 
@@ -171,15 +180,16 @@ body {
 
         <div id="nav">
             <div><a href="sponsors.html">Sponsors</a></div>
-            <div style="background-color: inherit; border-radius: 50%;" data-tilt data-tilt-scale="1.3"><a href="#Home"><img src="oculus-favicon.png"></a></div>
+            <div style="background-color: inherit; border-radius: 50%;" data-tilt data-tilt-scale="1.3"><a href="#Home"><img
+                        src="oculus-favicon.png"></a></div>
             <div><a href="#Events">Events</a></div>
         </div>
-<style type="text/css">
-
-</style>
+        <style type="text/css">
+        </style>
         <div class="register"><a style="color : #ffc00f; text-decoration: none; " href="events.final.html">Register Now!</a></div>
 
-    </div><!--
+    </div>
+    <!--
 
 <div id="fadeandscale"><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FOculusSeesAll%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1853031124748176" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></div>
 
@@ -206,263 +216,287 @@ body {
     <!-- <i class="fa fa-angle-up" id="scrollUp" onclick="topFunction()"></i> -->
 
 
-<style type="text/css">
-    .slide_text{
-        text-align: center;
-         line-height: 160%;
-        font-size: 2em;
-         color: white;  
-         font-family: 'ZCOOL QingKe HuangYou', cursive;
-         width: 60%;
-        margin: 0 auto;
-        display: block;
-        letter-spacing: 2px;
-    }
-
-    .size_svg{
-        margin: 20px auto;
-        width:36%;
-         height:auto;
-
-    }
-
-    .smoke_hand{
-        height: 400px;
-       margin: 0 auto;
-
-        z-index: -10;
-
-        width: auto;
-    }
-
-
-    .shadowfilter {
-    -webkit-filter: drop-shadow(-3px 13px 13px yellow);
-     filter: drop-shadow(-3px 13px 13px yellow);
-}
-
-@keyframes glowing {
-  0% { }
-  40% {  -webkit-filter: drop-shadow(-3px 13px 13px yellow);
-     filter: drop-shadow(-3px 13px 13px yellow);}
-  60% { -webkit-filter: drop-shadow(-3px 13px 13px yellow);
-     filter: drop-shadow(-3px 13px 13px yellow); }
-  100% {  }
-}
-
-
-.glow {
-  animation: glowing 3000ms infinite;
-}
-
-.era{
-    opacity: 1;
-    margin: 0 auto;
-
-}
-
-.brain{
-    width: 22%; height: auto;
-    margin: 2% auto;
-}
-
-.scrolldown-container {
-  
-  position: relative;
-}
-.scrolldown-container .scrolldown-btn {
-  width: 50px;
-  height: 100px;
-  position: absolute;
-  left: 50%;
-  bottom: 10%;
-  bottom: auto;
-  right: auto;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  text-align: center;
-}
-.scrolldown-container .scrolldown-btn svg {
-  position: absolute;
-  bottom: 70%;
-  left: 0;
-  width: 100%;
-  height: auto;
-}
-.scrolldown-container .scrolldown-btn svg path.first-path {
-  animation: scrollanim 1s ease-in-out infinite;
-  animation-delay: 0.8s;
-}
-.scrolldown-container .scrolldown-btn svg path.second-path {
-  animation: scrollanim2 1s ease-in-out infinite;
-}
-
-@-webkit-keyframes scrollanim {
-  0% {
-    -webkit-transform: translate(0, -40px);
-    opacity: 0;
-  }
-  60% {
-    -webkit-transform: translate(0, 0);
-    opacity: 0.8;
-  }
-}
-@-moz-keyframes scrollanim {
-  0% {
-    -moz-transform: translate(0, -40px);
-    opacity: 0;
-  }
-  60% {
-    -moz-transform: translate(0, 0);
-    opacity: 0.8;
-  }
-}
-@keyframes scrollanim {
-  0% {
-    -webkit-transform: translate(0, -40px);
-    -moz-transform: translate(0, -40px);
-    -ms-transform: translate(0, -40px);
-    -o-transform: translate(0, -40px);
-    transform: translate(0, -40px);
-    opacity: 0;
-  }
-  60% {
-    -webkit-transform: translate(0, 0);
-    -moz-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
-    transform: translate(0, 0);
-    opacity: 0.8;
-  }
-}
-@-webkit-keyframes scrollanim2 {
-  0% {
-    -webkit-transform: translate(0, -40px);
-    opacity: 0;
-  }
-  60% {
-    -webkit-transform: translate(0, 0px);
-    opacity: 0.6;
-  }
-}
-@-moz-keyframes scrollanim2 {
-  0% {
-    -moz-transform: translate(0, -40px);
-    opacity: 0;
-  }
-  60% {
-    -moz-transform: translate(0, 0px);
-    opacity: 0.6;
-  }
-}
-@keyframes scrollanim2 {
-  0% {
-    -webkit-transform: translate(0, -40px);
-    -moz-transform: translate(0, -40px);
-    -ms-transform: translate(0, -40px);
-    -o-transform: translate(0, -40px);
-    transform: translate(0, -40px);
-    opacity: 0;
-  }
-  60% {
-    -webkit-transform: translate(0, 0px);
-    -moz-transform: translate(0, 0px);
-    -ms-transform: translate(0, 0px);
-    -o-transform: translate(0, 0px);
-    transform: translate(0, 0px);
-    opacity: 0.6;
-  }
-}
-
-
-
-    @media only screen and (max-width: 767px){
-
-        .slide_text{
-            font-size: 1.5em;
-            width: 83%;
+    <style type="text/css">
+        .slide_text {
+            text-align: center;
+            line-height: 160%;
+            font-size: 2em;
+            color: white;
+            font-family: 'ZCOOL QingKe HuangYou', cursive;
+            width: 60%;
+            margin: 0 auto;
+            display: block;
+            letter-spacing: 2px;
         }
 
-        .size_svg{
-         margin: 10% auto;
-            width:80%;
-            height:auto;
+        .size_svg {
+            margin: 20px auto;
+            width: 36%;
+            height: auto;
+
+        }
+
+        .smoke_hand {
+            height: 400px;
+            margin: 0 auto;
+
+            z-index: -10;
+
+            width: auto;
         }
 
 
-        .smoke_hand{
-            width: 100vw;
-           height: auto;
-            margin: 16% auto;
+        .shadowfilter {
+            -webkit-filter: drop-shadow(-3px 13px 13px yellow);
+            filter: drop-shadow(-3px 13px 13px yellow);
+        }
+
+        @keyframes glowing {
+            0% {}
+            40% {
+                -webkit-filter: drop-shadow(-3px 13px 13px yellow);
+                filter: drop-shadow(-3px 13px 13px yellow);
+            }
+            60% {
+                -webkit-filter: drop-shadow(-3px 13px 13px yellow);
+                filter: drop-shadow(-3px 13px 13px yellow);
+            }
+            100% {}
+        }
+
+
+        .glow {
+            animation: glowing 3000ms infinite;
+        }
+
+        .era {
+            opacity: 1;
+            margin: 0 auto;
+
+        }
+
+        .brain {
+            width: 22%;
+            height: auto;
+            margin: 2% auto;
+        }
+
+        .scrolldown-container {
+
+            position: relative;
+        }
+
+        .scrolldown-container .scrolldown-btn {
+            width: 50px;
+            height: 100px;
             position: absolute;
-            left: 0%;
-                    }
-
-        .era{
-
-            height: 146px;
-            margin: 33% auto 10% auto;
+            left: 50%;
+            bottom: 10%;
+            bottom: auto;
+            right: auto;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -o-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            text-align: center;
         }
 
-        .brain{
-            width: 55%;
+        .scrolldown-container .scrolldown-btn svg {
+            position: absolute;
+            bottom: 70%;
+            left: 0;
+            width: 100%;
+            height: auto;
         }
 
-</style>
+        .scrolldown-container .scrolldown-btn svg path.first-path {
+            animation: scrollanim 1s ease-in-out infinite;
+            animation-delay: 0.8s;
+        }
+
+        .scrolldown-container .scrolldown-btn svg path.second-path {
+            animation: scrollanim2 1s ease-in-out infinite;
+        }
+
+        @-webkit-keyframes scrollanim {
+            0% {
+                -webkit-transform: translate(0, -40px);
+                opacity: 0;
+            }
+            60% {
+                -webkit-transform: translate(0, 0);
+                opacity: 0.8;
+            }
+        }
+
+        @-moz-keyframes scrollanim {
+            0% {
+                -moz-transform: translate(0, -40px);
+                opacity: 0;
+            }
+            60% {
+                -moz-transform: translate(0, 0);
+                opacity: 0.8;
+            }
+        }
+
+        @keyframes scrollanim {
+            0% {
+                -webkit-transform: translate(0, -40px);
+                -moz-transform: translate(0, -40px);
+                -ms-transform: translate(0, -40px);
+                -o-transform: translate(0, -40px);
+                transform: translate(0, -40px);
+                opacity: 0;
+            }
+            60% {
+                -webkit-transform: translate(0, 0);
+                -moz-transform: translate(0, 0);
+                -ms-transform: translate(0, 0);
+                -o-transform: translate(0, 0);
+                transform: translate(0, 0);
+                opacity: 0.8;
+            }
+        }
+
+        @-webkit-keyframes scrollanim2 {
+            0% {
+                -webkit-transform: translate(0, -40px);
+                opacity: 0;
+            }
+            60% {
+                -webkit-transform: translate(0, 0px);
+                opacity: 0.6;
+            }
+        }
+
+        @-moz-keyframes scrollanim2 {
+            0% {
+                -moz-transform: translate(0, -40px);
+                opacity: 0;
+            }
+            60% {
+                -moz-transform: translate(0, 0px);
+                opacity: 0.6;
+            }
+        }
+
+        @keyframes scrollanim2 {
+            0% {
+                -webkit-transform: translate(0, -40px);
+                -moz-transform: translate(0, -40px);
+                -ms-transform: translate(0, -40px);
+                -o-transform: translate(0, -40px);
+                transform: translate(0, -40px);
+                opacity: 0;
+            }
+            60% {
+                -webkit-transform: translate(0, 0px);
+                -moz-transform: translate(0, 0px);
+                -ms-transform: translate(0, 0px);
+                -o-transform: translate(0, 0px);
+                transform: translate(0, 0px);
+                opacity: 0.6;
+            }
+        }
+
+
+
+        @media only screen and (max-width: 767px) {
+
+            .slide_text {
+                font-size: 1.5em;
+                width: 83%;
+            }
+
+            .size_svg {
+                margin: 10% auto;
+                width: 80%;
+                height: auto;
+            }
+
+
+            .smoke_hand {
+                width: 100vw;
+                height: auto;
+                margin: 16% auto;
+                position: absolute;
+                left: 0%;
+            }
+
+            .era {
+
+                height: 146px;
+                margin: 33% auto 10% auto;
+            }
+
+            .brain {
+                width: 55%;
+            }
+    </style>
 
 
 
 
 
     <div id="fullpage">
-<div class="reveal section" id="section1">
+        <div class="reveal section" id="section1">
 
-            <div class="slides" >
+            <div class="slides">
 
-                <section  data-background-image='newyear.gif' data-background-color="black" data-background-opacity="0.4" data-transition="zoom" style="padding: 2rem 0;">
-                    <div class="row" >
+                <section data-background-image='newyear.gif' data-background-color="black" data-background-opacity="0.4" data-transition="zoom"
+                    style="padding: 2rem 0;">
+                    <div class="row">
 
-                  <img data-src="era.png" class="glow era"  >
-                       <p class="slide_text">The transition from the 20th century into the 21st was a momentous point in history. As December 31 of 1999 bled into January 1 of 2000, an era ended and another began. </p>
+                        <img data-src="era.png" class="glow era">
+                        <p class="slide_text">The transition from the 20th century into the 21st was a momentous point in
+                            history. As December 31 of 1999 bled into January 1 of 2000, an era ended and another began.
+                            </p>
 
                     </div>
                 </section>
 
-                <section data-background-image="born.jpg" data-background-color="black" data-background-opacity="0.6" data-transition="zoom" data-background-size="cover" data-background-position="center" > 
-                <p class="slide_text">
-                    And unlike the millennials, who got to see the change with their young eyes, we were born into the change. We are Generation Z, and we are as old as this new century is.</p>
-               
-        
+                <section data-background-image="born.jpg" data-background-color="black" data-background-opacity="0.6" data-transition="zoom"
+                    data-background-size="cover" data-background-position="center">
+                    <p class="slide_text">
+                        And unlike the millennials, who got to see the change with their young eyes, we were born into the change. We are Generation
+                        Z, and we are as old as this new century is.</p>
 
-        
-                    </section>
-                  
-              
 
-              <section   data-background-image="smokebg.jpg" data-background-color="black" data-background-opacity="0.65" data-transition="zoom" data-background-size="cover" data-background-position="center" >
-                
-                    
-                 
-                    <canvas id="canvas"  height="100%" width="100%;" > 
+
+
+                </section>
+
+
+
+                <section data-background-image="smokebg.jpg" data-background-color="black" data-background-opacity="0.65" data-transition="zoom"
+                    data-background-size="cover" data-background-position="center">
+
+
+
+                    <canvas id="canvas" height="100%" width="100%;">
                     </canvas>
                     <div id="hi">
-                  
-                    <p   class="slide_text">We have been a part of a transitioning world. And it's not just self-reinvention that we've done smoothly - we have made the change around us better.</p>
-                      <img data-src="smoke_opt.png" style="" class="smoke_hand glow">
+
+                        <p class="slide_text">We have been a part of a transitioning world. And it's not just self-reinvention
+                            that we've done smoothly - we have made the change around us better.</p>
+                        <img data-src="smoke_opt.png" style="" class="smoke_hand glow">
                     </div>
-     
 
-                   
-                </section  >
 
-                <section data-background-image="./genztech.png" data-background-color="black" data-background-opacity="0.5" data-transition="zoom" data-background-size="cover" data-background-position="center" >
-                      <p class="slide_text" style="text-align: center;">We have seen everything change and been a part of the change - we have used both flip phones and smart phones, connected to the Internet using both dial-ups and WiFi, played both 8-bit games and The Last of Us. We went from playing songs on cassettes to Spotify, from watching movies on cable to Netflix. </p>
-                    
+
                 </section>
-<!--
+
+                <section data-background-image="./genztech.png" data-background-color="black" data-background-opacity="0.5" data-transition="zoom"
+                    data-background-size="cover" data-background-position="center">
+                    <p class="slide_text" style="text-align: center;">We have seen everything change and been a part of the
+                        change - we have used both flip phones and smart phones, connected to the Internet using both dial-ups
+                        and WiFi, played both 8-bit games and The Last of Us. We went from playing songs on cassettes to
+                        Spotify, from watching movies on cable to Netflix. </p>
+
+                </section>
+                <!--
               <section data-background-image="sa.gif" data-background-color="black"  data-transition="zoom" data-background-opacity="0.5">
                     
                     <p class="slide_text" style="text-align: center;">SPIT found this generation a fitting encapsulation of Oculus 2019, and is proud to announce the theme for the same -<b> Generation Z</b>.<br><br> We believe it represents everything Oculus strives and stands for - change, flexibility, modernism and fun.<br><br>  Oculus 2019 will hopefully be the perfect generational paradigm.</p>
@@ -470,126 +504,130 @@ body {
                 </section>-->
 
 
-                <section  data-background-video="crowd.webm" data-background-color="white" data-background-video-loop='true' data-transition="zoom" data-background-opacity="0.25" data-transition="zoom">
+                <section data-background-video="crowd.webm" data-background-color="white" data-background-video-loop='true' data-transition="zoom"
+                    data-background-opacity="0.25" data-transition="zoom">
 
-                     <div class=""  id="particles-js" style="width: 100vw;height: 100vh;" >
-<script type="text/javascript">$(window).bind('resize', function () {
-    resizeElements();
-}).trigger('resize');</script>
-            <div class="clock">
-                <div class="holder">
-                    <span> Days</span>
-                    <div class="time-card">
-                        <div class="digit tenday">
-                            <span class="base"></span>
-                            <div class="flap over front"></div>
-                            <div class="flap over back"></div>
-                            <div class="flap under"></div>
+                    <div class="" id="particles-js" style="width: 100vw;height: 100vh;">
+                        <script type="text/javascript">$(window).bind('resize', function () {
+                                resizeElements();
+                            }).trigger('resize');</script>
+                        <div class="clock">
+                            <div class="holder">
+                                <span> Days</span>
+                                <div class="time-card">
+                                    <div class="digit tenday">
+                                        <span class="base"></span>
+                                        <div class="flap over front"></div>
+                                        <div class="flap over back"></div>
+                                        <div class="flap under"></div>
+                                    </div>
+                                    <div class="digit day">
+                                        <span class="base"></span>
+                                        <div class="flap over front"></div>
+                                        <div class="flap over back"></div>
+                                        <div class="flap under"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="holder">
+                                <span>Hours</span>
+                                <div class="time-card">
+                                    <div class="digit tenhour">
+                                        <span class="base"></span>
+                                        <div class="flap over front"></div>
+                                        <div class="flap over back"></div>
+                                        <div class="flap under"></div>
+                                    </div>
+
+                                    <div class="digit hour">
+                                        <span class="base"></span>
+                                        <div class="flap over front"></div>
+                                        <div class="flap over back"></div>
+                                        <div class="flap under"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="holder">
+                                <span>Minutes</span>
+                                <div class="time-card">
+                                    <div class="digit tenmin">
+                                        <span class="base"></span>
+                                        <div class="flap over front"></div>
+                                        <div class="flap over back"></div>
+                                        <div class="flap under"></div>
+                                    </div>
+
+                                    <div class="digit min">
+                                        <span class="base"></span>
+                                        <div class="flap over front"></div>
+                                        <div class="flap over back"></div>
+                                        <div class="flap under"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="holder">
+                                <span>Seconds</span>
+                                <div class="time-card">
+                                    <div class="digit tensec">
+                                        <span class="base"></span>
+                                        <div class="flap over front"></div>
+                                        <div class="flap over back"></div>
+                                        <div class="flap under"></div>
+                                    </div>
+
+                                    <div class="digit sec">
+                                        <span class="base"></span>
+                                        <div class="flap over front"></div>
+                                        <div class="flap over back"></div>
+                                        <div class="flap under"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="digit day">
-                            <span class="base"></span>
-                            <div class="flap over front"></div>
-                            <div class="flap over back"></div>
-                            <div class="flap under"></div>
+
+                        <div class="about-oculus">
+                            <a href="#"><img data src="oculus.png"></a>
+                            <p class="about-oculus-para">
+                                Sardar Patel Institute of Technology presents to you Oculus 2019.
+                                <span class="about-oculus-hide-mobile"> Oculus is a Techno-Cultural festival that represents
+                                    the synergy between Culture and Technology.</span>
+                                Be it performing arts, or hackathons. Writing poetry or Technical Papers,<br> Oculus sees
+                                all.
+                            </p>
+
                         </div>
                     </div>
-                </div>
 
-
-
-                <div class="holder">
-                    <span>Hours</span>
-                    <div class="time-card">
-                        <div class="digit tenhour">
-                            <span class="base"></span>
-                            <div class="flap over front"></div>
-                            <div class="flap over back"></div>
-                            <div class="flap under"></div>
-                        </div>
-
-                        <div class="digit hour">
-                            <span class="base"></span>
-                            <div class="flap over front"></div>
-                            <div class="flap over back"></div>
-                            <div class="flap under"></div>
+                    <div class="scrolldown-container">
+                        <div class="scrolldown-btn">
+                            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                width="50px" height="80px" viewbox="0 0 50 80" enable-background="new 0 0 50 80" xml:space="preserve"><a
+                                    href="#Events">
+                                    <path class="first-path" fill="#333" d="M24.752,79.182c-0.397,0-0.752-0.154-1.06-0.463L2.207,57.234c-0.306-0.305-0.458-0.656-0.458-1.057                  s0.152-0.752,0.458-1.059l2.305-2.305c0.309-0.309,0.663-0.461,1.06-0.461c0.398,0,0.752,0.152,1.061,0.461l18.119,18.119                  l18.122-18.119c0.306-0.309,0.657-0.461,1.057-0.461c0.402,0,0.753,0.152,1.059,0.461l2.306,2.305                  c0.308,0.307,0.461,0.658,0.461,1.059s-0.153,0.752-0.461,1.057L25.813,78.719C25.504,79.027,25.15,79.182,24.752,79.182z"></path>
+                                    <path class="second-path" fill="#333" d="M24.752,58.25c-0.397,0-0.752-0.154-1.06-0.463L2.207,36.303c-0.306-0.304-0.458-0.655-0.458-1.057                  c0-0.4,0.152-0.752,0.458-1.058l2.305-2.305c0.309-0.308,0.663-0.461,1.06-0.461c0.398,0,0.752,0.153,1.061,0.461l18.119,18.12                  l18.122-18.12c0.306-0.308,0.657-0.461,1.057-0.461c0.402,0,0.753,0.153,1.059,0.461l2.306,2.305                  c0.308,0.306,0.461,0.657,0.461,1.058c0,0.401-0.153,0.753-0.461,1.057L25.813,57.787C25.504,58.096,25.15,58.25,24.752,58.25z"></path></a>
+                            </svg>
                         </div>
                     </div>
-                </div>
 
-                <div class="holder">
-                    <span>Minutes</span>
-                    <div class="time-card">
-                        <div class="digit tenmin">
-                            <span class="base"></span>
-                            <div class="flap over front"></div>
-                            <div class="flap over back"></div>
-                            <div class="flap under"></div>
-                        </div>
+                </section>
 
-                        <div class="digit min">
-                            <span class="base"></span>
-                            <div class="flap over front"></div>
-                            <div class="flap over back"></div>
-                            <div class="flap under"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="holder">
-                    <span>Seconds</span>
-                    <div class="time-card">
-                        <div class="digit tensec">
-                            <span class="base"></span>
-                            <div class="flap over front"></div>
-                            <div class="flap over back"></div>
-                            <div class="flap under"></div>
-                        </div>
-
-                        <div class="digit sec">
-                            <span class="base"></span>
-                            <div class="flap over front"></div>
-                            <div class="flap over back"></div>
-                            <div class="flap under"></div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
-            <div class="about-oculus">
-                <a href="#"><img data src="oculus.png"></a>
-                <p class="about-oculus-para">
-                    Sardar Patel Institute of Technology presents to you Oculus 2019.
-                    <span class="about-oculus-hide-mobile"> Oculus is a Techno-Cultural festival that represents the synergy
-                        between Culture and Technology.</span>
-                    Be it performing arts, or hackathons. Writing poetry or Technical Papers,<br> Oculus sees all.
-                </p>
-
-            </div>
         </div>
-
-        <div class="scrolldown-container">
-  <div class="scrolldown-btn">
-    <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="80px" viewbox="0 0 50 80" enable-background="new 0 0 50 80" xml:space="preserve"><a href="#Events">
-      <path class="first-path" fill="#333" d="M24.752,79.182c-0.397,0-0.752-0.154-1.06-0.463L2.207,57.234c-0.306-0.305-0.458-0.656-0.458-1.057                  s0.152-0.752,0.458-1.059l2.305-2.305c0.309-0.309,0.663-0.461,1.06-0.461c0.398,0,0.752,0.152,1.061,0.461l18.119,18.119                  l18.122-18.119c0.306-0.309,0.657-0.461,1.057-0.461c0.402,0,0.753,0.152,1.059,0.461l2.306,2.305                  c0.308,0.307,0.461,0.658,0.461,1.059s-0.153,0.752-0.461,1.057L25.813,78.719C25.504,79.027,25.15,79.182,24.752,79.182z"></path>
-      <path class="second-path" fill="#333" d="M24.752,58.25c-0.397,0-0.752-0.154-1.06-0.463L2.207,36.303c-0.306-0.304-0.458-0.655-0.458-1.057                  c0-0.4,0.152-0.752,0.458-1.058l2.305-2.305c0.309-0.308,0.663-0.461,1.06-0.461c0.398,0,0.752,0.153,1.061,0.461l18.119,18.12                  l18.122-18.12c0.306-0.308,0.657-0.461,1.057-0.461c0.402,0,0.753,0.153,1.059,0.461l2.306,2.305                  c0.308,0.306,0.461,0.657,0.461,1.058c0,0.401-0.153,0.753-0.461,1.057L25.813,57.787C25.504,58.096,25.15,58.25,24.752,58.25z"></path></a>
-    </svg>
-  </div>
-</div>
-
-       </section>
-
-</div>
-
-</div>
 
         <script src="https://cdn.jsdelivr.net/npm/reveal.js@3.7.0/js/reveal.min.js"></script>
         <script>
             Reveal.initialize({
-                    width: "100%",
-                    height: "100%",
-                    margin: 0,
-                    minScale: 1,
-                    maxScale: 1,
+                width: "100%",
+                height: "100%",
+                margin: 0,
+                minScale: 1,
+                maxScale: 1,
 
 
             });
@@ -597,132 +635,181 @@ body {
         </script>
 
         <style type="text/css">
-            .technical{position:absolute;mix-blend-mode:luminosity;bottom:0; width: 120%; height: auto; opacity: 0.5 ;}
-            .literary{position:absolute;mix-blend-mode:luminosity;bottom:0; width: 180%; height: auto; opacity: 0.5; top: 10%;}
-            .cultural{position:absolute;mix-blend-mode:luminosity;bottom:0; width: 130%; height: auto;}
-            .fun{position:absolute;mix-blend-mode:luminosity;bottom:-10px; width: 130%; height: auto;}
-            ._spacing{ margin : 20% auto; }
-             .literary_img{
-                    height:auto; width: 110%; opacity: 0.5
+            .technical {
+                position: absolute;
+                mix-blend-mode: luminosity;
+                bottom: 0;
+                width: 120%;
+                height: auto;
+                opacity: 0.5;
+            }
+
+            .literary {
+                position: absolute;
+                mix-blend-mode: luminosity;
+                bottom: 0;
+                width: 180%;
+                height: auto;
+                opacity: 0.5;
+                top: 10%;
+            }
+
+            .cultural {
+                position: absolute;
+                mix-blend-mode: luminosity;
+                bottom: 0;
+                width: 130%;
+                height: auto;
+            }
+
+            .fun {
+                position: absolute;
+                mix-blend-mode: luminosity;
+                bottom: -10px;
+                width: 130%;
+                height: auto;
+            }
+
+            ._spacing {
+                margin: 20% auto;
+            }
+
+            .literary_img {
+                height: auto;
+                width: 110%;
+                opacity: 0.5
+            }
+
+            .littext {
+                padding-top: 35%;
+            }
+
+            @media only screen and (max-width: 767px) {
+
+                .literary_img {
+                    width: 64%;
                 }
 
-                .littext{
-                    padding-top:35%;
-                }
-            @media only screen and (max-width: 767px){
-
-             .literary_img{
-                    width: 64%; 
-                }
-
-                .technical,  .cultural  {
+                .technical,
+                .cultural {
                     width: 30%;
-                   
+
                 }
-                .fun{
+                .fun {
                     bottom: 0px;
                     width: 33%;
                 }
 
-                .literary{
+                .literary {
                     width: 55%;
                     top: 0px;
-                    
+
 
                 }
 
-                 .littext{
-                    padding-top:5%;
+                .littext {
+                    padding-top: 5%;
                 }
 
-                ._spacing{ margin : 3% auto; }
+                ._spacing {
+                    margin: 3% auto;
+                }
             }
-
         </style>
-         <div style="font-family: comic sans ;padding:0px;padding-top:0px;padding-bottom:0px;height:100vh;" class="section" id="section2">
+        <div style="font-family: comic sans ;padding:0px;padding-top:0px;padding-bottom:0px;height:100vh;" class="section" id="section2">
             <section class="strips">
-                <article class="strips__strip" >
-                  <div class="strip__content" >
-                    <img class="hiddenmobile strip__title technical " style="" src="./images/technical.png">
-                    <h1 class="strip__title"  data-name="Lorem">Technical</h1>
-                    <div class="strip__inner-text">
-                        <div class="row">
-                            <div class="col-sm-3 col-md-5">
+                <article class="strips__strip">
+                    <div class="strip__content">
+                        <img class="hiddenmobile strip__title technical " style="" src="./images/technical.png">
+                        <h1 class="strip__title" data-name="Lorem">Technical</h1>
+                        <div class="strip__inner-text">
+                            <div class="row">
+                                <div class="col-sm-3 col-md-5">
                                     <img class="eventimg" src="./images/technical.png" style="width:60%;height:auto; opacity: 0.5">
-                            </div>
-                            <div class="col-sm-9 col-md-7">
-                                <div class="hidden-xs" style="padding-top:20%"></div>
-                                    Think you have the tech skills to pay the bills? Can you code your way out of any problem and hack your way to any solution? Want a platform to showcase your robotics skills? Meet industry leaders hear what they have to say? Then come on and be a part of Oculus Tech Events!
+                                </div>
+                                <div class="col-sm-9 col-md-7">
+                                    <div class="hidden-xs" style="padding-top:20%"></div>
+                                    Think you have the tech skills to pay the bills? Can you code your way out of any problem and hack your way to any solution?
+                                    Want a platform to showcase your robotics skills? Meet industry leaders hear what they
+                                    have to say? Then come on and be a part of Oculus Tech Events!
                                     <br/><br/>
                                     <a href="./events.final.html" style="font-size:20px;color:black;">Checkout the events</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </article>
+
+                <article class="strips__strip">
+                    <div class="strip__content">
+                        <img class="hiddenmobile strip__title literary" style=" " src="./images/literary.png">
+                        <h1 class="strip__title" data-name="Ipsum">Literary</h1>
+                        <div class="strip__inner-text">
+                            <div class="row">
+                                <div class="col-sm-3 col-md-5">
+                                    <img class="eventimg literary_img" src="./images/literary.png" style="">
+                                </div>
+                                <div class="col-sm-9 col-md-7">
+                                    <div class="hidden-xs littext" style=""></div>
+                                    Remember when we were kids and we wanted to do it all? Some of us wanted to be leaders, some of us wanted to be storytellers.
+                                    Come realise those dreams with our amazing literary events. Step into the shoes of a
+                                    diplomat and save the world or take a minute to speak your heart out. Hear real stories
+                                    from real people. Come, interact, live<br><br>
+                                    <a href="./events.final.html" style="font-size:20px;color:black;">Checkout the events</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
-                  </div>
                 </article>
 
                 <article class="strips__strip">
-                  <div class="strip__content">
-                    <img class="hiddenmobile strip__title literary" style=" " src="./images/literary.png">
-                    <h1 class="strip__title" data-name="Ipsum">Literary</h1>
-                    <div class="strip__inner-text">
+                    <div class="strip__content">
+                        <img class="hiddenmobile strip__title cultural" style="" src="./images/cultural.png">
+                        <h1 class="strip__title" data-name="Dolor">Performing Arts</h1>
+                        <div class="strip__inner-text">
                             <div class="row">
-                                    <div class="col-sm-3 col-md-5">
-                                            <img class="eventimg literary_img" src="./images/literary.png"  style=""> 
-                                    </div>
-                                    <div class="col-sm-9 col-md-7">
-                                        <div class="hidden-xs littext" style=""></div>
-                                            Remember when we were kids and we wanted to do it all? Some of us wanted to be leaders, some of us wanted to be storytellers. Come realise those dreams with our amazing literary events. Step into the shoes of a diplomat and save the world or take a minute to speak your heart out. Hear real stories from real people. Come, interact, live<br><br>
-                                            <a href="./events.final.html" style="font-size:20px;color:black;">Checkout the events</a>
-                                    </div>
+                                <div class="col-sm-3 col-md-5">
+                                    <img class="eventimg" src="./images/cultural.png" style="width:75%;height:auto;">
+                                </div>
+                                <div class="col-sm-9 col-md-7">
+                                    <div class="hidden-xs _spacing"></div>
+                                    Sing like Beyonce, Dance like Beyonce, and dress like Beyonce. We can't help the fact that Beyonce can do it all, but at
+                                    Oculus' cultural showcase so can you! Fashion show, dance competition, singing competition
+                                    you name it, we got it! Participate and hear the crowd roar your name only at Oculus
+                                    <br/><br/>
+                                    <a href="./events.final.html" style="font-size:20px;color:black;">Checkout the events</a>
+                                </div>
                             </div>
+                        </div>
                     </div>
-                  </div>
                 </article>
 
                 <article class="strips__strip">
-                  <div class="strip__content">
-                    <img class="hiddenmobile strip__title cultural" style="" src="./images/cultural.png">
-                    <h1 class="strip__title" data-name="Dolor">Performing Arts</h1>
-                    <div class="strip__inner-text">
+                    <div class="strip__content">
+                        <img class="hiddenmobile strip__title fun " style="" src="./images/fun.png">
+                        <h1 class="strip__title" data-name="Sit">Fun</h1>
+                        <div class="strip__inner-text">
                             <div class="row">
-                                    <div class="col-sm-3 col-md-5">
-                                            <img class="eventimg" src="./images/cultural.png"  style="width:75%;height:auto;">
-                                    </div>
-                                    <div class="col-sm-9 col-md-7">
-                                        <div class="hidden-xs _spacing"></div>
-                                           Sing like Beyonce, Dance like Beyonce, and dress like Beyonce. We can't help the fact that Beyonce can do it all, but at Oculus' cultural showcase so can you! Fashion show, dance competition, singing competition you name it, we got it! Participate and hear the crowd roar your name only at Oculus
-                                            <br/><br/>
-                                            <a href="./events.final.html" style="font-size:20px;color:black;">Checkout the events</a>
-                                    </div>
+                                <div class="col-sm-3 col-md-5">
+                                    <img class="eventimg" src="./images/fun.png" style="width:80%;height:auto;">
+                                </div>
+                                <div class="col-sm-9 col-md-7">
+                                    <div class="hidden-xs" style="padding-top:10%"></div>
+                                    Competition can be exhausting and don't even get us started on the academic burden we face as college students. It's time
+                                    to let loose the shackles and let our hair down. Oculus fun events have something for
+                                    everyone. From bouncing around in an inflated ball to singing out you favorite songs,
+                                    Oculus sees all!
+                                    <br/><br/>
+                                    <a href="./events.final.html" style="font-size:20px;color:black;">Checkout the events</a>
+                                </div>
                             </div>
+                        </div>
                     </div>
-                  </div>
-                </article>
-
-                <article class="strips__strip">
-                  <div class="strip__content">
-                    <img class="hiddenmobile strip__title fun " style="" src="./images/fun.png">
-                    <h1 class="strip__title" data-name="Sit">Fun</h1>
-                    <div class="strip__inner-text">
-                            <div class="row">
-                                    <div class="col-sm-3 col-md-5">
-                                            <img class="eventimg" src="./images/fun.png"  style="width:80%;height:auto;">
-                                    </div>
-                                    <div class="col-sm-9 col-md-7">
-                                        <div class="hidden-xs" style="padding-top:10%"></div>
-                                            Competition can be exhausting and don't even get us started on the academic burden we face as college students. It's time to let loose the shackles and let our hair down. Oculus fun events have something for everyone. From bouncing around in an inflated ball to singing out you favorite songs, Oculus sees all!
-                                            <br/><br/>
-                                            <a href="./events.final.html" style="font-size:20px;color:black;">Checkout the events</a>
-                                    </div>
-                            </div>
-                    </div>
-                  </div>
                 </article>
 
                 <i class="fa fa-close strip__close"></i>
-              </section>
+            </section>
         </div>
 
 
@@ -738,12 +825,12 @@ body {
                         We at SPIT believe that students cannot be called engineers with just their degrees. What makes us engineers is a holistic
                         development of our perspectives and being equipped to solve problems, not just on circuits or computers,
                         but also in the world around us. Oculus 2019 is proud to be associated with Ratna Nidhi Charitable
-                        Trust and be a part of its efforts to attain its noble goal.<br><br> As part of our collaboration with the
-                        organization, the students of SPIT will be organising a drive for donating spectacles and clothes
-                        for BMC drainage cleaners and people living in rural Maharashtra. To help educate children with lesser
-                        privileges and facilities, we will help the Trust in sending books and resources to such kids and
-                        to municipal schools. We will also be raising funds in the fest to pay for prosthetic limbs for the
-                        victims of terror attacks and other unforeseen accidents.
+                        Trust and be a part of its efforts to attain its noble goal.<br><br> As part
+                        of our collaboration with the organization, the students of SPIT will be organising a drive for donating
+                        spectacles and clothes for BMC drainage cleaners and people living in rural Maharashtra. To help
+                        educate children with lesser privileges and facilities, we will help the Trust in sending books and
+                        resources to such kids and to municipal schools. We will also be raising funds in the fest to pay
+                        for prosthetic limbs for the victims of terror attacks and other unforeseen accidents.
                         <br><br>Oculus 2019 wishes to continue it's association with this cause and contribute to the Trust's
                         humanitarian efforts.<br>
                     </p>
@@ -814,7 +901,8 @@ body {
 
     <!-- scripts -->
     <script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.0.4/dist/fullpage.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script type="text/javascript" src="./js/app.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
@@ -822,24 +910,24 @@ body {
     <script type="text/javascript" src="js/mainevent.js"></script>
     <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"> </script>
     <script src="js/smoke.js"></script>
-<script>
+    <script>
 
-    var canvas = document.getElementById('canvas');
-    var ctx = canvas.getContext('2d');
-   
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
 
 
-canvas.width = innerHeight
-canvas.height = innerWidth
-    
 
-    var party = smokemachine(ctx, [220, 46, 51]);
-    party.start(); // start animating
-    party.setPreDrawCallback(function(dt){
-        party.addSmoke(innerWidth/2, 0.70*(innerHeight), .5);
-        canvas.width = innerWidth;
-        canvas.height = innerHeight;
-    })
+        canvas.width = innerHeight
+        canvas.height = innerWidth
+
+
+        var party = smokemachine(ctx, [220, 46, 51]);
+        party.start(); // start animating
+        party.setPreDrawCallback(function (dt) {
+            party.addSmoke(innerWidth / 2, 0.70 * (innerHeight), .5);
+            canvas.width = innerWidth;
+            canvas.height = innerHeight;
+        })
 
 
 
@@ -857,22 +945,22 @@ canvas.height = innerWidth
        // party.addsmoke(x, y, n, t)
    // }
 
-</script>
+    </script>
 
 
     <script type="text/javascript">
-    VanillaTilt.init(document.querySelector(".your-element"), {
-        max: 25,
-        speed: 400
-    });
-</script>
+        VanillaTilt.init(document.querySelector(".your-element"), {
+            max: 25,
+            speed: 400
+        });
+    </script>
 
     <script>
         var myFullpage = new fullpage('#fullpage', {
             //Navigation
             menu: '#menu',
             lockAnchors: false,
-            anchors: ['Home','Events', 'Social_Cause', 'Contact'],
+            anchors: ['Home', 'Events', 'Social_Cause', 'Contact'],
             navigation: false,
             navigationPosition: 'right',
             navigationTooltips: ['firstSlide', 'secondSlide'],
