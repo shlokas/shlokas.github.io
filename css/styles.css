@@ -32,7 +32,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     width: 30%;
-    height: 5vh;
+    height: 9vh;
     padding: 2vh;
     position: inherit;
     top: 0;
@@ -45,12 +45,12 @@ body {
 #nav img {
     position: relative;
     top: 15px;
-    height: 75px;
+    height: 95px;
     width: auto;
     /* background-color: rgb(59, 59, 59); */
     background-size: 50%;
     border-radius: 50%;
-    padding: 10px 14px 10px 10px;
+    padding: 10px 14px 20px 10px;
     /* box-shadow: 1px 1px rgb(82, 81, 81); */
 }
 
@@ -795,6 +795,11 @@ a.effect-shine:hover {
 }
 
 @media screen and (max-width: 600px) {
+    
+    #navbar{
+        font-size: 16px;
+    }
+
     .swing {
         left: 10vw;
     }
