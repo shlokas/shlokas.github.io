@@ -831,6 +831,11 @@
   transform: scale(1);
 }
 
+.close{
+     position: absolute; right: 0%; top: 5%; height: 20px; width: auto; left: 95%; z-index: 100
+}
+
+
 #section6{
      background: url(./team/backgroundteam.png); background-color: black; background-position: center; background-repeat: no-repeat; background-size: contain;
 }
@@ -840,7 +845,9 @@
     margin-top: 22%;
 }
 #section6{
-    background : orange;
+    
+    background: orange;
+}
 }
 
 .team_image{
@@ -851,6 +858,9 @@
  
 }
 
+.close{
+    left: 88%; 
+}
 
 }
 </style>
@@ -1236,6 +1246,7 @@ viewBox="0 0 3014.12 4233.32"
 
 <!-- Chairs-->
     <div id="fadeandscale" style="background-color: #000000bf; height: 500px; width: 90vw; border-radius: 10px;">
+        <img  class="fadeandscale_close close" src="./team/close.png">
        <div class="carousel" data-flickity='{ "freeScroll": false  }'>
 
       <div class="carousel-cell"><img  class="team_image" src="./team/anukrit.jpg"><p class="designation">Chairperson</p><p class="name">Anukrit Jain</p></div>
@@ -1243,10 +1254,16 @@ viewBox="0 0 3014.12 4233.32"
       <div class="carousel-cell"><img class="team_image" src="./team/vaibhav.jpg"><p class="designation">Vice Chairperson</p><p class="name">Vaibhav Bagri</p></div>
       <div class="carousel-cell"><img class="team_image" src="./team/anushree.jpg"><p class="designation">Vice Chairperson</p><p class="name">Anushree Kulai</p></div>
       <div class="carousel-cell"><img class="team_image" src="./team/ahmed.jpg"><p class="designation">Vice Chairperson</p><p class="name">Ahmed Shaikh</p></div>
+
+          <!-- Add a button to close the popup (optional) -->
+    
+
+
       </div>
     </div>
 <!--creatives-->
     <div id="fadeandscale1" style="background-color: #000000bf; height: 500px; width: 90vw; border-radius: 10px;">
+        <img  class="fadeandscale1_close close" src="./team/close.png">
        <div class="carousel" data-flickity='{ "freeScroll": false  }'>
 
       <div class="carousel-cell"><div><img  class="team_image" src="./team/hussain.jpg"></div><p class="designation">Creative Head - Graphics </p><p class="name">Hussain Bhinderwala</p></div>
@@ -1259,6 +1276,7 @@ viewBox="0 0 3014.12 4233.32"
 
     <!--tech-->
         <div id="fadeandscale2" style="background-color: #000000bf; height: 500px; width: 90vw; border-radius: 10px;">
+            <img  class="fadeandscale2_close close" src="./team/close.png">
        <div class="carousel" data-flickity='{ "freeScroll": false  }'>
 
       <div class="carousel-cell"><img  class="team_image" src="./team/shloka_tech.jpg"><p class="designation">Tech Head - Web</p><p class="name">Shloka Sapru</p></div>
@@ -1271,6 +1289,7 @@ viewBox="0 0 3014.12 4233.32"
 
         <!--events-->
         <div id="fadeandscale3" style="background-color: #000000bf; height: 500px; width: 90vw; border-radius: 10px;">
+            <img  class="fadeandscale3_close close" src="./team/close.png">
        <div class="carousel" data-flickity='{ "freeScroll": false  }'>
 
       <div class="carousel-cell"><img  class="team_image" src="./team/lekha.jpg"><p class="designation">Event Head - Cultural</p><p class="name">Lekha Sharma</p></div>
@@ -1285,6 +1304,7 @@ viewBox="0 0 3014.12 4233.32"
 
             <!--hospitality-->
         <div id="fadeandscale4" style="background-color: #000000bf; height: 500px; width: 90vw; border-radius: 10px;">
+            <img  class="fadeandscale4_close close" src="./team/close.png">
        <div class="carousel" data-flickity='{ "freeScroll": false  }'>
 
       <div class="carousel-cell"><img  class="team_image" src="./team/soumya_hh.jpg"><p class="designation">Hospitality Head</p><p class="name">Soumya Koppaka</p></div>
@@ -1295,6 +1315,7 @@ viewBox="0 0 3014.12 4233.32"
 
                 <!--pr-->
         <div id="fadeandscale7" style="background-color: #000000bf; height: 500px; width: 90vw; border-radius: 10px;">
+            <img  class="fadeandscale7_close close" src="./team/close.png">
        <div class="carousel" data-flickity='{ "freeScroll": false  }'>
 
       <div class="carousel-cell"><img  class="team_image" src="./team/sarah_pr.jpg"><p class="designation">PR Head</p><p class="name">Sarah Hawa</p></div>
@@ -1307,6 +1328,7 @@ viewBox="0 0 3014.12 4233.32"
 
                     <!--operations-->
         <div id="fadeandscale6" style="background-color: #000000bf; height: 500px; width: 90vw; border-radius: 10px;">
+            <img  class="fadeandscale6_close close" src="./team/close.png">
        <div class="carousel" data-flickity='{ "freeScroll": false  }'>
 
       <div class="carousel-cell"><img  class="team_image" src="./team/kirti_oh.jpg"><p class="designation">Operations Head</p><p class="name">Kirti Tyagi</p></div>
@@ -1319,6 +1341,7 @@ viewBox="0 0 3014.12 4233.32"
 
                     <!--marketing-->
             <div id="fadeandscale5" style="background-color: #000000bf; height: 500px; width: 90vw; border-radius: 10px;">
+                <img  class="fadeandscale5_close close" src="./team/close.png">
        <div class="carousel" data-flickity='{ "freeScroll": false  }'>
 
     <div class="carousel-cell"><img  class="team_image" src="./team/riya_mh.jpg"><p class="designation">Marketing Head</p><p class="name"> Riya Bhagat</p></div>
@@ -1335,6 +1358,7 @@ viewBox="0 0 3014.12 4233.32"
 
     <!--photography-->
                 <div id="fadeandscale8" style="background-color: #000000bf; height: 500px; width: 90vw; border-radius: 10px;">
+                    <img  class="fadeandscale8_close close" src="./team/close.png">
        <div class="carousel" data-flickity='{ "freeScroll": false  }'>
 
     <div class="carousel-cell"><img  class="team_image" src="./team/melita.jpg"><p class="designation">Photography Head</p><p class="name">Melita Benn</p></div>
