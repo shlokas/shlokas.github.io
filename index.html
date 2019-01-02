@@ -1520,7 +1520,31 @@ viewBox="0 0 3014.12 4233.32"
         </div>
     </div>
 
+<style type="text/css">
+    .sticky_footer{
+            display:none;
+     position:fixed; 
+     bottom :0; 
+      width:100%;
+       height : 60px;
+        text-align: center;
+         background-color: #00000096;
+    }
+</style>
 
+<div id="log" class="sticky_footer"><a href="events.final.html"><p style="padding: 10px ; color: white; font-size: 2vh">Be a part of Oculus from 18th -20th January. Register now !</p></a></div>
+
+
+<script type="text/javascript">
+        $(window).scroll(function() {  
+
+    if ( $(window).width() < 767) {      
+  $(document).scrollTop() > 180 ? $('#log:hidden').fadeIn() : $('#log:visible').fadeOut(); 
+}            
+      
+    });
+
+</script>
 
 
     <!-- scripts -->
