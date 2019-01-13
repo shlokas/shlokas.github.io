@@ -1,3 +1,5 @@
+
+
 .heading,
 ul.card-stacks {
     position: fixed;
@@ -143,38 +145,47 @@ ul.card-stacks.transition li.card {
 }
 
 .literary .card-stacks {
-    left: 77vw
+    left: 80vw
 }
 
 .fun .card-stacks {
-    left: 56vw
+    left: 60vw
+}
+
+.featured .card-stacks {
+    left: 40vw
 }
 
 .cultural .card-stacks {
-    left: 35vw
+    left: 20vw
 }
 
 .technical .card-stacks {
-    left: 12vw
+    left: 6vw
 }
 
 .technical.heading {
-    left: 8vw;
+    left: 0vw;
     color: #c00b0b !important;
 }
 
 .cultural.heading {
-    left: 30vw;
+    left: 16vw;
+    color: rgb(255, 187, 0) !important;
+}
+
+.featured.heading {
+    left: 35vw;
     color: #168148 !important;
 }
 
 .fun.heading {
-    left: 52vw;
+    left: 55vw;
     color: #324eed !important;
 }
 
 .literary.heading {
-    left: 73vw;
+    left: 76vw;
     color: #903880 !important;
 }
 
@@ -222,6 +233,16 @@ ul.card-stacks.transition li.card {
     height: 50%
 }
 
+.landing-featured {
+    height: 30vmax;
+    width: 30vmax;
+    position: absolute;
+    top: calc(50vh - 15vmax);
+    left: calc(50vw - 15vmax);
+    border-radius: 50%;
+    background: linear-gradient(to right, #FF8008, #FFC837);
+}
+
 .landing-performing {
     background: linear-gradient(to right, #e0c3fc, #8ec5fc)
 }
@@ -241,7 +262,8 @@ ul.card-stacks.transition li.card {
 .slide,
 .slide2,
 .slide3,
-.slide4 {
+.slide4,
+.slide5 {
     position: absolute;
     width: 50%;
     top: inherit;
@@ -254,10 +276,20 @@ ul.card-stacks.transition li.card {
     opacity: 0
 }
 
+.slide5 {
+    position: absolute;
+    width: 30vmax;
+    height: 30vmax;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+
 .slide.show,
 .slide2.show,
 .slide3.show,
-.slide4.show {
+.slide4.show,
+.slide5.show {
     opacity: .25
 }
 
@@ -271,6 +303,11 @@ ul.card-stacks.transition li.card {
     font-weight: 700;
     transition: .8s ease all;
     outline: 0
+}
+
+.landing-featured .event-category {
+    margin-top: 45%;
+    margin-left: 18%;
 }
 
 .event-category:hover {
@@ -315,24 +352,33 @@ ul.card-stacks.transition li.card {
         transition: .8s ease all;
         outline: 0
     }
-    
+
     ul.card-stacks.transition li.card {
         width: 76%;
         margin-left: 12%;
         height: 280px;
     }
+
     .technical .card-stacks {
         left: 4vw;
     }
+
     .cultural .card-stacks {
-        left: 26.5vw
+        left: 22vw
     }
+
+    .featured .card-stacks {
+        left: 40vw
+    }
+
     .fun .card-stacks {
-        left: 50vw
+        left: 63vw
     }
+
     ul.card-stacks {
         top: 78vh
     }
+
     .moveheading {
         display: block;
         font-weight: 400;
@@ -345,25 +391,37 @@ ul.card-stacks.transition li.card {
         background-size: 20px 20px;
         background-position: 0 0
     }
+
     .heading {
         width: 20%;
+        font-size: 13px;
     }
+
     ul.card-stacks li.card {
-        width: 60px;
-        height: 60px;
+        width: 45px;
+        height: 45px;
     }
+
     .literary.heading {
-        left: 74vw;
+        left: 77vw;
     }
+
     .fun.heading {
-        left: 48.5vw;
+        left: 59vw;
         margin-bottom: 15px;
     }
-    .cultural.heading {
-        left: 27vw;
+
+    .featured.heading {
+        left: 38vw;
+        margin-bottom: 15px;
     }
+
+    .cultural.heading {
+        left: 20vw;
+    }
+
     .technical.heading {
-        left: 4vw;
+        left: 0vw;
         margin-bottom: 15px;
     }
 }
@@ -377,3 +435,4 @@ ul.card-stacks.transition li.card {
 .hide {
     display: none;
 }
+

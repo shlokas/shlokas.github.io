@@ -64,7 +64,7 @@
 .container{
     margin: 15vh auto 0;
     width: 85%;
-    z-index: 15;
+    /* z-index: 15; */
     position: relative;
 	/* margin: 0 auto; */
 }
