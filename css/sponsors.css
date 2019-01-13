@@ -1,18 +1,12 @@
 .sponsor-content {
-    margin-top: 20vh;
+    padding: 50px;
     position: relative;
     z-index: 1;
+    display: none;
+	/* background: #ededed; */
+	padding: 15px;
 }
 
-@media screen and (max-width: 600px) {
-    .brochure {
-        /* position: absolute; */
-        /* right: 1vw; */
-        top: -6vh;
-        /* font-weight: 300; */
-        font-size: 1.3rem;
-    }
-}
 
 .co-sponsors {
     display: flex;
@@ -33,11 +27,21 @@
     justify-content: center;
 }
 
+.sponsor-wrapper {
+    font-weight: inherit;
+    color: darkslategrey;
+    font-size: 18px;
+    text-align: center;
+}
+
+
 #sponsorlogo {
-    height: 8vh;
+    height: 70px;
     width: auto;
-    margin: 15px;
+    margin: 25px 20px;
+    
     justify-self: center;
+    /* text-align: center; */
 }
 
 .co-sponsors img {
@@ -46,7 +50,7 @@
 
 .brochure {
     position: absolute;
-    right: 1vw;
+    right: 3vw;
     font-weight: 300;
     font-size: 1.6rem;
     animation: shine 2s infinite;
@@ -55,4 +59,55 @@
 .brochure .fa {
     color: black;
     font-size: 14px;
+}
+
+.container{
+    margin: 15vh auto 0;
+    width: 85%;
+    z-index: 15;
+    position: relative;
+	/* margin: 0 auto; */
+}
+
+ul.tabs{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+ul.tabs li{
+	background: none;
+	/* background: none; */
+    color: #222;
+    font-size: 18px;;
+	display: inline-block;
+	padding: 10px 15px;
+	cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+    .container {
+        margin: 20vh auto 0;
+        width: 90%;
+    }
+    .tabs {
+        margin: 5vh;
+    }
+    .brochure {
+        position: relative;
+        right: 0vw;
+        /* top: -6vh; */
+        /* font-weight: 300; */
+        font-size: 1.3rem;
+    }
+}
+
+ul.tabs li.current{
+    background: linear-gradient(to right, #ffc20d, #f18724);
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+}
+
+
+.sponsor-content.current{
+	display: inherit;
 }
