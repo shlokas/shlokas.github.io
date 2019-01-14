@@ -51,6 +51,7 @@
 .brochure {
     position: absolute;
     right: 3vw;
+    top: -5.5vh;
     font-weight: 300;
     font-size: 1.6rem;
     animation: shine 2s infinite;
