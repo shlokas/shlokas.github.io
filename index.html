@@ -90,43 +90,42 @@
         font-size: 16px;
         line-height: 1.75;
       }
-
       .campus-tour {
         position: absolute;
         width: 30vmin;
         top: 12vh;
         right: 2vh;
+        background-color: #f1352c;
+        padding: 5px;
+        border-radius: 10px;
         text-align: center;
         color: #eaeaea;
         font-family: fourHandTrial;
-        z-index: 5;
+        z-index: 3;
         font-size: 20px;
         transition: all 0.5s ease;
       }
 
       .campus-tour:hover {
-        color: rgb(109, 109, 109);
+        /* color: rgb(109, 109, 109); */
         cursor: pointer;
         transform: scale(1.1);
         /* transition: color 0.5s ease,scale 0.5s ease; */
         transition: all 0.5s ease;
       }
-
       @media only screen and (max-width: 767px) {
         #hi {
           top: 20%;
         }
-
         body {
           font-size: 1.75vh;
           line-height: 1.75;
         }
-
         .campus-tour {
           font-size: 15px;
-          top: 15vh;
-          width: 35vmin;
-          height: 35vmin;
+          top: 18%;
+          width: fit-content;
+          /* height: 35vmin; */
         }
       }
     </style>
@@ -784,23 +783,20 @@
             margin: 3% auto;
           }
         }
-
         a, a:hover, a:focus {
             color: inherit;
             text-decoration: none;
         }
-
       </style>
       <div
         style="font-family: comic sans ;padding:0px;padding-top:0px;padding-bottom:0px;height:100vh;"
         class="section"
         id="section2"
       >
-        <div class="campus-tour"><a href="./campus-tour/index.html">
-          <span
-            >Tour the campus with an immersive augmented reality
-            experience!</span
-          ></a>
+        <div class="campus-tour">    <a href="./campus-tour/index.html">
+            <span class="hiddenmobile">Tour the campus with an immersive augmented reality
+                experience!</span>
+            <span class="hiddendesktop">AR Campus Tour : Explore Now!</span></a>
         </div>
         <section class="strips">
           <article class="strips__strip">
@@ -1042,7 +1038,6 @@
       <script type="text/javascript">
         $(".main-carousel").flickity({
           // options
-
           contain: true
         });
       </script>
@@ -1072,7 +1067,6 @@
           left: 23%;
           width: 220px;
           height: 220px;
-
           background: #8c8;
           border-radius: 50%;
         }
@@ -1171,7 +1165,6 @@
       <script>
         $(document).ready(function() {
           // Initialize the plugin
-
           $("#fadeandscale").popup({
             transition: "all 0.3s"
           });
@@ -1196,7 +1189,6 @@
           $("#fadeandscale7").popup({
             transition: "all 0.3s"
           });
-
           $("#fadeandscale8").popup({
             transition: "all 0.3s"
           });
@@ -2731,7 +2723,7 @@
                   class="effect-shine"
                   style="cursor: pointer; color: white;"
                   onclick="showOverlay()"
-                  >AFTERMOVIE</a
+                  >TEASER</a
                 >
               </p>
               <p><a class="effect-shine" href="#section6">TEAM</a></p>
