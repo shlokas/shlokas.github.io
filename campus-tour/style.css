@@ -852,6 +852,15 @@ body.view-control-buttons .viewControlButton {
   vertical-align: middle;
 }
 
+.partner-logo {
+  z-index: 10;
+  position: absolute;
+  top: 7vmin;
+  right: 2vmin;
+  display: inline;
+  vertical-align: middle;
+}
+
 .subtext {
   z-index: 10;
   position: absolute;
